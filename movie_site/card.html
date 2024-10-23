@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화 사이트 - card(할인카드)</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/card.css" />
+    <!--폰트어썸 내 script 코드-->
+    <script
+      src="https://kit.fontawesome.com/3223480a48.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--js-->
+    <script src="js/card.js" defer></script>
+  </head>
+  <body>
+    <!--상단메뉴 부분-->
+    <header>
+      <div class="bg-color">
+        <div class="container">
+          <div class="list">
+            <ul>
+              <li><a href="movie.html">영화</a></li>
+              <li><a href="#">예매</a></li>
+              <li><a href="theater.html">극장</a></li>
+            </ul>
+            <a href="index.html" class="logo"></a>
+            <ul>
+              <li><a href="event.html">이벤트</a></li>
+              <li><a href="store.html">스토어</a></li>
+              <li><a href="boon.html">혜택</a></li>
+            </ul>
+          </div>
+          <!--list-->
+        </div>
+        <!--container-->
+      </div>
+      <!--bg-color-->
+    </header>
+
+    <main>
+      <div class="container">
+        <!--추천 이벤트 슬라이드로 표현-->
+        <h1>제휴 할인</h1>
+        <div id="event-banner">
+          <p>제휴이벤트</p>
+          <div id="frame">
+            <ul id="banner">
+              <li>
+                <a href="#">
+                  <img src="image/event/제휴이벤트슬라이드1.jpg" alt=""/>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="image/event/이벤트슬라이드이미지2.png" alt=""/>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="image/event/제휴이벤트슬라이드2.jpg" alt=""/>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--frame-->
+          <p>
+            <a class="prev">&#10094;</a>
+            <!--이전버튼-->
+            <a class="next">&#10095;</a>
+            <!--다음버튼-->
+          </p>
+        </div>
+        <!--event-banner-->
+
+        <!--tab메뉴 목록-->
+        <div class="tab_menu">
+          <button class="on active">할인안내</button>
+          <button>신용카드(283)</button>
+          <button>통신사(3)</button>
+          <button>포인트/기타제휴(10)</button>
+          <button>상품권/관람권(3)</button>
+        </div>
+        <div class="tab_list">
+          <!--할인안내-->
+          <div id="discount" class="on">
+            <div class="D-all">
+              <div class="input-box">
+                <div class="txt">
+                  <b>더욱 알뜰하게 메가박스를 즐기는 방법!</b>
+                  <p>
+                    소지하고 계신 카들르 검색해 보세요. 할인 및 혜택정보를
+                    빠르게 확인할 수 있어요.
+                  </p>
+                </div>
+                <div class="D-search">
+                  <input type="text" placeholder="카드명을 검색해 보세요." />
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+              <div class="detail">
+                <div class="three">
+                  <div class="D-menu">
+                    <div class="option-box">
+                      <div class="title">
+                        <b>통신사</b>
+                        <button>전체보기 ></button>
+                      </div>
+                      <h3>3</h3>
+                      <select name="op" id="op">
+                        <option value="news-agency">통신사 선택</option>
+                        <option value="lg">LG U+</option>
+                        <option value="skt">SKT</option>
+                        <option value="kt">KT</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="three">
+                  <div class="D-menu">
+                    <div class="option-box">
+                      <div class="title">
+                        <b>신용카드</b>
+                        <button>전체보기 ></button>
+                      </div>
+                      <h3>283</h3>
+                      <select name="op" id="op">
+                        <option value="card">카드 선택</option>
+                        <option value="skt">메가박스 카드</option>
+                        <option value="kt">삼성카드</option>
+                        <option value="kt">현대카드</option>
+                        <option value="kt">신한카드</option>
+                        <option value="kt">비씨카드</option>
+                        <option value="kt">KB국민카드</option>
+                        <option value="kt">우리카드</option>
+                        <option value="kt">하나카드</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="three">
+                  <div class="D-menu">
+                    <div class="option-box">
+                      <div class="title">
+                        <b>포인트/기타제휴</b>
+                        <button>전체보기 ></button>
+                      </div>
+                      <h3>15</h3>
+                      <select name="op" id="op">
+                        <option value="point">포인트/기타제휴 선택</option>
+                        <option value="skt">기타</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gift">
+                <b>상품권/관람권</b>
+                <button>전체보기 ></button>
+              </div>
+            </div>
+            <!--D-all-->
+          </div>
+          <!--신용카드-->
+          <div id="credit-card">
+            <div>
+              <div class="notice">
+                <b>더욱 알뜰하게 메가박스를 즐기는 방법!</b>
+                <p>
+                  소지하고 계신 카드를 검색해 보세요. 할인 및 혜택정보를 빠르게
+                  확인할 수 있어요.
+                </p>
+              </div>
+              <div class="sub_tab_menu">
+                <button class="on">메가박스카드</button>
+                <button>삼성카드</button>
+                <button>현대카드</button>
+                <button>신한카드</button>
+                <button>비씨카드</button>
+                <button>KB국민카드</button>
+              </div>
+              <div class="sub_tab_list">  <!--카드 전체를 소개하는 영역-->
+                <div id="megabox-card" class="on">
+                  <div>
+                    <div class="megabox-box">
+                      <h1>메가박스 카드</h1>
+                      <ul>
+                        <li>
+                          <img src="image/card/메가박스카드1.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>메가박스카드</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>
+                                할인방식 : 선할인, 청구할인<br />
+                                제공혜택 : 3,000원 즉시할인, 10,000원 청구할인<br />
+                                사용조건 : 현장, 온라인 결제<br />
+                                서비스 제공조건<br />
+                                - 건당 이용금액 10,000원 이상 시 월 1회 3,000원
+                                선할인 제공<br />
+                                &nbsp;&nbsp;* 선할인 미선택 시 할인혜택 제공
+                                불가<br />
+                                - 건당 이용금액 10,000원 이상 시 월 1회 10,000원
+                                청구할인 제공<br />
+                                &nbsp;&nbsp;* 13,000원 이상 결제 시 선할인 선택
+                                후 잔여금액 결제 시 청구할인과 중복적용 가능<br />
+                                - 전월 국내가맹점 이용금액 40만원 이상 시 제공
+                              </p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/메가박스카드2.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>메가박스 체크카드</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>
+                                할인방식 : 선할인, 청구할인<br />
+                                제공혜택 : 3,000원 즉시할인, 10,000원
+                                청구할인<br />
+                                사용조건 : 현장, 온라인 결제<br />
+                                서비스 제공조건<br />
+                                - 건당 이용금액 10,000원 이상 시 월 1회 3,000원
+                                선할인 제공<br />
+                                &nbsp;&nbsp;* 선할인 미선택 시 할인혜택 제공
+                                불가<br />
+                                - 건당 이용금액 10,000원 이상 시 월 1회 10,000원
+                                청구할인 제공<br />
+                                &nbsp;&nbsp;* 13,000원 이상 결제 시 선할인 선택
+                                후 잔여금액 결제 시 청구할인과 중복적용 가능<br />
+                                - 전월 국내가맹점 이용금액 40만원 이상 시 제공
+                              </p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>  <!--메가박스카드 소개 end-->
+                <div id="samsung-card">
+                  <div>
+                    <div class="megabox-box">
+                      <h1>삼성카드</h1>
+                      <ul>
+                        <li>
+                          <img src="image/card/삼성카드1.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>SSG.COM 삼성카드</b>
+                              <div class="btn">
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>자세한 내용은 삼성카드 홈페이지에서 확인하세요.</p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/삼성카드2.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>삼성카드 애니패스+</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>자세한 내용은 삼성카드 홈페이지에서 확인하세요.</p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/삼성카드3.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>삼성카드 6 V3</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>자세한 내용은 삼성카드 홈페이지에서 확인하세요.</p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/삼성카드4.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>KDB SAMSUNGCARD 4</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>자세한 내용은 삼성카드 홈페이지에서 확인하세요.</p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/삼성카드5.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>SC제일은행 삼성카드 4V2</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>자세한 내용은 삼성카드 홈페이지에서 확인하세요.</p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/삼성카드6.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>국민은행 삼성체크카드</b>
+                              <div class="btn">
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>자세한 내용은 삼성카드 홈페이지에서 확인하세요.</p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/삼성카드7.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>굿포인트 삼성카드</b>
+                              <div class="btn">
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>자세한 내용은 삼성카드 홈페이지에서 확인하세요.</p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/삼성카드8.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>삼성쇼핑플래티늄카드</b>
+                              <div class="btn">
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>자세한 내용은 삼성카드 홈페이지에서 확인하세요.</p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/삼성카드9.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>삼성애니패스 포인트카드</b>
+                              <div class="btn">
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>자세한 내용은 삼성카드 홈페이지에서 확인하세요.</p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/삼성카드10.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>삼성오토캐시백 체크카드</b>
+                              <div class="btn">
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>자세한 내용은 삼성카드 홈페이지에서 확인하세요.</p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div> <!--삼성카드 end-->
+                <div id="hyundai-card">
+                  <div>
+                    <div class="megabox-box">
+                      <h1>현대카드</h1>
+                      <ul>
+                        <li>
+                          <img src="image/card/현대카드1.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>현대카드M2 Edition2카드</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>
+                                * 신규발급중단(2019.09.04) - 유효기간까지 사용가능<br />
+                                할인방식 : 청구할인<br />
+                                사용조건 : 현장, 온라인 결제<br />
+                                제공혜택 : 3,000원 / 6,000원 할인<br />
+                                사용조건 : 현장결제 /온라인<br />
+                                서비스 제공조건<br />
+                                - 3,000원 초과 1만원 이하 결제 시 3,000원 할인<br />
+                                - 1만원 초과 결제 시 6,000원 할인<br />
+                                - 본인+가족카드 포함 월 1회/연간 6회 한도
+                                - 전월 결제일자 청구금액(본인+가족카드의 일시불 및 할부금액)<br />
+                                &nbsp;&nbsp;&nbsp;50만원 이상 시 할인 적용(신규 발급 시 발급 월 포함 3개월간 이용금액 무관하게 혜택 제공)<br />
+                                - 할인 적용된 카드 결제 건에 대해 M포인트 적립 제외<br />
+                                -극장 내 매점 이용 시 영화 할인서비스가 적용될 수 있으니 유의
+                              </p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/현대카드2.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>현대카드 M3 Edition2</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>
+                                *신규발급중단(2019.09.04) - 유효기간까지 사용가능<br />
+                                할인방식 : 청구할인<br />
+                                제공혜택 : 3,000원 / 6,000원 할인<br />
+                                사용조건 : 현장결제 /온라인<br />
+                                서비스 제공조건<br />
+                                - 3,000원 초과 1만원 이하 결제 시 3,000원 할인<br />
+                                - 1만원 초과 결제 시 6,000원 할인<br />
+                                - 본인+가족카드 포함 월 1회/연간 6회 한도<br />
+                                - 전월 결제일자 청구금액(본인+가족카드의 일시불 및 할부금액)<br />
+                                &nbsp;&nbsp;&nbsp;50만원 이상 시 할인 적용(신규 발급 시 발급 월 포함 3개월간 이용금액 무관하게 혜택 제공)<br />
+                                - 할인 적용된 카드 결제 건에 대해 M포인트 적립 제외<br />
+                                - 극장 내 매점 이용 시 영화 할인서비스가 적용될 수 있으니 유의<br />
+                              </p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/현대카드3.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>현대카드 MY BUSINESS X2 Edition2</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>
+                                할인방식 : 청구할인<br />
+                                제공혜택 : 3,000원 / 6,000원 할인<br />
+                                사용조건 : 현장결제 /온라인<br />
+                                서비스 제공조건<br />
+                                - 3,000원 초과 1만원 이하 결제 시 3,000원 할인<br />
+                                - 1만원 초과 결제 시 6,000원 할인<br />
+                                - 본인+가족카드 포함 월 1회/연간 6회 한도<br />
+                                - 전월 이용금액 50만원 이상 시 할인 적용<br />
+                                &nbsp;&nbsp;&nbsp;(신규 발급 시 발급 월 포함 3개월간 이용금액 무관하게 혜택 제공)<br />
+                                - 할인 적용된 카드 결제 건에 대해 M포인트 적립 제외<br />
+                                - 극장 내 매점 이용 시 영화 할인서비스가 적용될 수 있으니 유의
+                              </p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/현대카드4.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>현대카드 MY BUSINESS X3 Edtion2</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>
+                                할인방식 : 청구할인<br />
+                                제공혜택 : 3,000원 / 6,000원 할인<br />
+                                사용조건 : 현장결제 /온라인<br />
+                                서비스 제공조건<br />
+                                - 3,000원 초과 1만원 이하 결제 시 3,000원 할인<br />
+                                - 1만원 초과 결제 시 6,000원 할인<br />
+                                - 본인+가족카드 포함 월 1회/연간 6회 한도<br />
+                                - 전월 이용금액 50만원 이상 시 할인 적용<br />
+                                &nbsp;&nbsp;&nbsp;(신규 발급 시 발급 월 포함 3개월간 이용금액 무관하게 혜택 제공)<br />
+                                - 할인 적용된 카드 결제 건에 대해 M포인트 적립 제외<br />
+                                - 극장 내 매점 이용 시 영화 할인서비스가 적용될 수 있으니 유의
+                              </p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/현대카드5.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>현대카드 T3 Edition2</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>
+                                할인방식 : 청구할인<br />
+                                제공혜택 : 3,000원 / 6,000원 할인<br />
+                                사용조건 : 현장결제 /온라인<br />
+                                서비스 제공조건<br />
+                                - 3,000원 초과 1만원 이하 결제 시 3,000원 할인<br />
+                                - 1만원 초과 결제 시 6,000원 할인<br />
+                                - 본인+가족카드 포함 월 1회/연간 6회 한도<br />
+                                - 전월 결제일자 청구금액(본인+가족카드의 일시불 및 할부금액)<br />
+                                &nbsp;&nbsp;&nbsp;50만원 이상 시 할인 적용(신규 발급 시 발급 월 포함 3개월간 이용금액 무관하게 혜택 제공)<br />
+                                - 할인 적용된 카드 결제 건에 대해 마일리지적립 제외<br />
+                                - 극장 내 매점 이용 시 영화 할인서비스가 적용될 수 있으니 유의<br />
+                              </p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/현대카드6.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>현대카드 X2 Edition2</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>
+                                할인방식 : 청구할인<br />
+                                제공혜택 : 3,000원 / 6,000원 할인<br />
+                                사용조건 : 현장결제 /온라인<br />
+                                서비스 제공조건<br />
+                                - 3,000원 초과 1만원 이하 결제 시 3,000원 할인<br />
+                                - 1만원 초과 결제 시 6,000원 할인<br />
+                                - 본인+가족카드 포함 월 1회/연간 6회 한도<br />
+                                - 전월 결제일자 청구금액(본인+가족카드의 일시불 및 할부금액)<br />
+                                &nbsp;&nbsp;&nbsp;50만원 이상 시 할인 적용(신규 발급 시 발급 월 포함 3개월간 이용금액 무관하게 혜택 제공)<br />
+                                - 할인 적용된 카드 결제 건에 대해 X기본할인 제외<br />
+                                - 극장 내 매점 이용 시 영화 할인서비스가 적용될 수 있으니 유의
+                              </p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/현대카드7.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>현대카드 M2 Platinum</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>
+                                * 신규발급중단 - 유효기간까지 사용가능<br />
+                                  할인방식 : 청구할인<br />
+                                  제공혜택 : 3,000원 / 6,000원 할인<br />
+                                  사용조건 : 현장결제 /온라인<br />
+                                  서비스 제공조건<br />
+                                  - 3,000원 초과 8,000원 이하 결제 시 3,000원 할인<br />
+                                  - 8,000원 초과 결제 시 6,000원 할인<br />
+                                  - 본인+가족카드 포함 월 1회/연간 5회 한도<br />
+                                  - 전월 이용금액 30만원 이상 시 할인 적용<br />
+                                  &nbsp;&nbsp;&nbsp;(신규 발급 시 발급 월 포함 2개월간 이용금액 무관하게 혜택 제공)<br />
+                                  - 할인 적용된 카드 결제 건에 대해 M포인트 적립 제외<br />
+                                  - 극장 내 매점 이용 시 영화 할인서비스가 적용될 수 있으니 유의
+                              </p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/현대카드8.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>현대카드 M2 BLUEmembers Family Edition2</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>
+                                할인방식 : 청구할인<br />
+                                제공혜택 : 3,000원 / 6,000원 할인<br />
+                                사용조건 : 현장결제<br />
+                                서비스 제공조건<br />
+                                - *메가박스의 경우 모바일웹 및 앱 예매 시 적용 불가<br />
+                                - 3,000원 초과 1만원 이하 결제 시 3,000원 할인<br />
+                                - 1만원 초과 결제 시 6,000원 할인<br />
+                                - 본인+가족카드 포함 월 1회/연간 6회 한도<br />
+                                - 전월 이용금액 50만원 이상 시 할인 적용<br />
+                                &nbsp;&nbsp;&nbsp;(신규 발급 시 발급 월 포함 3개월간 이용금액 무관하게 혜택 제공)<br />
+                                - 할인 적용된 카드 결제 건에 대해 M포인트 적립 제외<br />
+                                - 극장 내 매점 이용 시 영화 할인서비스가 적용될 수 있으니 유의
+                              </p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/현대카드9.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>현대카드 M3 Edition2</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>
+                                *신규발급중단(2019.09.04) - 유효기간까지 사용가능<br />
+                                할인방식 : 청구할인<br />
+                                제공혜택 : 3,000원 / 6,000원 할인<br />
+                                사용조건 : 현장결제 /온라인<br />
+                                서비스 제공조건<br />
+                                - 3,000원 초과 1만원 이하 결제 시 3,000원 할인<br />
+                                - 1만원 초과 결제 시 6,000원 할인<br />
+                                - 본인+가족카드 포함 월 1회/연간 6회 한도<br />
+                                - 전월 결제일자 청구금액(본인+가족카드의 일시불 및 할부금액)<br />
+                                &nbsp;&nbsp;&nbsp;50만원 이상 시 할인 적용(신규 발급 시 발급 월 포함 3개월간 이용금액 무관하게 혜택 제공)<br />
+                                - 할인 적용된 카드 결제 건에 대해 M포인트 적립 제외<br />
+                                - 극장 내 매점 이용 시 영화 할인서비스가 적용될 수 있으니 유의<br />
+                              </p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                        <li>
+                          <img src="image/card/현대카드10.png" alt="" />
+                          <div class="p-box">
+                            <div class="top">
+                              <b>현대카드 M3 Edition2</b>
+                              <div class="btn">
+                                <button class="btn1">인터넷할인</button>
+                                <button class="btn2">현장할인</button>
+                              </div>
+                            </div>
+                            <div class="txt">
+                              <p>
+                                *신규발급중단(2019.09.04) - 유효기간까지 사용가능<br />
+                                할인방식 : 청구할인<br />
+                                제공혜택 : 3,000원 / 6,000원 할인<br />
+                                사용조건 : 현장결제 /온라인<br />
+                                서비스 제공조건<br />
+                                - 3,000원 초과 1만원 이하 결제 시 3,000원 할인<br />
+                                - 1만원 초과 결제 시 6,000원 할인<br />
+                                - 본인+가족카드 포함 월 1회/연간 6회 한도<br />
+                                - 전월 결제일자 청구금액(본인+가족카드의 일시불 및 할부금액)<br />
+                                &nbsp;&nbsp;&nbsp;50만원 이상 시 할인 적용(신규 발급 시 발급 월 포함 3개월간 이용금액 무관하게 혜택 제공)<br />
+                                - 할인 적용된 카드 결제 건에 대해 M포인트 적립 제외<br />
+                                - 극장 내 매점 이용 시 영화 할인서비스가 적용될 수 있으니 유의<br />
+                              </p>
+                              <button>자세히 보기</button>
+                            </div>  <!--txt-->
+                          </div>  <!--p-box"-->
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div id="shinhan-card">
+                  <div>
+                    <div class="megabox-box">
+                      <h1>신한카드</h1>
+                    </div>
+                    <ul>
+                      <li>
+                        <img src="image/card/신한카드1.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>신한은행 레져 체크플러스카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 1,500원 할인<br />
+                              사용조건 : 현장결제<br />
+                              서비스 제공조건<br />
+                              - 일 1회, 월 2회, 연 12회<br />
+                              - 최근 3개월 내 이용실적 10만원 이상 시 할인
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/신한카드2.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>JUICY 신한 체크카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 캐시백<br />
+                              제공혜택 : 10% 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 통합 일 1회, 월 3회, 할인 전 승인금액 1회 1만원까지 적용 (1회 1천원까지 할인)<br />
+                              - 예매 전 영화관 내 매점 이용 시, 영화할인서비스가 선 적용될 수 있으므로 유의하시기 바랍니다.<br />
+                              - 신규발급회원의 경우, 카드사용 등록월의 익월말(등록월+1개월)까지 2천원의 통합할인한도가 적용됩니다.<br />
+                              - 체크카드 할인서비스는 고객님의 이용금액에 따라 제공이 되는 통합할인한도 내에서 제공되며,<br />
+                              &nbsp;&nbsp;&nbsp;전월 이용금액에 따라 제한될 수 있습니다.<br /><br />
+                              통합할인 한도<br />
+                              - 전월 이용금액 20만원 이상~30만원 미만: 2천원<br />
+                              - 전월 이용금액 30만원 이상~50만원 미만: 3천원<br />
+                              - 전월 이용금액 50만원 이상~80만원 미만: 4천원<br />
+                              - 전월 이용금액 80만원 이상~120만원 미만: 8천원<br />
+                              - 전월 이용금액 120만원 이상~ : 1만 2천원
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/신한카드3.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>SOCAR 신한카드 체크</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 캐시백<br />
+                              제공혜택 : 10% 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 영화 이용 시 10% 할인 (캐시백)<br />
+                              - 통합 일 1회, 할인전 승인금액 1만원까지 할인 적용<br />
+                              - 통합 월 3회까지 할인 적용<br />
+                              - 해당 서비스는 통합 할인한도 범위 내에서 제공됩니다.<br />
+                              - 신규발급 회원의 발급월 이용실적 30만원 이상 시 해당실적 기준으로 서비스가 적용됩니다.
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/신한카드4.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>TLX PASS 신한카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 결제일 할인<br />
+                              제공혜택 : 4,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 통합 월 1회 <br />
+                              - 영화 예매건에 한하여 할인 적용되며, 매점이용, 상품권 구매 등은 할인 제외<br />
+                              - 해당 영화관 사이트/APP 직접 접속이용 또는 현장 결제시에 한하여 할인 적용 <br />
+                                (타 예매사이트 이용시 적용불가)<br />
+                              - 신규 발급회원은 다음달 말(등록월+1개월)까지 월 1만원의 할인 금액 제공<br />
+                              - 신용카드 할인서비스는 고객님의 이용금액에 따라 제공이 되는 통합할인한도 내에서 제공되며, 전월 이용금액에 따라 제한될 수 있습니다. 통합할인한도<br />
+                              - 전월 이용금액 30만원 이상~60만원 미만: 1만원<br />
+                              - 전월 이용금액 60만원 이상~90만원 미만: 2만원<br />
+                              - 전월 이용금액 90만원 이상~120만원 미만: 3만원<br />
+                              - 전월 이용금액 120만원 이상 : 4만원<br />
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/신한카드5.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>TLX PASS 신한카드 체크</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 선할인, 청구할인<br />
+                              제공혜택 : 3,000원 즉시할인, 10,000원 청구할인<br />
+                              사용조건 : 현장, 온라인 결제<br />
+                              서비스 제공조건<br />
+                              - 건당 이용금액 10,000원 이상 시 월 1회 3,000원
+                              선할인 제공<br />
+                              &nbsp;&nbsp;* 선할인 미선택 시 할인혜택 제공
+                              불가<br />
+                              - 건당 이용금액 10,000원 이상 시 월 1회 10,000원
+                              청구할인 제공<br />
+                              &nbsp;&nbsp;* 13,000원 이상 결제 시 선할인 선택
+                              후 잔여금액 결제 시 청구할인과 중복적용 가능<br />
+                              - 전월 국내가맹점 이용금액 40만원 이상 시 제공
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/신한카드6.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>리디 신한카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 결제일 할인<br />
+                              제공혜택 : 4,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 통합 월 1회 할인 적용<br />
+                              - 예매 전 영화관 내 매점 이용시, 영화할인 서비스가 선 적용될 수 있으므로 유의하시기 바랍니다.<br />
+                              - 신규발급회원의 경우, 카드사용 등록월의 익월말(등록월+1개월)까지 만원의 통합할인한도가 적용됩니다.<br />
+                                (해당기간중 60만원 이상 이용시에는 다음달에 해당 구간에 상응하는 할인한도 적용)<br />
+                              - 신용카드 할인서비스는 고객님의 이용금액에 따라 제공이 되는 통합할인한도 내에서 제공되며, 전월 이용금액에 따라 제한될 수 있습니다.<br /><br />
+                              통합 할인 한도<br />
+                              - 전월 이용금액: 30만원 이상 ~ 60만원 미만: 10,000원<br />
+                              - 전월 이용금액: 60만원 이상 ~ 90만원 미만: 20,000원 <br />
+                              - 전월 이용금액: 90만원 이상 ~120만원 미만 :30,000원<br />
+                              - 전월 이용금액: 120만원 이상~40,000원
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/신한카드7.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>메가티즌 신한카드(20/30/Lady)</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              제공혜택 : 3,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 신용카드 (월1회/ 연12회)<br />
+                              - 체크카드 (월1회/ 연8회)<br />
+                              - 메가박스 멤버쉽포인트 10 % 적립<br />
+                              - 전월 실적 10만원 이상<br /><br />
+                              할인한도<br />
+                              - 3천원 할인(전월 이용실적 10~30만원 미만)<br />
+                              - 5천원 할인(전월 이용실적 30~50만원 미만)<br />
+                              - 7천원 할인(전월 이용실적 50~100만원미만)<br />
+                              - 1,4000원 할인(전월 이용실적 100만원 이상)
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/신한카드8.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>신한 베니건스카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              제공혜택 : 1,500원 할인<br />
+                              사용조건 : 현장결제<br />
+                              서비스 제공조건<br />
+                              - 월2회, 연12회<br />
+                              - 최근 3개월내 이용실적 30만원 이상시 할인
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="bc-card">
+                  <div>
+                    <div class="megabox-box">
+                      <h1>비씨카드</h1>
+                    </div>
+                    <ul>
+                      <li>
+                        <img src="image/card/BC카드1.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>우리카드 D4@카드의정석</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 5,500원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 통합 월 할인한도 5,500원 (연 12회)<br />
+                              - 건당 이용금액 9,900원 이상 시 제공<br />
+                              - 전월 국내가맹점 이용금액 30만원 이상 시 제공
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/BC카드2.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>[하나카드] 카카오 T 하나카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 5% 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 월 10,000원 한도<br />
+                              - 결제 건당 1만원 이상 이용 시 할인 제공<br />
+                              - 전월 실적 30만원 이상 시 제공
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/BC카드3.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>[BNK부산] 딩딩 신용카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 4,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 월 1회, 연 12회<br />
+                              - BC가맹점 업종 기준 '영화관' 업종 등록 가맹점 이용 시 적용<br />
+                              - 건당 이용금액 9,900원 이상 시 제공<br />
+                              - 전월 이용실적 30만원 이상 시 통합 할인 한도 내 제공
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/BC카드4.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>[BNK경남] 플러스알파카드(할인형)</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 2,000원 할인<br />
+                              사용조건 : 온라인예매<br />
+                              서비스 제공조건<br />
+                              - 일 1회, 월 1회, 연 12회 제공<br />
+                              - 전월 국내가맹점 이용금액 30만원 이상 시 제공
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/BC카드5.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>[NH농협] 국민행복카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 2,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 일 1회, 월 2회<br />
+                              - 전월 국내가맹점 이용금액 30만원 이상 시 제공
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/BC카드6.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>[IBK] 국민행복카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 2,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 일 1회, 월 2회<br />
+                              - 전월 국내가맹점 이용금액 30만원 이상 시 제공
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/BC카드7.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>[NH농협] DC 줌 체크카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 1,500원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 일 1회, 월 2회<br />
+                              - 결제금액 10,000원 이상 시 제공<br />
+                              - 전월 국내가맹점 이용금액 30만원 이상 시 제공<br />
+                              자세히 보기
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/BC카드8.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>[하나카드] 부자되세요 더 오일카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 5,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 월 1회<br />
+                              - 결제금액 10,000원 이상 시 제공<br />
+                              - 전월 국내가맹점 이용금액 30만원 이상 시 제공
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/BC카드9.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>[하나카드] KT Super DC</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 3,000원 할인<br />
+                              사용조건 : 현장 결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 월 1회<br />
+                              - 1만 2천원 이상 결제 시 3,000원 할인<br />
+                              - 전월 실적 30만원 이상 시 서비스 제공
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/BC카드10.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>[IBK] 일상의 기쁨카드(체크)</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 4,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 통합 월 1회, 연 12회, <br />
+                              - 1만원 이상 결제 시 제공<br />
+                              - 예매 대행 사이트를 통한 예매 시 할인 제외<br />
+                              - 전월이용 실적 30만원 이상인 경우 제공.<br />
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                    </ul>
+                  </div>
+                </div> <!--BC카드 end-->
+                <div id="kb-bard">
+                  <div>
+                    <div class="megabox-box">
+                      <h1>KB국민카드</h1>
+                    </div>
+                    <ul>
+                      <li>
+                        <img src="image/card/국민카드1..png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>KB 국민 IT PHONE(잇폰) 카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 3,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건- 건당 7천원 이상 영화티켓 구매시 할인 (월 2회/ 연12회)<br />
+                              - 상품권 구매, 매점 이용금액  할인 제외<br />
+                              - 전월 이용실적 10 만원 이상
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/국민카드2.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>KB 국민 IT PHONE(잇폰) 카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 2,000원 / 4,000원<br />
+                              사용조건 : 현장할인, 온라인<br />
+                              서비스 제공조건<br />
+                              -통합 월 2회 연 10회<br />
+                              -9,000원 이하 결제시 2,000원 할인<br />
+                              -9,000원 초과 결제시 4,000원 할인<br />
+                              -전월 실적 10만원 이상 시 할인<br />
+                              -최초 카드사용등록일로 부터 60일간 이용실적 상관없이 할인 적용<br />
+                              (이용실적에서 교통카드 이용대금은 제외)
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/국민카드3.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>KB 마이원 카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 4,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 통합 월 2회 연 8회<br />
+                              - 3개월 평균 월 실적 10만원 이상 시 할인
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/국민카드4.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>KB국민은행 Be*Twin 체크카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 환급할인<br />
+                              제공혜택 : 20% 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 이용금액 건당 1만원~2만원 까지 할인 적용(1회 최대 4,000원 할인)<br />
+                              - 전월 이용실적에 따라 월간 통합할인한도 차등 적용<br />
+                              - 전월 이용실적 20만원 이상~30만원 미만 최대 1만원<br />
+                              - 전월 이용실적 30만원 이상~ 최대 2만원<br />
+                              - 상품권 구매, 매점 이용금액 할인 제외
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/국민카드5.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>KB국민은행 티머니 체크카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 환급할인<br />
+                              제공혜택 : 20% 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 전월 이용실적에 따라 월간 통합할인한도 차등 적용<br />
+                              - 이용금액 건당 1만원~2만원 까지 할인 적용(1회 최대 4,000원 할인)<br />
+                              - 전월 이용실적 20만원 이상~30만원 미만 최대 1만원<br />
+                              - 전월 이용실적 30만원 이상~ 최대 2만원<br />
+                              - 상품권 구매, 매점 이용금액 할인 제외
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/국민카드6.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>Welcome 체크카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              *신규발급중단(2019.01.01)<br />
+                              할인방식 : 환급할인<br />
+                              제공혜택 : 4,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 이용금액 건당 1만원~2만원 까지 할인 적용(1회 최대 4,000원 할인)<br />
+                              - 전월 이용실적에 따라 월간 통합할인한도 차등 적용<br />
+                              - 전월 이용실적 20만원 이상~30만원 미만 최대 1만원<br />
+                              - 전월 이용실적 30만원 이상~ 최대 2만원<br />
+                              - 상품권 구매, 매점 이용금액 할인 제외
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/국민카드7.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>KB국민은행 티머니 체크카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 환급할인<br />
+                              제공혜택 : 4,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건<br />
+                              - 이용금액 건당 1만원~2만원 까지 할인 적용(1회 최대 4,000원 할인)<br />
+                              - 전월 이용실적에 따라 월간 통합할인한도 차등 적용<br />
+                              - 전월 이용실적 20만원 이상~30만원 미만 최대 1만원<br />
+                              - 전월 이용실적 30만원 이상~ 최대 2만원<br />
+                              - 상품권 구매, 매점 이용금액 할인 제외
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/국민카드8.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>Welcome 체크카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 4,000원 할인<br />
+                              사용조건 : 현장,온라인<br />
+                              서비스 제공조건<br />
+                              - 월 2회, 연8회 건당 7천원 이상 이용 시 제공<br />
+                              - 전월 이용실적 40만원 이상 시 전월 이용실적에 따라 월간 할인한도 제공
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/국민카드9.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>I-NEED 카드</b>
+                            <div class="btn">
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              제공혜택 : 1,500원 할인<br />
+                              사용조건 : 현장결제<br />
+                              서비스 제공조건<br />
+                              - 1일 1회 1,500원 할인(월 2회,년 12회)<br />
+                              - 3개월간 30만원 이상 이용 경우에 한함.
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/국민카드10.png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>Easy link 티타늄 카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 3,000원<br />
+                              사용조건 : 현장할인, 온라인<br />
+                              서비스 제공조건<br />
+                              - 10,000원 이상 결제 시 3,000원 할인<br />
+                              - 통합 월 1회<br />
+                              - 전월실적 50만원 이상 시 할인
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/국민카드1..png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>신한은행 레져 체크플러스카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 3,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건- 건당 7천원 이상 영화티켓 구매시 할인 (월 2회/ 연12회)<br />
+                              - 상품권 구매, 매점 이용금액  할인 제외<br />
+                              - 전월 이용실적 10 만원 이상
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/국민카드1..png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>신한은행 레져 체크플러스카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 3,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건- 건당 7천원 이상 영화티켓 구매시 할인 (월 2회/ 연12회)<br />
+                              - 상품권 구매, 매점 이용금액  할인 제외<br />
+                              - 전월 이용실적 10 만원 이상
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                      <li>
+                        <img src="image/card/국민카드1..png" alt="">
+                        <div class="p-box">
+                          <div class="top">
+                            <b>신한은행 레져 체크플러스카드</b>
+                            <div class="btn">
+                              <button class="btn1">인터넷할인</button>
+                              <button class="btn2">현장할인</button>
+                            </div>
+                          </div>
+                          <div class="txt">
+                            <p>
+                              할인방식 : 청구할인<br />
+                              제공혜택 : 3,000원 할인<br />
+                              사용조건 : 현장결제, 온라인<br />
+                              서비스 제공조건- 건당 7천원 이상 영화티켓 구매시 할인 (월 2회/ 연12회)<br />
+                              - 상품권 구매, 매점 이용금액  할인 제외<br />
+                              - 전월 이용실적 10 만원 이상
+                            </p>
+                            <button>자세히 보기</button>
+                          </div>  <!--txt-->
+                        </div>  <!--p-box"-->
+                      </li>
+                    </ul>
+                  </div>
+                </div>  <!--KB국민카드 end-->
+              </div>  <!--sub_tab_list-->
+            </div>
+          </div>
+
+          <!--통신사-->
+          <div id="news-agency">
+            <div class="news-agency-box">
+              <div class="notice">
+                <b>더욱 알뜰하게 메가박스를 즐기는 방법!</b>
+                <p>
+                  소지하고 계신 카드를 검색해 보세요. 할인 및 혜택정보를 빠르게
+                  확인할 수 있어요.
+                </p>
+              </div>
+              <h1>LG U+</h1>
+              <!--카드목록 안내 영역-->
+              <div class="carrier-card">
+                <div class="C-card1">
+                  <img src="image/card/통신사카드1.png" alt="" />
+                  <div class="C-detail">
+                    <div class="tit">
+                      <b>LG U+ 멤버십</b>
+                      <div class="C-btn">
+                        <button class="btn1">인터넷할인</button>
+                        <button class="btn2">현장할인</button>
+                      </div>
+                    </div>
+                    <div class="C-ex">
+                      <p>제공혜택</p>
+                      <div class="text-all">
+                        <div class="cc">
+                          <b>&nbsp;&nbsp;&nbsp;1) VIP콕 할인</b>
+                          <p>
+                            - VIP 무료 : 티켓 1매 무료 예매 (월 1회, 연 3회
+                            제한)<br />
+                            - VIP 1+1 : 2매 이상 예매 시 1매 무료, 1매 유료 (월
+                            1회, 연 9회 제한)<br />
+                            - VIP 특별관 6천원 할인 : 하기 특별관에 한하여 티켓
+                            1매 6천원 할인 (월 1회, 연 12회)
+                          </p>
+                          <p>
+                            * VIP 무료, 1+1 적용조건<br />
+                            &nbsp;&nbsp;&nbsp;ㄴ 일반관, 컴포트관, 일반석,
+                            스페셜석<br />
+                            * VIP 특별관 6천원 할인 적용조건<br />
+                            &nbsp;&nbsp;&nbsp;ㄴ 더부티크, 더부티크스위트, Dolby
+                            Atmos, Dolby Cinema, MX4D, 일반석, 스페셜석<br />
+                          </p>
+                          <p></p>
+                        </div>
+                        <div class="cc">
+                          <b>&nbsp;&nbsp;&nbsp;2) 상시 할인</b>
+                          <p>
+                            - VVIP/VIP : 티켓 1매당 4천원 할인 (동반 3인까지, 일
+                            1회 제한)<br />
+                            - 일반 : 티켓 1매당 2천원 할인 (동반 3인까지, 일 1회
+                            제한)
+                          </p>
+                          <p>
+                            사 용 처<br />
+                            1) VIP 콕 할인 : 메가박스 온라인<br />
+                            2) 상시 할인 : 메가박스 온/오프라인
+                          </p>
+                          <p>
+                            유의사항<br />
+                            1) VIP 콕 할인<br />
+                            - 월 1회에 한하여 VIP 무료/1+1/특별관 6천원 할인예매
+                            중 1개의 혜택만 적용 가능<br />
+                            - 2D 일반컨텐츠/성인/청소년/우대에 한하여 적용
+                            가능<br />
+                            - 당월에 다른 LGU+ VIP 콕 사용 시 적용 불가<br />
+                            2) 상시할인<br />
+                            - 조조/우대/경로/어린이/문화의날/특별콘텐츠
+                            이용불가<br />
+                            - 돌비시네마, 더부티크스위트, 더부티크 프라이빗 적용
+                            불가<br />
+                            &nbsp;<b>※ 타 제휴 및 할인 쿠폰 중복 적용 불가</b>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--C-detail-->
+                </div>
+                <!--C-card1-->
+                <h1>SKT</h1>
+                <div class="C-card1">
+                  <img src="image/card/통신사카드2.png" alt="" />
+                  <div class="C-detail">
+                    <div class="tit">
+                      <b>LG U+ 멤버십</b>
+                      <div class="C-btn">
+                        <button class="btn1">인터넷할인</button>
+                      </div>
+                    </div>
+                    <div class="C-ex">
+                      <p>제공혜택</p>
+                      <div class="text-all">
+                        <div class="cc1">
+                          <p>
+                            상시할인: 영화 1천원 ~ 4천원 할인(일 1회,
+                            동반4인)<br />
+                            사 용 처: T멤버십 온라인(홈페이지/App)<br />
+                            유의사항: 조조/우대/경로/어린이/문화의날/특별콘텐츠
+                            이용불가<br />
+                          </p>
+                          <p>
+                            돌비시네마, 돌비애트모스, 더부티크스위트, 더부티크
+                            프라이빗 적용 불가<br />
+                            1만 1천원 이상 티켓에 한하여 적용 가능<br />
+                            <b>타 제휴 및 할인 쿠폰 중복 적용 불가</b>
+                          </p>
+                          <button>자세히보기</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!--text-all-->
+                  </div>
+                  <!--C-detail-->
+                </div>
+                <h1>KT</h1>
+                <div class="C-card1">
+                  <img src="image/card/통신사카드3.png" alt="" />
+                  <div class="C-detail">
+                    <div class="tit">
+                      <b>LG U+ 멤버십</b>
+                      <div class="C-btn">
+                        <button class="btn1">인터넷할인</button>
+                      </div>
+                    </div>
+                    <div class="C-ex">
+                      <p>제공혜택</p>
+                      <div class="text-all">
+                        <div class="cc1">
+                          <p>
+                            상시할인: 영화 1.1만원 관람(일반관, 컴포트관,
+                            일반석, 스페셜석)<br />
+                            사 용 처: KT멤버십 온라인(홈페이지/App)<br />
+                            유의사항: 조조/우대/경로/어린이/문화의날/특별콘텐츠
+                            이용불가<br />
+                          </p>
+                          <p>
+                            돌비시네마, 돌비애트모스, 더부티크스위트, 더부티크
+                            프라이빗 적용 불가<br />
+                            1만 1천원 이상 티켓에 한하여 적용 가능<br />
+                            <b>타 제휴 및 할인 쿠폰 중복 적용 불가</b>
+                          </p>
+                          <button>자세히보기</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!--text-all-->
+                  </div>
+                  <!--C-detail-->
+                </div>
+              </div>
+              <!--carrier-card-->
+            </div>
+          </div>
+          <!--포인트/기타제휴-->
+          <div id="points-etc">
+            <div class="points-etc-box">
+              <div class="notice">
+                <b>더욱 알뜰하게 메가박스를 즐기는 방법!</b>
+                <p>
+                  소지하고 계신 카드를 검색해 보세요. 할인 및 혜택정보를 빠르게
+                  확인할 수 있어요.
+                </p>
+              </div> <!--notice-->
+              
+            
+              <div class="point-box">
+                <h1>기타</h1>
+                <ul>
+                  <li>
+                    <img src="image/card/포인트카드1.png" alt="" />
+                    <div class="p-box">
+                      <div class="top">
+                        <b>블루멤버스 포인트</b>
+                        <div class="btn">
+                          <button class="btn1">인터넷할인</button>
+                          <button class="btn2">현장할인</button>
+                        </div>
+                      </div>
+                      <div class="txt">
+                        <p>
+                          할인 유형 : 포인트 차감<br />
+                          제공 혜택 : 티켓 1매당 4천원 할인(1일 최대 8매)<br />
+                          사 용 처 : 온/오프라인<br />
+                          유의 사항 : 우대/문화의날 이용불가
+                        </p>
+                        <p class="t-right">
+                          돌비시네마 할인 불가<br />
+                          타사 제휴포인트 중복할인(최대 2개까지) 적용가능<br />
+                          <b>(단, 현대M포인트, 문화누리카드 중복적용 불가)</b>
+                        </p>
+                      </div>
+                      <!--txt-->
+                    </div>
+                    <!--p-box"-->
+                  </li>
+                  <li>
+                    <img src="image/card/포인트카드2.png" alt="" />
+                    <div class="p-box">
+                      <div class="top">
+                        <b>기아멤버스</b>
+                        <div class="btn">
+                          <button class="btn1">인터넷할인</button>
+                          <button class="btn2">현장할인</button>
+                        </div>
+                      </div>
+                      <div class="txt">
+                        <p>
+                          할인 유형 : 포인트 차감<br />
+                          제공 혜택 : 결제금액의 일부 혹은 전체 포인트 차감사용
+                          가능<br />
+                          사 용 처 : 온/오프라인<br />
+                          유의 사항 : 잔여 1,000 포인트 이상 보유 시, 1,000
+                          포인트 단위로 사용 가능
+                        </p>
+                        <p class="t-right">
+                          * 포인트 차감금액 메가박스 멤버십 적립 불가
+                        </p>
+                      </div>
+                      <!--txt-->
+                    </div>
+                    <!--p-box"-->
+                  </li>
+                  <li>
+                    <img src="image/card/포인트카드3.png" alt="" />
+                    <div class="p-box">
+                      <div class="top">
+                        <b>OK캐쉬백(사용)</b>
+                        <div class="btn">
+                          <button class="btn1">인터넷할인</button>
+                          <button class="btn2">현장할인</button>
+                        </div>
+                      </div>
+                      <div class="txt">
+                        <p>
+                          할인 유형 : 포인트 차감<br />
+                          제공 혜택 : 결제금액의 일부 혹은 전체 포인트 차감사용
+                          가능<br />
+                          사 용 처 : 온/오프라인<br />
+                          유의 사항 : 잔여 1천 포인트 이상 보유 시, 현장 500점/
+                          온라인 100점 단위로 사용 가능
+                        </p>
+                        <p class="t-right">
+                          사용 시 현장과 온라인 비밀번호 상이함으로 오케이캐쉬백
+                          홈페이지 참조<br />
+                          * 포인트 차감금액 메가박스 멤버십 적립 불가
+                        </p>
+                      </div>
+                      <!--txt-->
+                    </div>
+                    <!--p-box"-->
+                  </li>
+                  <li>
+                    <img src="image/card/포인트카드4.png" alt="" />
+                    <div class="p-box">
+                      <div class="top">
+                        <b>GS & Point 카드</b>
+                        <div class="btn">
+                          <button class="btn1">인터넷할인</button>
+                          <button class="btn2">현장할인</button>
+                        </div>
+                      </div>
+                      <div class="txt">
+                        <p>
+                          할인 유형 : 포인트 차감<br />
+                          제공 혜택 : 티켓 1매당 2천원 할인(1일 최대 10매)<br />
+                          사 용 처 : 온/오프라인<br />
+                          유의 사항 : 우대/문화의날 이용불가
+                        </p>
+                        <p class="t-right">
+                          돌비시네마 할인 불가<br />
+                          타사 제휴포인트 중복할인(최대 2개까지) 적용가능<br />
+                          <b>(단, 현대M포인트, 문화누리카드 중복적용 불가)</b>
+                        </p>
+                      </div>
+                      <!--txt-->
+                    </div>
+                    <!--p-box"-->
+                  </li>
+                  <li>
+                    <img src="image/card/포인트카드5.jpg" alt="" />
+                    <div class="p-box">
+                      <div class="top">
+                        <b>해피포인트 카드</b>
+                        <div class="btn">
+                          <button class="btn1">인터넷할인</button>
+                          <button class="btn2">현장할인</button>
+                        </div>
+                      </div>
+                      <div class="txt">
+                        <p>
+                          할인 유형 : 포인트 차감<br />
+                          제공 혜택 : 티켓 1매당 2천p, 5천p 중 선택하여 할인<br />
+                          사 용 처 : 온/오프라인<br />
+                          유의 사항 : 우대/문화의날 이용불가
+                        </p>
+                        <p class="t-right">
+                          돌비시네마 할인 불가<br />
+                          타사 제휴포인트 중복할인(최대 2개까지) 적용가능<br />
+                          <b>(단, 현대M포인트, 문화누리카드 중복적용 불가)</b>
+                        </p>
+                      </div>
+                      <!--txt-->
+                    </div>
+                    <!--p-box"-->
+                  </li>
+                  <li>
+                    <img src="image/card/포인트카드6.png" alt="" />
+                    <div class="p-box">
+                      <div class="top">
+                        <b>하나포인트</b>
+                        <div class="btn">
+                          <button class="btn1">인터넷할인</button>
+                          <button class="btn2">현장할인</button>
+                        </div>
+                      </div>
+                      <div class="txt">
+                        <p>
+                          할인 유형 : 포인트 차감<br />
+                          제공 혜택 : 결제금액의 일부 혹은 전체 포인트 차감사용
+                          가능<br />
+                          사 용 처 : 온/오프라인<br />
+                        </p>
+                        <p class="t-right">
+                          하나포인트 사용 대상카드에 한하여 사용 가능(BC제외)<br />
+                          보유 포인트 1P 이상 시 사용 가능
+                        </p>
+                      </div>
+                      <!--txt-->
+                    </div>
+                    <!--p-box"-->
+                  </li>
+                  <li>
+                    <img src="image/card/포인트카드7.png" alt="" />
+                    <div class="p-box">
+                      <div class="top">
+                        <b>현대카드 M포인트</b>
+                        <div class="btn">
+                          <button class="btn1">인터넷할인</button>
+                          <button class="btn2">현장할인</button>
+                        </div>
+                      </div>
+                      <div class="txt">
+                        <p>
+                          할인 유형 : 포인트 차감<br />
+                          제공 혜택 : 상시 장당 6,000P 사용<br />
+                          사 용 처 : 온/오프라인<br />
+                          유의 사항 : 우대/문화의날 이용불가
+                        </p>
+                        <p class="t-right">
+                          일부 특별관(돌비시네마, 더부티크 프라이빗) 할인
+                          불가<br />
+                          <b>중복할인 적용 불가</b><br />
+                          포인트 차감한 현대카드로 결제 필수
+                        </p>
+                      </div>
+                      <!--txt-->
+                    </div>
+                    <!--p-box"-->
+                  </li>
+                  <li>
+                    <!--버튼요소가 있는 카드요소-->
+                    <img src="image/card/포인트카드8.jpg" alt="" />
+                    <div class="p-box">
+                      <div class="top">
+                        <b>문화누리카드</b>
+                        <div class="btn">
+                          <button class="btn1">인터넷할인</button>
+                          <button class="btn2">현장할인</button>
+                        </div>
+                      </div>
+                      <div class="txt">
+                        <p>
+                          할인방식 : 현장할인(즉시할인)<br />
+                          제공혜택 : 2,500원 할인(1일 2매)<br />
+                          사용조건 : 현장결제, 온라인<br />
+                          서비스 제공조건<br />
+                          - 성인/청소년 정가에서만 할인 적용 가능<br />
+                          (조조/심야/우대/마티네/어린이 등 기타 중복할인
+                          불가)<br />
+                          - 문화의 날 적용 불가<br />
+                          - 2D/ 3D 일반, 컴포트관에서만 할인 가능<br />
+                          (돌비시네마, 더 부티크, 특별관 및 특별콘텐트, 기타
+                          콘텐트 할인 불가)<br />
+                          - 문화누리카드 할인 이용 시 문화누리카드로만 결제
+                          가능하며, 잔여 금액 부족 시 결제 불가<br />
+                          - 할인제외지점: 센트럴, 삼천포, 속초, 아트나인,
+                          제주서귀포
+                        </p>
+                        <button>자세히 보기</button>
+                      </div>
+                      <!--txt-->
+                    </div>
+                    <!--p-box"-->
+                  </li>
+                  <li>
+                    <!--버튼요소가 있는 카드요소-->
+                    <img src="image/card/포인트카드9.png" alt="" />
+                    <div class="p-box">
+                      <div class="top">
+                        <b>L.POITN(사용)</b>
+                        <div class="btn">
+                          <button class="btn1">인터넷할인</button>
+                          <button class="btn2">현장할인</button>
+                        </div>
+                      </div>
+                      <div class="txt">
+                        <p>
+                          할인 유형 : 포인트 차감<br />
+                          제공 혜택 : 결제금액의 일부 혹은 전체 포인트 차감사용
+                          가능<br />
+                          사 용 처 : 온/오프라인<br />
+                          유의 사항 : 100 포인트 이상 보유 시 사용 가능
+                          (사용제한 없음)<br />
+                        </p>
+                        <p class="t-right">
+                          * 포인트 차감금액 메가박스 멤버십 및 L.POINT 적립 불가
+                        </p>
+                        <button>자세히 보기</button>
+                      </div>
+                      <!--txt-->
+                    </div>
+                    <!--p-box"-->
+                  </li>
+                  <li>
+                    <!--버튼요소가 있는 카드요소-->
+                    <img src="image/card/포인트카드10.png" alt="" />
+                    <div class="p-box">
+                      <div class="top">
+                        <b>L.POINT(적립)</b>
+                        <div class="btn">
+                          <button class="btn1">인터넷할인</button>
+                          <button class="btn2">현장할인</button>
+                        </div>
+                      </div>
+                      <div class="txt">
+                        <p>
+                          혜택 유형 : L.POINT 적립<br />
+                          적립 기준 : 결제 금액의 2% L포인트 적립<br />
+                          유의 사항 : 위탁예매처(통신사, BC페이북, 현대카드M몰
+                          등)를 통한 예매 건은 포인트 적립 불가
+                        </p>
+                        <p class="t-right">
+                          온라인 예매 건 현장 추후 적립 불가<br />
+                          (온라인 예매건은 온라인에서만, 현장 예매 건은
+                          현장에서만 적립 가능)<br />
+                          메가박스 포인트 차감 예매/관람권/온라인 스토어/모바일
+                          쿠폰 사용 시 적립 불가<br />
+                          매표 결제 금액에 한해 적립 가능 (매점 결제 금액은 적립
+                          불가)<br />
+                          <b>
+                            영화 티켓 내 관람일자 기준 +3일 05시 59분까지만 추후
+                            적립 가능<br />
+                            (예시 - 2024년 8월 25일 영화관람 시 8월 28일 05시
+                            59분까지 적립가능)<br />
+                            L.POINT 사용 금액 제외 후 적립<br />
+                            OK캐쉬백 적립과 중복 적용 불가
+                          </b>
+                        </p>
+                        <button>자세히 보기</button>
+                      </div>
+                      <!--txt-->
+                    </div>
+                    <!--p-box"-->
+                  </li>
+                </ul>
+              </div>
+              <!--point-box-->
+            </div>
+          </div>
+          <!--상품권/관람권-->
+          <div id="gift-certificate">
+            <div class="gift-box">
+              <div class="notice">
+                <b>더욱 알뜰하게 메가박스를 즐기는 방법!</b>
+                <p>
+                  소지하고 계신 카드를 검색해 보세요. 할인 및 혜택정보를 빠르게
+                  확인할 수 있어요.
+                </p>
+              </div>
+              <h1>문화상품권</h1>
+              <div class="G-box">
+                <ul>
+                  <li>
+                    <img src="image/card/문화상품권1.png" alt="" />
+                    <div class="txt">
+                      <b>문화상품권 (5천원 / 1만원 / 5만원)</b>
+                      <p>상품 가능 지점 : 메가박스 전국 지점(일부제외)</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="image/card/문화상품권2.png" alt="" />
+                    <div class="txt">
+                      <b>문화상품권 (5천원 / 1만원 / 5만원)</b>
+                      <p>상품 가능 지점 : 메가박스 전국 지점(일부제외)</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="ticket">
+                  <b>관람권</b>
+                  <p>
+                    전국 메가박스 일반 상영관에서 상영하는 영화 예매 시 사용
+                    가능한 관람권입니다.
+                  </p>
+                  <p class="col">
+                    ※ 특별콘텐트, THE BOUTIQUE SUITE, 아트나인 등 에서 상영하는
+                    영화 예매 시에는 사용 할 수 없습니다.<br />
+                    ※ 일부 상영관 이용 시, 추가 차액이 발생 할 수 있습니다.<br />
+                    ※ 1Set 구성: MEGABOX영화관람권 10매+영화 초대권 1매+매점
+                    1,000원 할인권 5매=130,000원
+                  </p>
+                </div>
+              </div>
+              <h3>영화관람권</h3>
+              <div class="movie-ticket">
+                <img src="image/card/영화관람권.png" alt="" />
+                <ul>
+                  <li><b>메가박스 영화관람권</b></li>
+                  <li>
+                    영화관람권은 메가박스에서 상영하는 영화 예매 시 메가박스
+                    일반영화관에서 사용 가능
+                  </li>
+                  <li>
+                    특별콘텐트 예매 시에는 사용불가 (상영관에 따라 추가
+                    차액이(일반요금기준)발생 할 수 있음)
+                  </li>
+                  <li>
+                    현장 매표소에서 영화 입장권으로 교환 가능하며, 홈페이지,
+                    모바일 앱에서 예매 가능.<br />
+                    (홈페이지 및 모바일 예매 시 ‘결제선택’단계에서 ‘메가박스
+                    영화관람권’을 선택)
+                  </li>
+                  <li>
+                    지류(종이)관람권 뒷면의 스크래치가 개봉된 경우 현장
+                    매표소에서 사용할 수 없으며 홈페이지 또는 모바일에서만 사용
+                    가능
+                  </li>
+                  <li>
+                    영화관람 시 메가박스 규정에 의해 일정의 멤버십 포인트 적립
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--gift-box-->
+        </div>
+      </div>
+      <!--tab_list-->
+    </main>
+
+    <!--footer-->
+    <footer>
+      <div class="bg-color4"></div>
+      <div class="container">
+        <div class="f-box">
+          <div class="content">
+            <ul>
+              <li>회사소개</li>
+              <li>인재채용</li>
+              <li>사회공헌</li>
+              <li>제휴/광고/부대사업문의</li>
+              <li>이용약관</li>
+              <li>위치기반서비스 이용약관</li>
+              <li><b>개인정보처리방침</b></li>
+              <li>윤리경영</li>
+            </ul>
+            <p><i class="fa-solid fa-magnifying-glass"></i> 극장찾기</p>
+          </div>
+          <div class="f-menu">
+            <div class="logo-img"></div>
+            <div class="txt">
+              <p>
+                서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 메가박스 스퀘어)
+                ARS 1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr
+                대표자명 홍정인 · 개인정보보호책임자 강병철 · 사업자등록번호
+                211-86-59478 · 통신판매업신고번호 2023-서울성동-0177 2024 LOGO
+                &copy; copyright all right reserved.
+              </p>
+            </div>
+            <div class="sns">
+              <a href="https://www.youtube.com/"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a href="https://www.instagram.com/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://www.facebook.com/"
+                ><i class="fa-brands fa-square-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--container-->
+    </footer>
+  </body>
+</html>

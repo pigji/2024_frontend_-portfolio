@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화 사이트 - boon(혜택)</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/boon.css" />
+    <!--폰트어썸 내 script 코드-->
+    <script src="https://kit.fontawesome.com/3223480a48.js"crossorigin="anonymous"></script>
+    <!--js-->
+    <script src="js/isotope.js"></script>
+    <script src="js/boon.js" defer></script>
+  </head>
+  <body>
+    <!--상단메뉴 부분-->
+    <header>
+      <div class="bg-color">
+        <div class="container">
+          <div class="list">
+            <ul>
+              <li><a href="movie.html">영화</a></li>
+              <li><a href="#">예매</a></li>
+              <li><a href="theater.html">극장</a></li>
+            </ul>
+            <a href="index.html" class="logo"></a>
+            <ul>
+              <li><a href="event.html">이벤트</a></li>
+              <li><a href="store.html">스토어</a></li>
+              <li><a href="boon.html">혜택</a></li>
+            </ul>
+          </div> <!--list-->
+        </div> <!--container-->
+      </div> <!--bg-color-->
+    </header>
+
+    <!--main : 멤버십&VIP tap메뉴-->
+    <main>
+      <div class="container">
+        <div class="tab">
+          <h1>메가박스 멤버십</h1>
+          <div class="tab_menu">
+            <button class="on">멤버십 안내</button>
+            <button>VIP LOUNGE</button>
+          </div><!--tab_menu-->
+          <div class="tab_list">
+            <div id="membership" class="on">
+              <h1>
+                MEGABOX<br>
+                <b>MEMBERSHIP</b>
+              </h1>
+              <p>메가박스 멤버십 회원에게만 제공되는 혜택</p>
+              <img src="image/boon/멤버십이미지.png" alt="" />
+              
+              <!--멤버십혜택 안내-->
+              <div class="guide">
+                <h2>메가박스 멤버십 혜택</h2>
+                <div class="member-box">
+                  <div class="box">
+                    <div class="icon">
+                      <i class="fab fa-pinterest"></i>
+                    </div>
+                    <div class="txt">
+                      <h3>포인트 적립</h3>
+                      <p>티켓, 매점 이용 시 등급에 따라<br>5 ~ 10% 포인트 적립!</p>
+                      <button type="button">자세히보기</button>
+                    </div>
+                  </div> <!--box-->
+                  <div class="box">
+                    <div class="icon">
+                      <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="txt">
+                      <h3>포인트 선물</h3>
+                      <p>
+                        사랑하는 가족, 친구에게 포인트를 선물하세요.<br>
+                        포인트 선물은 신포인트만 가능해요.<br>
+                        * 상세 내용은 모바일앱을 확인해 주세요!
+                      </p>
+                      <button type="button">자세히보기</button>
+                    </div>
+                  </div> <!--box-->
+                  <div class="box">
+                    <div class="icon">
+                      <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="txt">
+                      <h3>포인트 사용</h3>
+                      <p>
+                        원하는 영화도 보고<br>
+                        팝콘도 구매할 수 있는 포인트!
+                      </p>
+                      <button type="button">자세히보기</button>
+                    </div>
+                  </div> <!--box-->
+                  <div class="box">
+                    <div class="icon">
+                      <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <div class="txt">
+                      <h3>생일 축하쿠폰</h3>
+                      <p>
+                        회원이라면 누구나<br>
+                         생일 축하 쿠폰을 드려요.
+                      </p>
+                      <button type="button">자세히보기</button>
+                    </div>
+                  </div> <!--box-->
+                  <div class="box">
+                    <div class="icon">
+                      <i class="fas fa-film"></i>
+                    </div>
+                    <div class="txt">
+                      <h3>VIP LOUNGE</h3>
+                      <p>
+                        VIP 회원을 위한<br>
+                        더 특별한 추가 혜택
+                      </p>
+                      <button type="button">VIP LOUNGE 안내</button>
+                    </div>
+                  </div> <!--box-->
+                  <div class="box">
+                    <div class="icon">
+                      <i class="fab fa-stripe-s"></i>
+                    </div>
+                    <div class="txt">
+                      <h3>스페셜 멤버십</h3>
+                      <p>
+                        멤버십 혜택에 추가로<br>
+                         스페셜 멤버십 혜택까지!
+                      </p>
+                      <button type="button">스페셜멤버십 안내</button>
+                    </div>
+                  </div> <!--box-->
+                </div> <!--member-box-->
+              </div> <!--guide-->
+
+              <!--포인트사용 안내-->
+              <div class="point-use">
+                <h2>포인트 사용</h2>
+                <table>
+                  <tr>
+                    <th>회원상품</th>
+                    <th>구분</th>
+                    <th>포인트 사용 기준</th>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">영화</td>
+                    <td>사용 가능 요일</td>
+                    <td>월 ~ 일 (요일 무관)</td>
+                  </tr>
+                  <tr>
+                    <td class="t-box">차감 포인트</td>
+                    <td>티켓 정가 100% 필요</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">매점</td>
+                    <td>사용 가능 상품</td>
+                    <td>매점 판매 상품 (일부 상품 제외)</td>
+                  </tr>
+                  <tr>
+                    <td class="t-box">차감 포인트</td>
+                    <td>
+                      보유 푄트 내, 최소 1,000포인트부터 10포인트 단위 사용 가능<br>
+                      ※ 현장 직원 결제 시 500포인트 단위 사용 가능
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>포토 카드</td>
+                    <td class="t-box">차감 포인트</td>
+                    <td>장당 1,000 포인트</td>
+                  </tr>
+                  <tr>
+                    <td>온라인 스토어</td>
+                    <td>차감 포인트</td>
+                    <td>상품별 차감 기준 상이 / 일부 상품 제외</td>
+                  </tr>
+                </table>
+              </div> <!--point-use : 포인트사용 안내-->
+
+              <!--포인트 사용 안내 글-->
+              <div class="point-txt">
+                <div class="box">
+                  <h3>생일 축하 쿠폰</h3>
+                  <p>
+                    - 생일 쿠폰은 메가박스 회원에게만 제공됩니다.
+                  </p>
+                  <p>
+                    - 생일 쿠폰은 1년에 1회 지급되며, 한 번 발급되면 추가 발급되지 않습니다.
+                  </p>
+                  <p>
+                    - 생일 쿠폰은 회원정보에 등록된 생일을 기준으로 발급됩니다.<br>
+                    ※생일 2주전 쿠폰이 발행되며, 유효기간은 발행일로부터 4주입니다. (예 : 3월 16일 생일인 경우 3월 2일 발급, 3월 30일까지 사용 가능)
+                  </p>
+                  <p>
+                    - 발행된 쿠폰은 로그인 후 ‘나의 메가박스 > 쿠폰’에서 확인 가능합니다.<br>
+                    ※쿠폰 발급일 기준, 정상 회원에게만 제공됩니다. (쿠폰 발급일 이후 가입, 휴면 회원 상태 고객 등 제외)
+                  </p>
+                  <p>
+                    - 쿠폰 내용, 지급 일정, 사용 방법 등은 내부 사정에 따라 변경될 수 있습니다.
+                  </p>
+                </div> <!--box-->
+                <div class="box">
+                  <h3>멤버십 카드</h3>
+                  <p>
+                    - 극장 이용 시 멤버십 카드를 꼭 제시해주세요!
+                  </p>
+                  <p>
+                    - 메가박스 회원가입 시 모바일 카드가 자동 발급됩니다.
+                  </p>
+                  <p>
+                    - 플라스틱 카드 수령을 원하시는 분은 메가박스 현장 매표소에서 받으실 수 있습니다.
+                  </p>
+                  <p>
+                    - 플라스틱 카드를 수령하신 경우 홈페이지 ‘나의 메가박스 > 멤버십 포인트 > 멤버십 카드관리’에서 등록 후 이용하실 수 있습니다.
+                  </p>
+                </div> <!--box-->
+                <div class="box">
+                  <h3>유효기간 및 소멸</h3>
+                  <span>포인트 유효기간</span>
+                  <p>
+                    - 기본 적립 포인트 : 적립일로부터 24개월이 지난 해당월 말일 (티켓 및 매점 유료 구매 시)
+                  </p>
+                  <p>
+                    - 선물 받은 포인트 : 선물 받은 날로부터 3개월이 지난 해당월 말일
+                  </p>
+                  <p>
+                    - 이벤트 적립 포인트 : 이벤트 마다 유효기간이 상이(개별 확인 필요)
+                  </p>
+                  <span>포인트 소멸</span>
+                  <p>
+                    - 유효기간이 경과된 포인트는 매월 말일 영업 종료 후 포인트가 자동 소멸되며 포인트 사용 취소시 복구되지 않습니다
+                  </p>
+                  <p>
+                    - 소멸 기준은 잔여 가용 포인트 중 유효기간이 가장 짧은 포인트부터 소멸되며, 소멸된 포인트는 복구되지 않습니다.
+                  </p>
+                  <p>
+                    - 보유 포인트의 소멸 예정일이 도래할 경우, 포인트 소멸과 관련된 내용을 최소 15일 전에 문자 또는 이메일 등으로 고지합니다.
+                  </p>
+                  <p>
+                    - 또한, 홈페이지 및 모바일 웹/앱 로그인 시 소멸 예정 포인트를 확인하실 수 있습니다.
+                  </p>
+                </div> <!--box-->
+              </div> <!--point-txt-->
+            </div> <!--membership-->
+
+            <!--vip영역 내용-->
+            <div id="vip">
+              <h1>MEGABOX <b>VIP</b></h1>
+              <p>메가박스의 더 많은 혜택을 누릴 수 있는 방법! 로그인 후 메가박스 등급을 확인하세요.</p>
+
+              <!--버튼을 클릭하면 pooput함수가 호출-->
+              <button type="button" onclick="popup()">로그인</button>
+              <div class="login">
+                <div class="content">
+                  <!--클로즈 버튼을 클릭하면 pClose함수가 실행-->
+                  <div class="close" onclick="pClose(event)">
+                    <a href="#"><i class="fas fa-times"></i></a>
+                  </div>
+                  <div class="form">
+                    <form>
+                      <p>
+                        <input type="text" id="id" name="id" placeholder="아이디">
+                      </p>
+                      <p>
+                        <input type="text" id="pw" name="pw" placeholder="비밀번호">
+                      </p>
+                      <p class="save">
+                        <input type="checkbox">아이디 저장
+                        <button type="button">휴대폰 간편로그인</button>
+                      </p>
+                      <button type="submit" class="login-btn">로그인</button>
+                      <div class="find">
+                        <div class="btn">
+                          <button type="button">ID/PW 찾기</button>
+                          <button type="button">회원가입</button>
+                          <button type="button">비회원 예매확인</button>
+                        </div>
+                        <div class="sns-icon">
+                          <img class="icon1" src="image/boon/ico-kakao.png" alt="">
+                          <img class="icon1" src="image/boon/ico-naver.png" alt="">
+                          <img class="icon1" src="image/boon/ico-payco.png" alt="">
+                        </div>
+                    </form>
+                    </div>
+                    <!--이미지-->
+                    <div class="bg-img">
+                      <img src="image/boon/고래와나-포스터.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!--VIP 슬라이드 배너 이벤트-->
+              <div id="vip-banner">
+                <b>VIP 회원님을 위한 특별한 이벤트!</b>
+                <div id="frame">
+                  <ul id="banner">
+                    <li>
+                      <a href="#"><img src="image/boon/vip슬라이드이미지1.png" alt=""></a>
+                      <div class="text">
+                        <p>메가박스 오리지널 티켓 스페셜[엘리자벳: 더 뮤지컬 라이프...]</p>
+                        <p>2024.10.16 ~ 2024.11.15</p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#"><img src="image/boon/vip슬라이드이미지2.jpg" alt=""></a>
+                      <div class="text">
+                        <p>언제 어디서든 바삭하게!! 메가박스 바삽팝콘 런칭</p>
+                        <p>2024.10.08 ~ 2024.10.31</p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#"><img src="image/boon/vip슬라이드이미지3.png" alt=""></a>
+                      <div class="text">
+                        <p>메가박스 오리지널 티켓 Re.28[아이언맨]</p>
+                        <p>2024.10.09~2024.11.09</p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#"><img src="image/boon/vip슬라이드이미지4.jpg" alt=""></a>
+                      <div class="text">
+                        <p>메가박스 오리지널 티켓 No.123[조커: 폴리 아 되]</p>
+                        <p>2024.10.04 ~ 2024.10.31</p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#"><img src="image/boon/vip슬라이드이미지5.jpg" alt=""></a>
+                      <div class="text">
+                        <p>메가박스 오리지널 티켓 No,122[대도시의 사랑법]</p>
+                        <p>2024.10.01 ~ 2024.11.01</p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#"><img src="image/boon/vip슬라이드이미지6.jpg" alt=""></a>
+                      <div class="text">
+                        <p>달콤하고 부드러운 해태 오사쯔맛 콤보 런칭</p>
+                        <p>2024.09.24 ~ 2024.10.31</p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#"><img src="image/boon/vip슬라이드이미지7.jpg" alt=""></a>
+                      <div class="text">
+                        <p>재개봉 3주차 주말 현장 이벤트</p>
+                        <p>2024.10.12 ~ 2024.10.25</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div> <!--frame-->
+                <p>
+                  <a class="prev">&#10094;</a> <!--이전버튼-->
+                  <a class="next">&#10095;</a>  <!--다음버튼-->
+                </p>
+              </div> <!--vip-banner-->
+
+              <!--VIP기준 선정 텍스트-->
+              <div class="vip-selected">
+                <h3>VIP 선정 및 유지 기준</h3>
+                <div class="vip-box">
+                  <div class="standard">
+                    <p>선정기준</p>
+                    <p>유지기준</p>
+                    <p>쿠폰북 혜택</p>
+                  </div>
+                  <div class="v-table">
+                    <div class="nav">
+                      <div class="img">
+                        <!--이미지 3개-->
+                        <img src="image/boon/MVIP이미지.png" alt="">
+                        <img src="image/boon/VVIP이미지.png" alt="">
+                        <img src="image/boon/VIP이미지.png" alt="">
+                      </div>
+                      <div class="text-box">
+                        <!--선정기준 : 텍스트 -->
+                        <div>
+                          <p>
+                            VVIP 3년 연속 유지 회원 중 자격기간 내<br>
+                            18,000 포인트 이상 적립 시<br>
+                            4년차에 승급
+                          </p>
+                        </div>
+                        <div>
+                          <p>
+                            VIP 회원 중, 자격기간 내<br>
+                            18,000 포인트 이상 적립 시<br>
+                            익월 승급
+                          </p>
+                        </div>
+                        <div>
+                          <p>
+                            Friends 회원 중, 자격기간 내<br>
+                            12,000 포인트 이상 적립 시<br>
+                            익월 승급
+                          </p>
+                        </div>
+                      </div> <!--text-box-->
+                      <div class="text-box">
+                        <!--유지기준 : 텍스트 -->
+                        <div>
+                          <p>
+                            MVIP 회원 중 자격기간 내<br>
+                            24,000 포인트 이상 적립
+                          </p>
+                        </div>
+                        <div>
+                          <p>
+                            VVIP 1, 2년차 회원 중 자격기간 내<br>
+                            18,000 포인트 이상 적립
+                          </p>
+                        </div>
+                        <div>
+                          <p>
+                            -
+                          </p>
+                        </div>
+                      </div> <!--text-box-->
+                      <div class="couponBook">
+                        <!--쿠폰북 요소-->
+                        <div class="box">
+                          <!--3개씩 쿠폰 정렬-->
+                          <ul class="item">
+                            <li><span>14</span>매</li>
+                            <li>영화관람권</li>
+                          </ul>
+                          <ul class="item">
+                            <li><span>100</span>머니</li>
+                            <li>DIY 쿠폰</li>
+                          </ul>
+                          <ul class="item">
+                            <li><span>13</span>매</li>
+                            <li>매점할인권</li>
+                          </ul>
+                        </div>
+                        <!--쿠폰북 요소-->
+                        <div class="box">
+                          <!--3개씩 쿠폰 정렬-->
+                          <ul class="item">
+                            <li><span>14</span>매</li>
+                            <li>영화관람권</li>
+                          </ul>
+                          <ul class="item">
+                            <li><span>100</span>머니</li>
+                            <li>DIY 쿠폰</li>
+                          </ul>
+                          <ul class="item">
+                            <li><span>13</span>매</li>
+                            <li>매점할인권</li>
+                          </ul>
+                        </div>
+                        <!--쿠폰북 요소-->
+                        <div class="box">
+                          <!--3개씩 쿠폰 정렬-->
+                          <ul class="item">
+                            <li><span>14</span>매</li>
+                            <li>영화관람권</li>
+                          </ul>
+                          <ul class="item">
+                            <li><span>100</span>머니</li>
+                            <li>DIY 쿠폰</li>
+                          </ul>
+                          <ul class="item">
+                            <li><span>13</span>매</li>
+                            <li>매점할인권</li>
+                          </ul>
+                        </div>
+                      </div> <!--couponBook-->
+                      <div class="text">
+                        <!--텍스트-->
+                        <span>승급월로 부터 12개월 실적기준 (상영일) | 승급 포인트 적립 내역 기준</span>
+                        <p>- 회원의 VIP 선정 시점에 따라 쿠폰북 구성이 상이할 수 있습니다. 실제 발급 가능한 쿠폰북 내용은 로그인 후, 쿠폰북 발급 페이지에서 확인 부탁드립니다.</p>
+                        <p>- VIP 등급 유지 기간 중, 직접 쿠폰을 선택 및 발급 받은 후 쿠폰을 사용할 수 있습니다.</p>
+                        <p>- VIP 쿠폰북은 영화와 매점 쿠폰으로 구성되어 있으며, 영화 쿠폰은 <일반형(일반 영화 관람권)> 또는 <DIY형 (선택형 머니)> 중 선택 가능합니다.</p>
+                        <p>- VIP 선정 시점에 따라 쿠폰별 유효기간이 상이합니다. 발급일에 따라 사용 가능한 쿠폰 수량에 차이가 있을 수 있으니 확인 후 발급 바랍니다.</p>
+                        <p>- 자세한 내용은 쿠폰북 발급 페이지 내 유의 사항을 확인 바랍니다.</p>
+                      </div>
+                    </div>
+                  </div> <!--v-table-->
+                </div>
+              </div> <!--vip-selected-->
+              <div class="Bont-box">
+                <div class="boon b1">
+                  <div class="b-txt t1">
+                    <b>혜택 01</b>
+                    <h3>5년 VIP 쿠폰</h3>
+                    <p>5년 연속 VIP 혜택 영화 관람 쿠폰 2매 증정!</p>
+                    <div class="bs-txt bst1">
+                      <p>지난 VIP 등급 이력은 로그인 후 '나의 메가박스 > 지난 등급 조회'에서 확인 가능합니다.</p>
+                      <p>5년 VIP 쿠폰은 2023년 3월말 순차적으로 지급됩니다.</p>
+                      <p>5년 VIP 쿠폰의 세부 사항은 쿠폰 발급 후, 쿠폰 내 유의 사항을 참고해 주세요.</p>
+                    </div>
+                  </div>
+                  <img src="image/boon/혜택1이미지.png" alt="">
+                </div>
+                <div class="boon b2">
+                  <img src="image/boon/혜택2이미지.png" alt="">
+                  <div class="b-txt t2">
+                    <b>혜택 02</b>
+                    <h3>VIP 미션 이벤트</h3>
+                    <p>매년 서로 다른 영화 5회 이상 관람 시</p>
+                    <p>영화 & 콤보 할인, 무료관람권 증정!</p>
+                    <button type="button">VIP 스탬프 미션 보러가기</button>
+                    <div class="bs-txt bst2">
+                      <p>영화 유료 관람 후, 포인트 적립된 티켓 기준으로 서로 다른 영화 관람 편수가 책정됩니다.</p>
+                      <p>미션 달성 시 제공되는 쿠폰은 매월 2주차 내에 제공됩니다.</p>
+                      <p>지급되는 쿠폰은 일부 제한 사항이 있을 수 있습니다. 쿠폰 내 유의 사항을 참고 바랍니다.</p>
+                      <p>이벤트 진행 사항 및 경품 지급 내용은 사정에 따라 변경될 수 있습니다.</p>
+                    </div>
+                  </div>
+                </div> <!--boon b2-->
+                <div class="boon b1">
+                  <div class="b-txt t1">
+                    <b>혜택 03</b>
+                    <h3>VIP DAY</h3>
+                    <p>기본 포인트에 VIP & VIP DAY 포인트까지!</p>
+                    <div class="bs-txt bst1">
+                      <p>VIP 회원은 영화 관람 시, “기본 적립 포인트”만큼 추가 적립을 받을 수 있습니다.</p>
+                      <p>수요일 영화 관람 시, “기본 적립 + VIP 추가 적립 포인트” 만큼 VIP DAY 포인트가 적립됩니다.</p>
+                      <p>VIP 추가 적립, VIP DAY 적립 포인트는 VIP 선정 포인트에서 제외됩니다.</p>
+                      <p>VIP 추가 적립, VIP DAY 적립 포인트 관련 사항은 변경될 수 있습니다.</p>
+                    </div>
+                  </div>
+                  <img src="image/boon/혜택3이미지.png" alt="">
+                </div>
+                <div class="boon b2">
+                  <img src="image/boon/혜택4이미지.png" alt="">
+                  <div class="b-txt t2">
+                    <b>혜택 04</b>
+                    <h3>중앙멤버십 혜택</h3>
+                    <p>리조트 할인, CU 모바일 상품권 등 다양한 혜택!</p>
+                    <button type="button">중앙멤버십 카드 신청하기</button>
+                    <div class="bs-txt bst2">
+                      <p>본 혜택은 아래 카드 신청하기에서 중앙멤버십을 별도 신청하신 고객에 한해 적용 됩니다.</p>
+                      <p>중앙멤버십 카드는 VIP 기신청자의 경우 자동 연장되며 휴대폰 번호당 1개만 발급 가능합니다.</p>
+                      <p>제휴 혜택은 사정에 따라 변경되거나 종료될 수 있습니다.</p>
+                    </div>
+                  </div>
+                </div> <!--boon b2-->
+                <div class="boon b1">
+                  <div class="b-txt t1">
+                    <b>혜택 05</b>
+                    <h3>VIP CULTURE EVENT</h3>
+                    <p>교보문고 & 핫트랙스 10% 할인쿠폰 증정!</p>
+                    <div class="bs-txt bst1">
+                      <p>VIP 회원 대상 교보문고 & 핫트랙스 10% 할인 쿠폰을 드립니다.&nbsp;(오프라인 / 1만원 이상 결제 시 사용 가능)</p>
+                      <p>VIP 회원 중 마케팅 정보 수신 동의 회원 대상에 한하여 제공됩니다.</p>
+                      <p>할인 쿠폰은 매월 초 메가박스APP으로 자동 발급됩니다.&nbsp;(나의 메가박스> 제휴쿠폰)</p>
+                      <p>할인 쿠폰 사용 전 쿠폰 내 유의 사항을 반드시 확인 바랍니다.</p>
+                      <p>제휴 혜택은 사정에 따라 내용이 변경되거나 종료될 수 있습니다.</p>
+                    </div>
+                  </div>
+                  <img src="image/boon/혜택5이미지.png" alt="">
+                </div>
+                <div class="bottom-txt">
+                  <p>모든 회원의 누적 승급 포인트는 ’23년 3월 1일 부로 초기화 되며, 3월 1일 이후 관람실적부터 새로운 승급제도 적용을 받습니다.</p>
+                  <p>·Friends 및 VIP 이상 회원은 승급 후 12개월의 등급 자격 유지기간이 부여되며, 부여된 자격유지 기간 내 승급포인트 실적기준으로 매월 회원등급 조정이 진행됩니다.</p>
+                  <p>·Welcome 회원은 최근12개월 실적기준으로 Friends 등급으로 승급할 수 있습니다.(Welcome 등급은 자격유지기간 부 존재하여, 최근12개월 기준으로 산정합니다.)</p>
+                  <p>·등급 자격 유지기간 내 승급조건을 충족한 경우, 익월에 다음등급으로 승급되며 (MVIP 제외) 새로운 등급으로 선정되는 경우 선정월로 부터 12개월의 새로운 자격 유지기간이 부여됩니다.</p>
+                  <p>·VIP 등급선정 기준 및 혜택은 매년 상이 할 수 있습니다.</p>
+                  <p>·VIP 회원 혜택은 내부사정에 의하여 변경 또는 종료될 수 있습니다.</p>
+                  <p>·VIP 회원 추가적립 포인트, 선물받은 포인트, 이벤트 적립포인트, 제휴처 적립포인트 등은 VIP 산정에서 제외됩니다.</p>
+                  <p>·“서로 다른 영화”는 선정기간 내 멤버십 포인트 적립된 영화 중 서로 다른 영화를 의미합니다. (동일 영화는1편으로 산정)</p>
+                </div>
+              </div> <!--Bont-box-->
+            </div>
+          </div> <!--tab_list-->
+        </div> <!--tab-->
+      </div> <!--container-->
+    </main>
+
+    <!--footer-->
+    <footer>
+      <div class="bg-color4">
+        <div class="container">
+          <div class="f-box">
+            <div class="content">
+              <ul>
+                <li>회사소개</li>
+                <li>인재채용</li>
+                <li>사회공헌</li>
+                <li>제휴/광고/부대사업문의</li>
+                <li>이용약관</li>
+                <li>위치기반서비스 이용약관</li>
+                <li><b>개인정보처리방침</b></li>
+                <li>윤리경영</li>
+              </ul>
+              <p><i class="fa-solid fa-magnifying-glass"></i> 극장찾기</p>
+            </div>
+            <div class="f-menu">
+              <div class="logo-img"></div>
+              <div class="txt">
+                <p>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 메가박스 스퀘어) ARS 1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr
+                  대표자명 홍정인 · 개인정보보호책임자 강병철 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 2023-서울성동-0177
+                  2024 LOGO &copy; copyright all right reserved.
+                </p>
+              </div>
+              <div class="sns">
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-square-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div> <!--container-->
+      </div>
+    </footer>
+  </body>
+</html>

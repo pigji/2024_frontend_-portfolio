@@ -1,0 +1,836 @@
+/*구글 폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&display=swap'); /*font-family: "Odor Mean Chey"*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); /*"Oswald"*/
+/*눈누 폰트*/
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+/*공통속성 : container*/
+.container{
+  max-width: 1200px;
+  width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'S-CoreDream-3Light';
+}
+/*--------------------------------------------------*/
+/*header*/
+header{
+  width: 100%;
+  font-family: "Odor Mean Chey";
+}
+header > .bg-color{
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #503396;
+}
+/*메뉴 부분*/
+.list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.3);
+}
+.list > h1{
+  padding-left: 20px;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+
+/*로고*/
+.list > .logo{
+  /*border: 1px solid red;  영역 확인용*/
+  width: 200px;
+  height: 70px;
+  background-image: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo_new2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.list > ul{
+  display: flex;
+}
+.list > ul > li{
+padding: 0 40px;
+margin-bottom: 15px;
+font-size: 16px;
+}
+/*--------------------------------------------------*/
+/*main : 멤버십&VIP tap메뉴*/
+.tab{
+  margin-top: 50px;
+  /* border: 1px solid red;  영역확인용 */
+}
+.tab > h1{
+  font-size: 26px;
+  color: #503396;
+  margin: 10px 0;
+}
+.tab_menu{
+  border-top: 1px solid #503396;
+  border-bottom: 1px solid #503396;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/*버튼요쇼*/
+.tab_menu button {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+/*마우스이벤트 효과*/
+.tab_menu button:hover {
+  background-color: #f1ecfd;
+}
+.tab_menu button.on{
+  background-color:#f1ecfd;
+  font-weight:bold;
+}
+.tab > .tab_list{
+  margin: 30px 10px;
+  padding: 20px 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+/*텍스트*/
+.tab > .tab_list h1{
+  font-size: 50px;
+  letter-spacing: 3px;
+  font-weight: normal;
+  color: #503396;
+}
+.tab > .tab_list > div > p{
+  margin-top: 10px;
+  color: #503396;
+  font-weight: bold;
+}
+/*이미지*/
+.tab > .tab_list > #membership img{
+  width: 290px;
+  height: 180px;
+}
+
+/*on클래스 추가된 div만 보이도록 설정*/
+.tab_list > div{
+  display:none;
+  border-top: none;
+}
+.tab_list > div.on{
+  display:block;
+}
+/*텍스트*/
+.tab > .tab_list > #vip > h1{
+  color: #503396;
+}
+/*로그인창 버튼(a태그)*/
+.tab > .tab_list > #vip > a{
+  border: 1px solid #503396;
+  background-color: #fff;
+  width: 140px;
+  height: 55px;
+  display: block;
+  margin: 80px auto 50px;
+  border-radius: 5px;
+  line-height: 55px;  /*텍스트 가운데정렬*/
+}
+/*--------------------------------------------------*/
+/*tap메뉴 : 멤버십 혜택*/
+.guide > h2{
+  margin-top: 70px;
+  text-align: left;
+  color: #503396;
+  font-size: 20px;
+}
+.guide > .member-box{
+  /* border: 1px solid red;  영역 확인용 */
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/*section : 멤버십 혜택*/
+.guide > .member-box > .box{
+  width: 500px;
+  height: 210px;
+  text-align: center;
+  padding: 25px 10px;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, .07);
+  border-radius: 10px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/*아이콘*/
+.guide > .member-box > .box > .icon{
+  width: 110px;
+  height: 110px;
+  /* border: 1px solid red; */
+  margin-left: 20px;
+}
+.guide > .member-box > .box > .icon > i{
+  font-size: 70px;
+  color: #333;
+}
+/*텍스트*/
+.guide > .member-box > .box > .txt{
+  font-size: 14px;
+  text-align: left;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+/*버튼요소*/
+.guide > .member-box > .box > .txt > button{
+  outline: 0;
+  border: 0;
+  background-color: #503396;
+  color: #fff;
+  line-height: 36px;
+  width: 130px;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+/*--------------------------------------------------*/
+/*section : 포인트사용 안내*/
+.point-use > h2{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #503396;
+  font-size: 20px;
+}
+/*테이블 요소*/
+.point-use > table{
+  width: 100%;
+  height: 100%;
+  border-spacing: 0px;  /*기본여백 제거*/
+}
+/*테이블 제목태그*/
+.point-use > table th{
+  height: 48px;
+  border: 1px solid #d9d9d9;
+  border-width: 0 0 1px 1px;
+  border-top: 1px solid #666;
+  background-color: #fcfcfc;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: #000;
+}
+.point-use > table td{
+  height: 62px;
+  border-left: none;
+  border: 1px solid #d9d9d9;
+  border-width: 0 0 1px 1px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+}
+.point-use > table td:first-child{
+  border-left: 0;
+}
+/*td에 왼쪽 테두리 제거한 요소에만 따로 테두리 추가*/
+.point-use > table tr > .t-box{
+  border-left: 1px solid #d9d9d9;
+}
+/*--------------------------------------------------*/
+/*포인트사용 안내 글*/
+.point-txt{
+  /* border: 1px solid red; 영역 확인용 */
+  margin-top: 30px;
+  position: relative;
+  padding-left: 8px
+}
+/*텍스트 요소*/
+.point-txt > .box{
+  text-align: left;
+}
+.point-txt > .box > h3{
+  color: #503396;
+  padding: 40px 0 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+.point-txt > .box > p{
+  font-size: 14px;
+  color: #222;
+}
+.point-txt > .box > span{
+  /* border: 1px solid yellow; 영역 확인용 */
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  color: #333;
+}
+.point-txt > .box > span:nth-of-type(1){
+  margin-top: 15px;
+}
+.point-txt > .box > span:nth-of-type(2){
+  margin-top: 30px;
+}
+
+/*--------------------------------------------------*/
+/*vip영역 : 로그인 팝업창*/
+.login{
+  display: none;
+  position: fixed;  /*고정*/
+  top: 0; left: 0; bottom: 0; right: 0; /*뷰포트 사이즈로 늘려줌*/
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+.login > .content{
+  width: 850px;
+  height: 490px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+}
+.close{
+  height: 40px;
+  border-bottom: 1px solid #999;
+  position: relative;
+  background-color: #503396;
+}
+.close > a{
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+.close > a > i{
+  color: #fff;
+}
+
+form{
+  /* border: 1px solid blue; */
+  width: 350px;
+  padding: 30px 40px;
+}
+
+/*type=text인 속성 설정*/
+input[type=text]{
+  width: 360px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: 1px solid #999;
+  text-indent: 10px;  /*글자 들여쓰기*/
+}
+.login button{
+  width: 220px;
+  height: 40px;
+  color: #333;
+  background-color: transparent;
+  font-size: 14px;
+  border: 0;
+}
+
+/*input요소와 기타 버튼을 감싸고 있는 요소*/
+.form{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.form p{
+  line-height: 120%;
+}
+/*아이디저장 + 간편 로그인*/
+form > .save{
+  width: 350px;
+  /* border: 1px solid red; */
+  text-align: center;
+  margin: 0 auto;
+}
+form > .save > button{
+  text-align: right;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  color: rgb(72, 134, 214);
+  font-size: 14px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+/*로그인버튼*/
+.form .login-btn{
+  margin-top: 30px;
+  width: 350px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+/*아이디,비밀번호 찾기*/
+.find > .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+/*sns 아이콘*/
+.sns-icon{
+  /* border: 1px solid red; */
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sns-icon > .icon1{
+  width: 35px;
+  height: 35px;
+  margin: 0 20px;
+}
+
+/*오른쪽 이미지요소*/
+.form .bg-img{
+  margin-top: 25px;
+  width: 480px;
+  height: auto;
+}
+.form .bg-img > img{
+  width: 400px;
+  height: auto;
+}
+/*--------------------------------------------------*/
+/*vip영역 : 슬라이드 배너 영역*/
+
+#vip-banner{
+  /* border: 1px solid #333; 영역 확인용 */
+  width: 100%;
+  height: 380px;
+  border-top: 1px solid #f8f8fa;
+  border-bottom: 1px solid #f8f8fa;
+  box-shadow: 1px 1px 10px #eee;
+  /* background-color: #f8f8fa; */
+	padding:  50px 20px 10px;
+	margin: 0 auto 100px;
+  position: relative;
+}
+#vip-banner > p > a{
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  color: #222;
+}
+#vip-banner > p > a:nth-of-type(1){
+  left: 15px;
+}
+#vip-banner > p > a:nth-of-type(2){
+  right: 15px;
+}
+#frame{
+  /* border: 1px solid blue; */
+  width: 1040px;
+  margin: 10px auto;
+  padding-top: 10px;
+  overflow: hidden;
+}
+#vip-banner > b{
+  font-size: 24px;
+  color: #503396;
+  float: left;
+  margin-bottom: 10px;
+}
+#banner{
+  width: 4680px;
+  height: 260px;
+}
+#banner li{
+  list-style: none;
+  float: left;
+  width: 520px;
+}
+/*슬라이드 이미지 설명글*/
+#banner li > div{
+  margin: 0 auto; /*가운데 위치*/
+  width: 475px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+
+#banner img{
+  width: 480px;
+  height: 230px;
+  border-radius: 10px;
+}
+
+/*--------------------------------------------------*/
+/*tap메뉴 : VIP 혜택*/
+#vip > button{
+  width: 140px;
+  height: 56px;
+  line-height: 55px;
+  border: 1px solid #503396;
+  border-radius: 5px;
+  color: #503396;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 80px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/*vip 선정 기준*/
+#vip > .vip-selected{
+  width: 100%;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/*vip영역 : VIP기준 선정 텍스트*/
+.vip-selected{
+  /* border: 1px solid red; */
+  margin-top: 50px;
+}
+
+.vip-selected > h3{
+  text-align: left;
+  color: #503396;
+}
+.vip-selected > .vip-box{
+  width: 100%;
+  height: auto;
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+/*왼쪽 요소 - 선정기준*/
+.vip-selected > .vip-box > .standard{
+  width: 250px;
+  background-color: #fcfcfc;
+  /* border: 1px solid red; */
+  padding-top: 130px;
+}
+.vip-selected > .vip-box > .standard > p{
+  border-top: 1px solid #ccc;
+  width: 100%;
+  height: 90px;
+  font-weight: bold;
+  box-sizing: border-box;
+  height: 90px;
+  margin: 15px 0;
+  padding: 48px 0;
+}
+/*오른쪽 요소*/
+.vip-selected > .vip-box > .v-table{
+  margin-left: 30px;
+  width: 100%;
+}
+/*오른쪽 요소 : 이미지*/
+.vip-selected > .vip-box > .v-table .img{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.vip-selected > .vip-box > .v-table .img > img{
+  width: 130px;
+  height: 130px;
+}
+.v-table .text-box{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  height: 120px;
+}
+.v-table .text-box > div{
+  border-top: 1px solid #d9d9d9;
+  width: 250px;
+  height: 90px;
+  margin: 15px 10px;
+  padding: 30px 0 20px;
+  box-sizing: border-box;
+}
+.v-table .text-box:nth-of-type(3){
+  border-bottom: 1px solid #d9d9d9;
+}
+/*쿠폰북*/
+.couponBook{
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+.couponBook > .box{
+  /* border: 1px solid red;  영역 확인용 */
+  width: 250px;
+}
+.couponBook > .box > ul{
+  position: relative;
+  width: 201px;
+  height: 117px;
+  padding: 15px 0 0 22px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+/*가상요소 - before*/
+.couponBook > .box > ul::before{
+  content: "";
+  width: 200px;
+  height: 108px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+/*가상요소 - after*/
+.couponBook > .box > ul::after{
+  content: "";
+  width: 200px;
+  height: 108px;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  z-index: 1;
+}
+/*가상요소 box별 색상 변경*/
+.couponBook > .box:nth-of-type(1) > ul::before{
+  background-color: #9206ed;
+}
+.couponBook > .box:nth-of-type(1) > ul::after{
+  background-color: #4c1674;
+}
+.couponBook > .box:nth-of-type(2) > ul::before{
+  background-color: #5601d1;
+}
+.couponBook > .box:nth-of-type(2) > ul::after{
+  background-color: #321065;
+}
+.couponBook > .box:nth-of-type(3) > ul::before{
+  background-color: #2e65ff;
+}
+.couponBook > .box:nth-of-type(3) > ul::after{
+  background-color: #294595;
+}
+
+/*텍스트*/
+.couponBook > .box > .item li{
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  line-height: 42px;
+  padding-bottom: 5px;
+  padding-top: 3px;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 35px;
+}
+
+/*쿠폰 설명글*/
+.text{
+  /* border: 1px solid red; */
+  text-align: left;
+}
+.text > span{
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: block;
+}
+.text > p{
+  color: #333;
+  font-size: 12px;
+  margin: 10px 0;
+}
+/*--------------------------------------------------*/
+/*VIP 혜택*/
+.Bont-box{
+  width: 100%;
+  height: 100%;
+}
+/*제목 공통속성*/
+.Bont-box h3{
+  margin: 15px 0;
+  color: #503396;
+  font-size: 42px;
+  font-weight: bold;
+}
+/*영역 공통속성*/
+.Bont-box > .boon{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 44px 0 60px;
+}
+.b1{
+  margin-top: 50px;
+  background-color: #f9fafc;
+}
+.b2{
+  background-color: #fff;
+}
+/*텍스트 공통속성*/
+.b-txt{
+  width: 570px;
+  margin: 0 20px;
+}
+
+/*이미지 공통속성*/
+.Bont-box > .boon > img{
+  width: 450px;
+  height: 400px;
+}
+
+.Bont-box > .boon > .b-txt > b{
+  width: 75px;
+  height: 30px;
+  line-height: 32px;
+  border-radius: 15px;
+  background-color: #888;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-block;
+}
+.Bont-box > .boon > .b-txt > .bs-txt{
+  font-size: 14px;
+  color: #333;
+}
+
+.t1{
+  text-align: left;
+}
+.t2{
+  text-align: right;
+}
+
+.t2 > button{
+  margin: 25px 0;
+  width: 220px;
+  height: 50px;
+  line-height: 53px;
+  border-radius: 41px;
+  background-color: #222;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.bst1{
+  margin-top: 35px;
+}
+.bottom-txt{
+  margin-top: 60px;
+  margin-left: 10px;
+  text-align: left;
+  line-height: 1.7;
+  font-size: 12px;
+  color: #666;
+  background-color: #fff;
+}
+
+
+
+/*--------------------------------------------------*/
+/*footer*/
+footer{
+  background-color: #f8f8fa;
+}
+footer > .bg-color4{
+  border-top: 1px solid #ececec;
+  margin-top: 70px;
+}
+footer .f-box{
+  width: 100%;
+  height: 200px;
+}
+footer .content{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .content > ul{
+  margin-top: 30px;
+  display: flex;
+}
+footer .content > ul > li{
+  color: #666;
+  line-height: 30px;
+  padding: 0 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+/*마우스이벤트*/
+footer .content > ul > li:hover{
+  text-decoration: underline;
+}
+footer .content > p{
+  border: 1px solid #333;
+  border-radius: 30px;
+  width: 105px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+/**/
+footer .f-box > .f-menu{
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+/*로고 이미지*/
+footer .f-box > .f-menu > .logo-img{
+  width: 150px;
+  height: 50px;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-opacity_new2.png) no-repeat center;
+}
+footer .f-box > .f-menu > .txt{
+  font-size: 13px;
+  margin-left: 50px;
+  width: 65%;
+  color: #333;
+}
+/*sns 아이콘*/
+footer .f-box > .f-menu > .sns{
+  font-size: 24px;
+  margin-left: 70px;
+  color: gray;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+}

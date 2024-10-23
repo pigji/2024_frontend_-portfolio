@@ -1,0 +1,736 @@
+/*구글 폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&display=swap'); /*font-family: "Odor Mean Chey"*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); /*"Oswald"*/
+/*눈누 폰트*/
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+/*공통속성 : container*/
+.container{
+  max-width: 1200px;
+  width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'S-CoreDream-3Light';
+}
+/*--------------------------------------------------*/
+/*header*/
+header{
+  width: 100%;
+  font-family: "Odor Mean Chey";
+}
+header > .bg-color{
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #503396;
+}
+/*메뉴 부분*/
+.list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.3);
+}
+.list > h1{
+  padding-left: 20px;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+
+/*로고*/
+.list > .logo{
+  /*border: 1px solid red;  영역 확인용*/
+  width: 200px;
+  height: 70px;
+  background-image: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo_new2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.list > ul{
+  display: flex;
+}
+.list > ul > li{
+padding: 0 40px;
+margin-bottom: 15px;
+font-size: 16px;
+}
+/*--------------------------------------------------*/
+main{
+  width: 100%;
+}
+main > .container > h1{
+  margin: 50px 0 20px;
+  font-size: 24px;
+}
+
+/*event영역 : 슬라이드 배너 영역*/
+#event-banner{
+  /* border: 1px solid #333; 영역 확인용 */
+  width: 100%;
+  height: 350px;
+  background-color: #f8f8fa;
+	padding: 10px 20px;
+	margin: 0 auto;
+  position: relative;
+}
+#event-banner > p > a{
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  color: #222;
+}
+#event-banner > p > a:nth-of-type(1){
+  left: 15px;
+}
+#event-banner > p > a:nth-of-type(2){
+  right: 15px;
+}
+#frame{
+  /* border: 1px solid blue; */
+  width: 1040px;
+  margin: 10px auto;
+  padding-top: 10px;
+  overflow: hidden;
+}
+#banner{
+  width: 3100px;
+  height: 260px;
+}
+#banner li{
+  list-style: none;
+  float: left;
+  width: 535px;
+}
+#banner img{
+  width: 480px;
+  height: 230px;
+  border-radius: 10px;
+}
+/*--------------------------------------------------*/
+/*main영역*/
+main{
+  width: 100%;
+  height: 100%;
+}
+
+/*tap메뉴 목록*/
+/*할인안내 부분*/
+main .tab_menu{
+  height: 50px;
+  margin: 50px 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+main .tab_menu > button {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+/*마우스이벤트*/
+main .tab_menu > button:hover{
+  background-color: #c4b1f0;
+}
+main .tab_menu > button:active{
+  background-color: #9889bb;
+}
+
+
+main .tab_list {
+  text-align: left;
+  width: 100%;
+  height: auto;
+}
+
+/*on클래스 추가된 div만 보이도록 설정*/
+.tab_list > div{
+  display:none;
+  padding: 6px 12px;
+  border-top: none;
+}
+.tab_list > div.on{
+  display:block;
+}
+
+/*on클래스 추가된 div만 보이도록 설정*/
+.sub_tab_list > div{
+  display:none;
+  border-top: none;
+}
+.sub_tab_list > div.on{
+  display:block;
+}
+
+
+main .tab_list .D-all{
+  margin-top: 40px;
+}
+main .tab_list .D-all > .input-box{
+  margin: 10px;
+  padding: 35px 30px;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .tab_list .D-all > .input-box > .txt > b{
+  font-size: 22px;
+  margin-bottom: 10px;
+  display: block;
+}
+main .tab_list .D-all > .input-box > .txt > p{
+  font-size: 14px;
+  color: #666;
+}
+/*검색 박스*/
+main .tab_list .D-all > .input-box > .D-search{
+  border-bottom: 2px solid #555;
+}
+main .tab_list .D-all > .input-box > .D-search > input{
+  border: 0;
+  background-color: transparent;
+  width: 280px;
+  height: 45px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+/*아이콘*/
+main .tab_list .D-all > .input-box > .D-search > i{
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+main .tab_list .D-all .detail{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .tab_list .D-all .detail > .three{
+  margin: 40px 0;
+}
+main .tab_list .option-box{
+  width: 330px;
+  height: 180px;
+  margin: 0 20px;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  background-color: #f2f4f5;
+  border-radius: 10px;
+  
+}
+main .tab_list .D-menu .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .tab_list .D-menu .title > b{
+  font-size: 18px;
+}
+/*버튼요소*/
+main .tab_list .D-menu .title > button{
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+main .tab_list .D-menu .title > button:hover{
+  text-decoration: underline;
+}
+main .tab_list .D-menu h3{
+  padding: 5px 0 10px 0;
+  color: #34a2b7;
+  font-size: 45px;
+  line-height: 1.1;
+  font-weight: 300;
+}
+
+/*select + option 부분*/
+select{
+  height: 35px;
+  border-radius: 5px;
+}
+select:nth-of-type(1){
+  width: 110px;
+}
+main .tab_list .three:nth-of-type(3) select{
+  width: 170px;
+}
+
+.gift{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 30px;
+  border: 1px solid #ebebeb;
+  background-color: #f2f4f5;
+  border-radius: 10px;
+  margin-bottom: 60px;
+
+}
+.gift > button{
+  border: 0;
+  background-color: transparent;
+  color: #666;
+  cursor: pointer;
+}
+.gift > button:hover{
+  text-decoration: underline;
+}
+/*--------------------------------------------------*/
+/*tap메뉴 목록*/
+/*상단 타이틀 공통속성*/
+.notice{
+  margin: 30px 0 10px;
+  padding: 25px;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.notice > b{
+  font-size: 28px;
+}
+.notice > p{
+  font-size: 17px;
+  color: #333;
+  padding: 14px 0 0 0;
+}
+
+/*특정요소 버튼요소*/
+.p-box .txt > button{
+  width: 120px;
+  height: 40px;
+  color: #fff;
+  background-color: #503396;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+/*1개의 카드박스*/
+.sub_tab_list ul{  
+  border-top: 1px solid #333; /*구분선*/
+}
+.sub_tab_list li{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.p-box{
+  /* border: 1px solid red; 영역확인용 */
+  width: 100%;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+/*버튼요소*/
+.p-box > .top > .btn > button{
+  width: 100px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 20px;
+  margin: 0 5px;
+}
+.p-box > .top > .btn > .btn1{
+  color: #503396;
+  border-color: #503396;
+}
+.p-box > .top > .btn > .btn2{
+  color: #037b94;
+  border-color: #037b94;
+}
+
+/*텍스트 영역*/
+li .p-box .txt{
+  line-height: 1.6;
+  font-size: 15px;
+  margin-left: 50px;
+}
+li .p-box .txt > .t-right{
+  margin-left: 50px;
+}
+/*특정 텍스트 요소 설정*/
+li .p-box .txt > .t-right > b{
+  font-size: 12px;
+  color: red;
+}
+/*--------------------------------------------------*/
+/*신용카드 안내 부분*/
+.sub_tab_menu{
+  text-align: left;
+  margin: 50px auto 20px;
+}
+.megabox-box > h1{
+  margin-top: 70px;
+  margin-bottom: 10px;
+  color: #503396;
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+/*버튼요소*/
+.sub_tab_menu > button{
+  border: 0;
+  border-left: 1px solid #ccc;  /*구분선*/
+  background-color: transparent;
+  margin: 0 20px;
+  padding-left: 40px;
+  color: #444;
+  font-size: 16px;
+  cursor: pointer;
+}
+.sub_tab_menu > button:nth-of-type(1){
+  margin-left: 0;
+}
+.sub_tab_menu > button:nth-of-type(6){
+  border-right: 1px solid #ccc;
+  padding-right: 40px;
+}
+/*마우스이벤트 효과*/
+.sub_tab_menu > button:hover{
+  font-weight: bold;
+  color: #503396;
+}
+
+
+/*--------------------------------------------------*/
+/*통신사 안내 부분*/
+.news-agency-box{
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red;  영역확인용 */
+}
+
+
+.news-agency-box > h1{
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: #503396;
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+
+/*카드 이미지 및 설명 글*/
+.news-agency-box > .carrier-card > h1{
+  color: #503396;
+}
+.news-agency-box > .carrier-card > .C-card1{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 1px solid #333; /*영역 확인용*/
+  border-bottom: 1px solid #e2e2e2; /*영역 확인용*/
+  padding-top:30px;
+  padding-bottom:30px;
+  margin-bottom: 70px;
+}
+/*카드 이미지*/
+.news-agency-box > .carrier-card > .C-card1 > img{
+  width: 250px;
+  height: 250px;
+  margin:0 40px;
+}
+
+/*텍스트를 감싸고 있는 div*/
+.news-agency-box .C-card1 > .C-detail{
+  margin-right: 20px;
+  width: 100%;
+}
+.news-agency-box .C-card1 > .C-detail > .tit{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.news-agency-box .C-card1 > .C-detail > .tit > b{
+  font-size: 24px;
+}
+
+/*버튼요소*/
+.news-agency-box .C-card1 > .C-detail > .tit .C-btn > button{
+  width: 100px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 20px;
+  margin: 0 5px;
+}
+.news-agency-box .C-card1 > .C-detail > .tit .C-btn > .btn1{
+  color: #503396;
+  border-color: #503396;
+}
+.news-agency-box .C-card1 > .C-detail > .tit .C-btn > .btn2{
+  color: #037b94;
+  border-color: #037b94;
+}
+
+/*텍스트 영역*/
+.news-agency-box .C-card1 > .C-detail > .C-ex{
+  margin-top: 15px;
+}
+.news-agency-box .C-card1  .C-ex > .text-all > .cc > b{
+  margin: 5px 0;
+  display: block;
+}
+.news-agency-box .C-card1  .C-ex > .text-all > .cc > p{
+  margin-left: 35px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.news-agency-box .C-card1 .cc > p > b{
+  color: red;
+}
+
+/*2번째 + 3번째 카드 공통속성*/
+.news-agency-box .C-card1  .C-ex > .text-all > .cc1 > p{
+  font-size: 14px;
+  line-height: 1.7;
+}.news-agency-box .C-card1  .C-ex > .text-all > .cc1 > p:nth-of-type(2){
+  margin-left: 30px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.news-agency-box .C-card1 .cc1 > p > b{
+  color: red;
+}
+
+
+/*버튼요소*/
+.cc1 > button{
+  width: 100px;
+  color: #fff;
+  background: #503396;
+  line-height: 36px;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.news-agency-box .C-detail > .text-all > div > p{
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+/*특정 텍스트*/
+.news-agency-box .C-detail > .text-all > div > p > b{
+  color: red;
+}
+/*--------------------------------------------------*/
+/*포인트&기타제휴 안내 부분*/
+.points-etc-box{
+  width: 100%;
+  height: 100%;
+}
+
+.points-etc-box > .point-box{ /*카드를 감까고 있는 전체 박스*/
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+.points-etc-box > .point-box > h1{
+  color: #503396;
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+.points-etc-box > .point-box ul{  
+  border-top: 1px solid #333; /*구분선*/
+}
+
+.points-etc-box > .point-box li{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+
+
+/*--------------------------------------------------*/
+/*상품권&관람권 안내 부분*/
+.gift-box >  h1{
+  color: #503396;
+  margin-top: 70px;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.G-box{
+  width: 100%;
+  height: 100%;
+}
+.G-box ul{
+  border-top: 1px solid #333;
+}
+.G-box li{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid #eaeaea;
+  margin-left: 5px;
+}
+.G-box li > .txt{
+  margin-left: 40px;
+  line-height: 2;
+  font-size: 20px;
+}
+.G-box li > .txt > p{
+  font-size: 14px;
+}
+
+/*관람권 영역*/
+.G-box > .ticket{
+  margin-top: 40px;
+  padding: 30px 50px;
+  text-align: left;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+}
+.G-box > .ticket > b{
+  font-size: 22px;
+  margin-bottom: 15px;
+  display: block;
+}
+.G-box > .ticket > p{
+  font-size: 14px;
+  line-height: 1.5;
+}
+.G-box > .ticket > .col{
+  padding: 5px 0 0 0;
+  color: #01738b;
+}
+
+/*영화관람권 영역*/
+.gift-box h3{
+  margin-top: 70px;
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #503396;
+}
+.movie-ticket{
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 70px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.movie-ticket > ul{
+  width: 100%;
+  margin-left: 70px;
+  padding: 30px 0;
+}
+.movie-ticket > ul > li{
+  padding: 10px 0;
+  font-size: 14px;
+}
+.movie-ticket > ul > li > b{
+  font-size: 20px;
+}
+
+/*--------------------------------------------------*/
+/*footer*/
+footer{
+  background-color: #f8f8fa;
+}
+footer > .bg-color4{
+  border-top: 1px solid #ececec;
+  margin-top: 70px;
+}
+footer .f-box{
+  width: 100%;
+  height: 200px;
+}
+footer .content{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+footer .content > ul{
+  display: flex;
+}
+footer .content > ul > li{
+  color: #666;
+  line-height: 30px;
+  padding: 0 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+/*마우스이벤트*/
+footer .content > ul > li:hover{
+  text-decoration: underline;
+}
+footer .content > p{
+  border: 1px solid #333;
+  border-radius: 30px;
+  width: 105px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/**/
+footer .f-box > .f-menu{
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+/*로고 이미지*/
+footer .f-box > .f-menu > .logo-img{
+  width: 150px;
+  height: 50px;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-opacity_new2.png) no-repeat center;
+}
+footer .f-box > .f-menu > .txt{
+  font-size: 13px;
+  margin-left: 50px;
+  width: 65%;
+  color: #333;
+}
+/*sns 아이콘*/
+footer .f-box > .f-menu > .sns{
+  font-size: 24px;
+  margin-left: 70px;
+  color: gray;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+}

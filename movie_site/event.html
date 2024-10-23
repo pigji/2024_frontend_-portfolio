@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영화 사이트 - event(이벤트)</title>
+
+  <!--css-->
+  <link rel="stylesheet" href="css/event.css">
+  <!--폰트어썸 내 script 코드-->
+  <script src="https://kit.fontawesome.com/3223480a48.js" crossorigin="anonymous"></script>
+  <!--js-->
+  <script src="js/isotope.js"></script>
+  <script src="js/event.js" defer></script>
+</head>
+<body>
+  <!--상단메뉴 부분-->
+  <header>
+    <div class="bg-color">
+      <div class="container">
+        <div class="list">
+          <ul>
+            <li><a href="movie.html">영화</a></li>
+            <li><a href="#">예매</a></li>
+            <li><a href="theater.html">극장</a></li>
+          </ul>
+          <a href="index.html" class="logo"></a>
+          <ul>
+            <li><a href="event.html">이벤트</a></li>
+            <li><a href="store.html">스토어</a></li>
+            <li><a href="boon.html">혜택</a></li>
+          </ul>
+        </div> <!--list-->
+      </div> <!--container-->
+    </div> <!--bg-color-->
+  </header>
+
+  <!--main : 이벤트 목록-->
+  <main>
+    <div class="color"></div>
+    <div class="container">
+      <h1>진행중인 이벤트</h1>
+      <ul class="ev">
+        <li class="on"><a href="*">전체</a></li>
+        <li class="pick"><a href=".pick">Pick</a></li>
+        <li class="movie"><a href=".movie">영화</a></li>
+        <li class="theater"><a href=".theater">극장</a></li>
+        <li class="discount"><a href=".discount">제휴/할인</a></li>
+        <li class="discount"><a href=".preview">시사회/무대인사</a></li>
+      </ul>
+      <!--추천 이벤트 슬라이드로 표현-->
+      <div id="event-banner">
+        <b>추천 이벤트</b>
+        <div id="frame">
+          <ul id="banner">
+            <li>
+              <a href="#"><img src="image/event/이벤트슬라이드이미지1.jpg" alt=""></a>
+              <div class="text">
+                <p>[베테랑2] 흥행 기념 현장 증정 이벤트</p>
+                <p>2024.10.09 ~ 2024.10.22</p>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="image/event/이벤트슬라이드이미지2.png" alt=""></a>
+              <div class="text">
+                <p>[토스페이] 토스페이 생애 첫 결제 시...</p>
+                <p>2024.10.01 ~ 2024.10.31</p>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="image/event/이벤트슬라이드이미지4.jpg" alt=""></a>
+              <div class="text">
+                <p>[LG유플러스] 멤버십 적용 메가박스 할인!</p>
+                <p>2024.04.03 ~ 2025.12.31</p>
+              </div>
+            </li>
+          </ul>
+        </div> <!--frame-->
+        <p>
+          <a class="prev">&#10094;</a> <!--이전버튼-->
+          <a class="next">&#10095;</a>  <!--다음버튼-->
+        </p>
+      </div> <!--event-banner-->
+
+      <section>
+        <div class="event-box">
+          <article class="pick">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/추천포스터1.jpg" alt="">
+                <p>영화권 오리지널 티켓<br>No.123[조커:폴리 아 되]</p>
+                <p>2024.10.04 ~ 2024.10.31</p>
+              </div>
+            </div>
+          </article>
+          <article class="pick">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/추천포스터2.jpg" alt="">
+                <p>[프로모션][굿즈]<br>10월:명탐정 코난 콤포 런칭</p>
+                <p>2024.10.04 ~ 2024.10.31</p>
+              </div>
+            </div>
+          </article>
+          <article class="pick">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/추천포스터3.jpg" alt="">
+                <p>영화권 드로잉 카드<br>No.22[위국일기]</p>
+                <p>2024.10.02 ~ 2024.10.22</p>
+              </div>
+            </div>
+          </article>
+          <article class="pick">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/추천포스터4.jpg" alt="">
+                <p>영화권 아트그라피[로봇드림]</p><br>
+                <p>2024.10.02 ~ 2024.10.10</p>
+              </div>
+            </div>
+          </article>
+        </div> <!--event-box-->
+        <div class="event-box">
+          <article class="movie">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/추천포스터5.jpg" alt="">
+                <p>[라이브뷰잉] 사쿠라키코 1st<br>Live "flower fantasista"</p>
+                <p>2024.10.26 ~ 2024.10.26</p>
+              </div>
+            </div>
+          </article>
+          <article class="movie">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/추천포스터8.jpg" alt="">
+                <p>[보통의 가족] 이동진 평가론 토크</p><br>
+                <p>2024.10.09 ~ 2024.10.09</p>
+              </div>
+            </div>
+          </article>
+          <article class="movie">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/추천포스터7.jpg" alt="">
+                <p>[해야 할 일] 토크</p><br>
+                <p>2024.10.07 ~ 2024.10.07</p>
+              </div>
+            </div>
+          </article>
+          <article class="movie">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/추천포스터6.jpg" alt="">
+                <p>[라이브뷰잉] PLAVEE FAN<br>CONCERT [Hello, Asterum!]</p>
+                <p>2024.10.02 ~ 2024.10.10</p>
+              </div>
+            </div>
+          </article>
+        </div> <!--event-box-->
+        <div class="event-box">
+          <article class="theater">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/극장포스터1.jpg" alt="">
+                <p>[해운대장산] 심야영화 관람<br>EVENT</p>
+                <p>2024.09.27 ~ 2025.03.31</p>
+              </div>
+            </div>
+          </article>
+          <article class="theater">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/극장포스터2.jpg" alt="">
+                <p>[킨텍스] 제16회 DMZ 국제다큐<br>멘터리 영화제</p>
+                <p>2024.09.26 ~ 2024.10.02</p>
+              </div>
+            </div>
+          </article>
+          <article class="theater">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/극장포스터3.jpg" alt="">
+                <p>[제주서귀포] 1주년 고객<br>감사 이벤트</p>
+                <p>2024.09.23 ~ 2024.12.31</p>
+              </div>
+            </div>
+          </article>
+          <article class="theater">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/극장포스터4.jpg" alt="">
+                <p>[수원AK플라자] 문화의 날<br>예매하고 팝콘 할인받자!</p>
+                <p>2024.09.19 ~ 2024.11.27</p>
+              </div>
+            </div>
+          </article>
+        </div> <!--event-box-->
+        <div class="event-box">
+          <article class="discount">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/할인포스터1.png" alt="">
+                <p>[토스페이]토스페이 첫 결제시<br>2천원 토스포인트 적립!</p>
+                <p>2024.10.01 ~ 2024.10.31</p>
+              </div>
+            </div>
+          </article>
+          <article class="discount">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/할인포스터2.jpg" alt="">
+                <p>[LG유플러스] 멤버십 전용<br>MOVIE 할인!</p>
+                <p>2024.04.03 ~ 2025.12.31</p>
+              </div>
+            </div>
+          </article>
+          <article class="discount">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/할인포스터3.jpg" alt="">
+                <p>[ktM모바일 X MOVIE] 알뜰폰<br>제휴요금제 출시!</p>
+                <p>2024.07.06 ~ 2024.12.31</p>
+              </div>
+            </div>
+          </article>
+          <article class="discount">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/할인포스터4.jpg" alt="">
+                <p>T멤버십 전등급 회원<br>MOVIE 영화 할인</p>
+                <p>2024.01.31 ~ 2024.12.31</p>
+              </div>
+            </div>
+          </article>
+        </div> <!--event-box-->
+        <div class="event-box">
+          <article class="preview">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/시사회포스터1.png" alt="">
+                <p>[베테랑2] 개봉 5주차 무대인사</p><br>
+                <p>2024.10.12 ~ 2024.10.13</p>
+              </div>
+            </div>
+          </article>
+          <article class="preview">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/시사회포스터2.jpg" alt="">
+                <p>[대도시의 사랑법] 2주차 무대인사</p><br>
+                <p>2024.10.09 ~ 2024.10.13</p>
+              </div>
+            </div>
+          </article>
+          <article class="preview">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/시사회포스터3.jpg" alt="">
+                <p>[보통의 가족] 개봉 전 무대인사</p><br>
+                <p>2024.10.09 ~ 2024.10.12</p>
+              </div>
+            </div>
+          </article>
+          <article class="preview">
+            <div class="movie-pick">
+              <div class="box">
+                <img src="image/event/시사회포스터4.jpg" alt="">
+                <p>[최소한의 선의] MOVIE 회원시사</p><br>
+                <p>2024.10.02 ~ 2024.10.20</p>
+              </div>
+            </div>
+          </article>
+        </div> <!--event-box-->
+      </section>
+    </div> <!--container-->
+  </main>
+
+  <!--footer-->
+  <footer>
+    <div class="bg-color4">
+      <div class="container">
+        <div class="f-box">
+          <div class="content">
+            <ul>
+              <li>회사소개</li>
+              <li>인재채용</li>
+              <li>사회공헌</li>
+              <li>제휴/광고/부대사업문의</li>
+              <li>이용약관</li>
+              <li>위치기반서비스 이용약관</li>
+              <li><b>개인정보처리방침</b></li>
+              <li>윤리경영</li>
+            </ul>
+            <p><i class="fa-solid fa-magnifying-glass"></i> 극장찾기</p>
+          </div>
+          <div class="f-menu">
+            <div class="logo-img"></div>
+            <div class="txt">
+              <p>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 메가박스 스퀘어) ARS 1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr
+                대표자명 홍정인 · 개인정보보호책임자 강병철 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 2023-서울성동-0177
+                2024 LOGO &copy; copyright all right reserved.
+              </p>
+            </div>
+            <div class="sns">
+              <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.facebook.com/"><i class="fa-brands fa-square-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div> <!--container-->
+    </div>
+  </footer>
+</body>
+</html>

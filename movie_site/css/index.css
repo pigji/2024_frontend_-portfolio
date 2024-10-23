@@ -1,0 +1,699 @@
+/*폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&display=swap'); /*font-family: "Odor Mean Chey"*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); /*"Oswald"*/
+
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+/*공통속성 : container*/
+.container{
+  max-width: 1200px;
+  width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+/*--------------------------------------------------*/
+/*header*/
+header{
+  width: 100%;
+  color: #fff;
+  font-family: "Odor Mean Chey";
+}
+header > .bg-color{
+  width: 100%;
+  height: 830px;
+  background-color: #0b1330;
+}
+/*메뉴 부분*/
+.list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.3);
+}
+/*로고*/
+.list > .logo{
+  /*border: 1px solid red;  영역 확인용*/
+  width: 200px;
+  height: 70px;
+  background-image: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-white_new2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.list > ul{
+  display: flex;
+}
+.list > ul > li{
+padding: 0 40px;
+margin-bottom: 15px;
+font-size: 15px;
+}
+/*마우스이벤트 효과*/
+.list li:hover, .list img:hover{
+  font-weight: bold;
+}
+
+/*박스오피스 영화부분*/
+.moivie_box .box-office{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*영화 소개글[hover했을때 이벤트]*/
+.moivie_box .box-office > .box{
+  width: 230px;
+  height: 350px;
+  cursor: pointer;
+  overflow: hidden; /*애니메이션 효과*/
+  position: relative;
+}
+.moivie_box .box-office > .box > img{
+  width: 100%;
+  height: 100%;
+}
+
+.moivie_box .box-office > .box > .overlay{
+  position: absolute; /*유령화로 공주에 띄움*/
+  /*부모요소와 같은 크기로 겹치게 설정*/
+  left: 0; right: 0; top: 0; bottom: 0;
+  /*배경색 어둡게 설정*/
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 40px 20px;
+  line-height: 1.5em;
+}
+/*이미지요소*/
+.moivie_box .box-office > .box > .overlay > img{
+  width: 250px;
+  height: 350px;
+}
+/*hover효과*/
+.overlay{
+  opacity: 0;
+  /* transform: scale(10) rotate(-720deg); */
+  transform: translateY(100%);  /*위로 나타나듯이 효과를 줌*/
+  transition: all 0.5s;
+}
+/*box에 마우스를 올리면 overlay가 나타남*/
+.box:hover > .overlay{
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.moivie_box > h1{
+  text-align: center;
+  margin-top: 60px;
+  font-size: 14px;
+}
+.moivie_box > .box-office > .box{
+  width: 250px;
+  height: 350px;
+}
+.moivie_box > .box-office > .box > img{
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+/*예매하기 부분*/
+.view-btn{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.view-btn .views{
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.view-btn .views > p{
+  width: 70px;
+  height: 35px;
+  border: 1px solid #fff;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding-left: 13px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  line-height: 35px;
+}
+
+/*예매하기 버튼*/
+.moivie_box .views button{
+  border: 0;
+  background-color: #037b94;
+  width: 160px;
+  height: 38px;
+  border-radius: 7px;
+
+  margin-bottom: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*예매하기 및 기타 서브메뉴*/
+.information{
+  margin-top: 50px;
+  background-color: rgba(0,0,0,0.2);
+  height: 75px;
+}
+.information > ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin: 50px 0 0 0;;
+}
+.information > ul > li{
+  width: 280px;
+  padding: 25px 0 0 0;
+  /*구분선 추가*/
+}
+/*마우스이벤트 효과*/
+.information > ul > li > a:hover{
+  text-decoration: underline;
+}
+/*영화검색 input요소*/
+.information > ul > li > input{
+  border: 0;
+  border-bottom: 1px solid #777;
+  background-color: transparent;
+  outline: none;
+  color: #fff;
+  letter-spacing: 2px;
+  padding-left: 5px;
+}
+/*--------------------------------------------------*/
+/*section : 혜택 및 이미지 전체 부분*/
+
+section{
+  width: 100%;
+}
+section .boon{
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+section .boon > .txt{
+  /* border: 2px solid red; */
+  width: 680px;
+  position:relative;
+}
+/*슬라이드 배너 이미지*/
+section .boon > .txt > .slide-img{
+  width: 100%;
+  height: auto;
+  /* border: 1px solid red; */
+}
+.dot-btn .active,
+.dot-btn .dot:hover {
+  background-color: #503396;
+}
+/*dot버튼*/
+.dot-btn{
+  width: 100%;
+  height: auto;
+  width: 200px;
+  margin-left: 35px;
+  position: relative;
+  bottom: 60px;
+}
+.dot{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+/*-----*/
+section .boon > .txt .bImg-box{
+  display: flex;
+  justify-content: space-between;
+}
+/*이미지 요소*/
+section .boon > .txt .bImg-box > .img > img{
+  margin-top: 50px;
+  width: 385px;
+  height: 325px;
+}
+section .boon > .txt .bImg-box:nth-of-type(2) > .img > img{
+  width: 335px;
+  margin-right: 15px;
+}
+section .boon > .txt .bImg-box:nth-of-type(3) > .img > img{
+  width: 315px;
+  margin-right: 15px;
+}
+
+/*텍스트 부분*/
+section .boon > .txt .bImg-box > .box-inner{
+  /* border: 2px solid yellow; */
+  width: 380px;
+  height: 300px;
+}
+section .boon > .txt .bImg-box > .box-inner > h2{
+  font-size: 36px;
+  font-weight: normal;
+}
+section .boon > .txt .bImg-box > .box-inner > h1{
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 10px 0 30px;
+}
+section .boon > .txt .bImg-box:nth-of-type(2) > .box-inner > h1{
+  color: #037b94;
+}
+section .boon > .txt .bImg-box:nth-of-type(3) > .box-inner > h1{
+  color: #177035;
+}
+section .boon > .txt .bImg-box > .box-inner > h3{
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: 30px;
+}
+section .boon > .txt .bImg-box > .box-inner > p{
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/*룩백 이미지*/
+section .boon > .boon-img{
+  margin-left: 20px;
+}
+section .boon > .boon-img > img{
+  position: absolute;
+  transform:translateY(20px);
+  border-radius: 5px;
+  width: 400px;
+  height: 535px;
+  z-index: 10;
+}
+
+
+/*할인+이벤트 이미지*/
+section .boon > .txt > .b-event-box{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: -150px;
+  /* border: 2px solid blue; */
+}
+section .boon > .txt > .b-event-box > img{
+  width: 470px;
+  height: 180px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  z-index: 10;
+}
+section .boon > .txt > .b-event-box > img:nth-of-type(2){
+  width: 200px;
+  height: 180px;
+}
+
+
+
+/*--------------------------------------------------*/
+/*section : */
+section .event-menu{
+  width: 100%;
+  height: 300px;
+  background-color: #503396;
+  margin-top: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+.event-menu > .box{
+  margin: 0 70px;
+  cursor: pointer;
+  display: block;
+}
+/*마우스이벤트 효과*/
+section .event-menu > .box:hover{
+  color: gold;
+}
+.event-menu > .box > a{
+  width: 100%;
+  font-size: 14px;
+  font-weight: normal;
+}
+/*아이콘*/
+.event-menu > .box > a > p{
+  font-size: 40px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+
+/*--------------------------------------------------*/
+/*section : 큐레이션 부분*/
+section > .bg-color2{
+  background-color: #252451;
+  width: 100%;
+  height: 800px;
+}
+section .curation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0 20px;
+  color: #fff;
+}
+section .curation > h1{
+  font-size: 32px;
+}
+/*버튼요소*/
+section .curation > a{
+  font-size: 15px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+section .curation > a:hover{
+  text-decoration: underline;
+}
+.introduction{
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+.introduction > .iMovie-1 > img{
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+/*버튼요소*/
+.introduction > .iMovie-1 > .iBtn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*버튼요소*/
+.introduction > .iMovie-1 > .iBtn > button{
+  border: 0;  
+  background-color: transparent;  /*초기화*/
+  width: 140px;
+  height: 50px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.introduction > .iMovie-1 > .iBtn > button:nth-of-type(1){
+  border: 2px solid #fff;
+}
+.introduction > .iMovie-1 > .iBtn > button:nth-of-type(2){
+  background-color: #037b94;
+}
+/*텍스트 요소*/
+.introduction > .iMovie-2 > h2{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.introduction > .iMovie-2 > h1{
+  font-size: 36px;
+  border-bottom: 1px solid #999;  /*구분선*/
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+/*이미지요소*/
+.introduction > .iMovie-2 > .iImg-Box{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.introduction > .iMovie-2 > .iImg-Box > .i-Img > img{
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-right: 20px;
+  width: 170px;
+  cursor: pointer;
+}
+.introduction > .iMovie-2 > .iImg-Box > .i-Img > p{
+  font-size: 13px;
+}
+/*--------------------------------------------------*/
+/*section : 극장안내 부분*/
+#cinema h2{
+  margin: 30px auto 10px;
+  padding: 10px 20px;
+  font-size: 30px;
+  color: #333;
+}
+#cinema .C-box{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+}
+/*극장*/
+#cinema .C-box > .theater{
+  border: 2px solid pink;
+  width: 180px;
+  height: 180px;
+  margin: 10px;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  filter: grayscale(1);
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+#cinema .C-box > .theater:nth-of-type(1){
+  background: url(../image/index/극장안내이미지.avif) center/cover;
+}
+#cinema .C-box > .theater:nth-of-type(2){
+  background: url(../image/index/영화관이미지1.png) center/cover;
+}
+#cinema .C-box > .theater:nth-of-type(3){
+  background: url(../image/index/영화관이미지2.png) center/cover;
+}
+#cinema .C-box > .theater:nth-of-type(4){
+  background: url(../image/index/극장안내이미지.avif) center/cover;
+}
+#cinema .C-box > .theater:nth-of-type(5){
+  background: url(../image/index/영화관이미지4.png) center/cover;
+}
+#cinema .C-box > .theater:nth-of-type(6){
+  background: url(../image/index/영화관이미지5.png) center/cover;
+}
+
+
+
+#cinema .C-box > .theater > h1{
+  font-size: 20px;
+}
+/*마우스이벤트 효과*/
+#cinema .C-box > .theater:hover{
+  filter: grayscale(0);
+}
+/*--------------------------------------------------*/
+/*section : 간단 공지사항 안내 글*/
+section > .line{
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  height: 60px;
+  margin-top: 50px;
+}
+section .container > .content{
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #222;
+}
+/*왼쪽 안내글*/
+section .content > .txt{
+  display: flex;
+  align-items: center;
+}
+section .content > .txt > p{
+  font: 13px;
+  margin-left: 20px;
+}
+section .content > .txt > p > b{
+  color: #037b94;
+}
+/*왼쪽 안내글*/
+section .content > .date{
+  display: flex;
+  align-items: center;
+}
+section .content > .date > p{
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #ccc;
+}
+/*버튼요소*/
+section .content > .date > button{
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+section .content > .date > button:hover{
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------*/
+/*section : 공지사항, Q&A*/
+section > .bg-color3{
+  margin: 30px 0 70px;
+  padding-top: 30px;
+}
+section > .bg-color3 .user-menu{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+section > .bg-color3 .user-menu > .box{
+  width: 120px;
+  height: 120px;
+  color: #222;
+  padding-top: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+}
+/*아이콘 속성*/
+section > .bg-color3 .user-menu > .box > p{
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+section > .bg-color3 .user-menu > .box:nth-of-type(1) > p{
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-main-customer.png) center/cover;
+  width: 46px;
+  height: 46px;
+}
+section > .bg-color3 .user-menu > .box:nth-of-type(2) > p{
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-main-faq.png) center/cover;
+  width: 50px;
+  height: 46px;
+}
+section > .bg-color3 .user-menu > .box:nth-of-type(3) > p{
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-main-qna.png) center/cover;
+  width: 50px;
+  height: 50px;
+}
+section > .bg-color3 .user-menu > .box:nth-of-type(4) > p{
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-main-group.png) center/cover;
+  width: 50px;
+  height: 38px;
+}
+section > .bg-color3 .user-menu > .box:nth-of-type(5) > p{
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-main-lost.png) center/cover;
+  width: 51px;
+  height: 39px
+}
+
+section > .bg-color3 .user-menu > .box > a{
+  margin-top: 10px;
+  display: block;
+}
+/*텍스트*/
+section > .bg-color3 .user-menu > .box:hover{
+  text-decoration: underline;
+}
+/*--------------------------------------------------*/
+/*section : 절찬상영중 포스터*/
+section{
+  width: 100%;
+  height: 100%;
+}
+section > .poster{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #eef1de;
+}
+/*--------------------------------------------------*/
+/*footer*/
+footer{
+  background-color: #f8f8fa;
+}
+footer > .bg-color4{
+  border-top: 1px solid #ececec;
+  margin-top: 70px;
+}
+footer .f-box{
+  width: 100%;
+  height: 200px;
+}
+footer .content{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+footer .content > ul{
+  display: flex;
+}
+footer .content > ul > li{
+  color: #666;
+  line-height: 30px;
+  padding: 0 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+/*마우스이벤트*/
+footer .content > ul > li:hover{
+  text-decoration: underline;
+}
+footer .content > p{
+  border: 1px solid #333;
+  border-radius: 30px;
+  width: 105px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/**/
+footer .f-box > .f-menu{
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+/*로고 이미지*/
+footer .f-box > .f-menu > .logo-img{
+  width: 150px;
+  height: 50px;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-opacity_new2.png) no-repeat center;
+}
+footer .f-box > .f-menu > .txt{
+  font-size: 13px;
+  margin-left: 50px;
+  width: 65%;
+  color: #333;
+}
+/*sns 아이콘*/
+footer .f-box > .f-menu > .sns{
+  font-size: 24px;
+  margin-left: 70px;
+  color: gray;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+}

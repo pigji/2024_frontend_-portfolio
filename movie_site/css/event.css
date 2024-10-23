@@ -1,0 +1,301 @@
+/*구글 폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&display=swap'); /*font-family: "Odor Mean Chey"*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); /*"Oswald"*/
+/*눈누 폰트*/
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+/*공통속성 : container*/
+.container{
+  max-width: 1200px;
+  width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'S-CoreDream-3Light';
+}
+/*--------------------------------------------------*/
+/*header*/
+header{
+  width: 100%;
+  font-family: "Odor Mean Chey";
+}
+header > .bg-color{
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #503396;
+}
+/*메뉴 부분*/
+.list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.3);
+}
+.list > h1{
+  padding-left: 20px;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+
+/*로고*/
+.list > .logo{
+  /*border: 1px solid red;  영역 확인용*/
+  width: 200px;
+  height: 70px;
+  background-image: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo_new2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.list > ul{
+  display: flex;
+}
+.list > ul > li{
+padding: 0 40px;
+margin-bottom: 15px;
+font-size: 16px;
+}
+/*--------------------------------------------------*/
+/*main 부분*/
+main{
+  width: 100%;
+  position: relative;
+}
+main > .color{
+  position: absolute;
+  top: 130px;
+  width: 100%;
+  height: 360px;
+  background-color: #f8f8fa;
+}
+main > .container > h1{
+  margin: 50px 0 20px;
+  font-size: 24px;
+}
+main .container > ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+main .container > ul > li{
+  border: 1px solid #ebebeb;
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  padding-top: 8px;
+  box-sizing: border-box;
+}
+/*마우스이벤트 효과*/
+main .ev > li:hover{
+  border-bottom: 1px solid #503396;
+  color: #503396;
+}
+main .suggestion{
+  margin-top: 40px;
+}
+/*텍스트*/
+main .suggestion > .txt{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .suggestion > .txt > p{
+  font-size: 14px;
+}
+main .suggestion > .txt > p:hover{
+  text-decoration: underline;
+}
+main .event-box{
+  margin-top: 50px;
+}
+
+/*--------------------------------------------------*/
+/*section : 이벤트*/
+main .event-box{
+  width: 100%;
+  margin-top: 50px;
+}
+main .event-box::after{ /*클리어픽스 핵*/
+  content: "";
+  display: block;
+  clear: both;
+}
+main section article{
+ /* border: 1px solid red;  영역 확인용*/
+  margin-top: 30px;
+  width: 275px;
+  height: auto;
+  float:left;
+  box-sizing: border-box;
+}
+main section article > .movie-pick{
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+main section article > .movie-pick > .box{
+  width: 100%;
+  height: 365px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/*이미지*/
+main section article > .movie-pick > .box img{
+  width: 100%;
+  height: 265px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+/*텍스트*/
+main section article > .movie-pick > .box > p{
+  padding-top: 10px;
+  font-size: 14px;
+}
+/*--------------------------------------------------*/
+/*event영역 : 슬라이드 배너 영역*/
+
+#event-banner{
+  /* border: 1px solid #333; 영역 확인용 */
+  width: 100%;
+  background-color: #f8f8fa;
+	padding: 10px 20px;
+	margin: 50px auto;
+  position: relative;
+}
+#event-banner > b{
+  margin-left: 30px;
+  font-size: 25px;
+  color: #503396;
+}
+
+#event-banner > p > a{
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  color: #222;
+}
+#event-banner > p > a:nth-of-type(1){
+  left: 15px;
+}
+#event-banner > p > a:nth-of-type(2){
+  right: 15px;
+}
+#frame{
+  /* border: 1px solid blue; */
+  width: 1040px;
+  margin: 10px auto;
+  padding-top: 10px;
+  overflow: hidden;
+}
+#banner{
+  width: 3100px;
+  height: 260px;
+}
+#banner li{
+  list-style: none;
+  float: left;
+  width: 535px;
+}
+#banner li > .text{
+  width: 475px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+#banner img{
+  width: 480px;
+  height: 230px;
+  border-radius: 10px;
+}
+
+
+/*--------------------------------------------------*/
+/*footer*/
+footer{
+  background-color: #f8f8fa;
+}
+footer > .bg-color4{
+  border-top: 1px solid #ececec;
+  margin-top: 70px;
+}
+footer .f-box{
+  width: 100%;
+  height: 200px;
+}
+footer .content{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .content > ul{
+  margin-top: 30px;
+  display: flex;
+}
+footer .content > ul > li{
+  color: #666;
+  line-height: 30px;
+  padding: 0 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+/*마우스이벤트*/
+footer .content > ul > li:hover{
+  text-decoration: underline;
+}
+footer .content > p{
+  border: 1px solid #333;
+  border-radius: 30px;
+  width: 105px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+/**/
+footer .f-box > .f-menu{
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+/*로고 이미지*/
+footer .f-box > .f-menu > .logo-img{
+  width: 150px;
+  height: 50px;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-opacity_new2.png) no-repeat center;
+}
+footer .f-box > .f-menu > .txt{
+  font-size: 13px;
+  margin-left: 50px;
+  width: 65%;
+  color: #333;
+}
+/*sns 아이콘*/
+footer .f-box > .f-menu > .sns{
+  font-size: 24px;
+  margin-left: 70px;
+  color: gray;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+}

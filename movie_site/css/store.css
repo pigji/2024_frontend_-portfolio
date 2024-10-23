@@ -1,0 +1,260 @@
+/*구글 폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&display=swap'); /*font-family: "Odor Mean Chey"*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); /*"Oswald"*/
+/*눈누 폰트*/
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+/*공통속성 : container*/
+.container{
+  max-width: 1200px;
+  width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'S-CoreDream-3Light';
+}
+/*--------------------------------------------------*/
+/*header*/
+header{
+  width: 100%;
+  font-family: "Odor Mean Chey";
+}
+header > .bg-color{
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #503396;
+}
+/*메뉴 부분*/
+.list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.3);
+}
+.list > h1{
+  padding-left: 20px;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+
+/*로고*/
+.list > .logo{
+  /*border: 1px solid red;  영역 확인용*/
+  width: 200px;
+  height: 70px;
+  background-image: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo_new2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.list > ul{
+  display: flex;
+}
+.list > ul > li{
+padding: 0 40px;
+margin-bottom: 15px;
+font-size: 16px;
+}
+/*--------------------------------------------------*/
+/*main 부분*/
+main{
+  width: 100%;
+}
+main > .container > h1{
+  margin: 50px 0 20px;
+  font-size: 24px;
+}
+main ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+main ul > li{
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  padding-top: 8px;
+  box-sizing: border-box;
+}
+/*마우스이벤트 효과*/
+main ul > li:hover{
+  color: #503396;
+}
+
+/*스토어 샹품표시*/
+main .store_box{
+  /* border: 1px solid black; */
+  width: 100%;
+  margin-top: 50px;
+}
+main .store_box::after{ /*클리어픽스 핵*/
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+/*각 목록박스*/
+section{
+  margin: 0 auto;
+}
+main section article{
+   /* border: 1px solid red; */
+   width: 250px;
+   height: 445px;
+   margin: 10px;
+   float:left;
+   cursor: pointer;
+}
+
+main section article > .box{
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+/*마우스이벤트 효과*/
+main section article > .box:hover{
+  border: 1px solid #503396;
+}
+
+ /*이미지요소*/
+main section article > .box > img{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #eee;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+/*판매상품 제목태그*/
+main section article > .box > .tit{
+  /*border: 1px solid red;  영역 확인용*/
+  height: 90px;
+  text-align: left;
+  padding: 0 10px;
+}
+main section article > .box > .tit > h2{
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+main section article > .box > .tit > p{
+  font-size: 12px;
+}
+
+/*가격표시 텍스트*/
+section article > .box > .txt{
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  padding-top: 10px;
+  text-align: left;
+  padding-left: 20px;
+}
+section article > .box > .txt > p{
+  text-decoration: line-through;
+}
+section article > .box > .txt > .txt_price > h2{
+  color: #503396;
+  padding-top: 5px;
+}
+section article > .box > .txt > .txt_price > p{
+  text-align: right;
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+/*설명글이 없거나 가격할인이 없는 부분*/
+main section article:nth-of-type(4) > .box > .txt > .txt_price{
+  padding-top: 20px;
+}
+
+/*foode : 팝콘, 음료 등 부분*/
+
+
+/*--------------------------------------------------*/
+/*footer*/
+footer > .bg-color4{
+  background-color: #f8f8fa;
+}
+footer .f-box{
+  width: 100%;
+  height: 200px;
+}
+footer .content{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+footer .content > ul{
+  margin-top: 30px;
+  display: flex;
+}
+footer .content > ul > li{
+  color: #666;
+  line-height: 30px;
+  padding: 0 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+/*마우스이벤트*/
+footer .content > ul > li:hover{
+  text-decoration: underline;
+}
+footer .content > p{
+  border: 1px solid #333;
+  border-radius: 30px;
+  width: 105px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+/**/
+footer .f-box > .f-menu{
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+/*로고 이미지*/
+footer .f-box > .f-menu > .logo-img{
+  width: 150px;
+  height: 50px;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-opacity_new2.png) no-repeat center;
+}
+footer .f-box > .f-menu > .txt{
+  font-size: 13px;
+  margin-left: 50px;
+  width: 65%;
+  color: #333;
+}
+/*sns 아이콘*/
+footer .f-box > .f-menu > .sns{
+  font-size: 24px;
+  margin-left: 70px;
+  color: gray;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+}

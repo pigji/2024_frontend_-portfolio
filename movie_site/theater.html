@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화 사이트 - theater(극장)</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/theater.css" />
+    <!--폰트어썸 내 script 코드-->
+    <script
+      src="https://kit.fontawesome.com/3223480a48.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--js-->
+    <script src="js/tapmenu.js" defer></script>
+  </head>
+  <body>
+    <!--상단메뉴 부분-->
+    <header>
+      <div class="bg-color">
+        <div class="container">
+          <div class="list">
+            <ul>
+              <li><a href="movie.html">영화</a></li>
+              <li><a href="#">예매</a></li>
+              <li><a href="theater.html">극장</a></li>
+            </ul>
+            <a href="index.html" class="logo"></a>
+            <ul>
+              <li><a href="event.html">이벤트</a></li>
+              <li><a href="store.html">스토어</a></li>
+              <li><a href="boon.html">혜택</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--container-->
+      </div>
+      <!--bg-color-->
+    </header>
+
+    <!--각 지역 극장 표시 : tap 메뉴-->
+    <main>
+      <div class="container">
+        <h1>전체 극장</h1>
+        <div class="tab">
+          <div class="tab_menu">
+            <!--Tap버튼별 지역-->
+            <button class="on">서울</button>
+            <button>경기</button>
+            <button>인천</button>
+            <button>대전/충청/세종</button>
+          </div>
+          <div class="tab_list">
+            <div id="seoul" class="on">
+              <ul>
+                <li>강남</li>
+                <li>동대문</li>
+                <li>상봉</li>
+                <li>송파파크하비오</li>
+                <li>코엑스</li>
+              </ul>
+              <ul>
+                <li>강동</li>
+                <li>마곡</li>
+                <li>상암월드컵경기장</li>
+                <li>신촌</li>
+                <li>홍대</li>
+              </ul>
+              <ul>
+                <li>군자</li>
+                <li>목동</li>
+                <li>성수</li>
+                <li>이수</li>
+                <li>화곡</li>
+              </ul>
+              <ul>
+                <li>더 부티크 목동현대백화점</li>
+                <li>브로드웨이(신사)</li>
+                <li>센트럴</li>
+                <li>창동</li>
+                <li>ARTNINE</li>
+              </ul>
+            </div>
+
+            <div id="gyeonggi">
+              <ul>
+                <li>고양스타필드</li>
+                <li>김포한강신도시</li>
+                <li>미사강변</li>
+                <li>분당</li>
+                <li>수원스타일드</li>
+                <li>안산중앙</li>
+                <li>용인테크노밸리</li>
+                <li>파주운정</li>
+              </ul>
+              <ul>
+                <li>광명AK플라자</li>
+                <li>남양주</li>
+                <li>백설벨라시타</li>
+                <li>수원</li>
+                <li>수원인계</li>
+                <li>안성스타필드</li>
+                <li>의정부민락</li>
+                <li>평택비전</li>
+              </ul>
+              <ul>
+                <li>광명소하</li>
+                <li>남양주현대아웃렛</li>
+                <li>별내</li>
+                <li>수원AK플라자</li>
+                <li>수원호매실</li>
+                <li>양주</li>
+                <li>킨텍스</li>
+                <li>하남스타필드</li>
+              </ul>
+              <ul>
+                <li>금정AK플라자</li>
+                <li>동탄</li>
+                <li>부천스타필드시티</li>
+                <li>수원남문</li>
+                <li>시흥배곧</li>
+                <li>용인기흥</li>
+                <li>파주금촌</li>
+              </ul>
+            </div>
+            <!--gyeonggi : 경기 지역-->
+            <div id="incheon">
+              <ul>
+                <li>검단</li>
+                <li>인천논현</li>
+              </ul>
+              <ul>
+                <li>송도</li>
+                <li>청라지젤</li>
+              </ul>
+              <ul>
+                <li>영종</li>
+              </ul>
+              <ul>
+                <li>영종하늘도시</li>
+              </ul>
+            </div>
+            <!--incheon : 인천 지역-->
+            <div id="other-areas">
+              <ul>
+                <li>공주</li>
+                <li>대전유성</li>
+                <li>세종나성</li>
+                <li>천안</li>
+                <li>홍성내포</li>
+              </ul>
+              <ul>
+                <li>논산</li>
+                <li>대전중앙로</li>
+                <li>세종청사</li>
+                <li>청주사창</li>
+              </ul>
+              <ul>
+                <li>대전</li>
+                <li>대전현대아울렛</li>
+                <li>오창</li>
+                <li>청주성안길</li>
+              </ul>
+              <ul>
+                <li>대전신세계</li>
+                <li>세종(조치원)</li>
+                <li>진천</li>
+                <li>충주연수</li>
+              </ul>
+            </div> <!--other-areas : 그외 지역 -->
+          </div> <!--tab_list-->
+          <div class="form">
+            <p><i class="fa-solid fa-bookmark"></i> 나의 선호영화관 정보</p>
+            <button type="button">로그인하기</button>
+          </div>
+        </div> <!--tab-->
+      </div> <!--container-->
+    </main>
+
+    <!--극장 이벤트-->
+    <section>
+      <div class="container">
+        <div class="event">
+          <div class="e_txt">
+            <h1>극장 이벤트</h1>
+            <a href="event.html">더보기 ></a>
+          </div>
+          <div class="theater-event">
+            <img src="image/theater/극장이벤트1.jpg" alt="" />
+            <img src="image/theater/극장이벤트2.jpg" alt="" />
+          </div>
+        </div>
+        <!--event-->
+      </div>
+      <!--container-->
+    </section>
+
+    <!--극장 공지사항-->
+    <section>
+      <div class="container">
+        <div class="theater-notice">
+          <div class="tn-txt">
+            <h1>극장 공지사항</h1>
+            <p>더보기 ></p>
+          </div>
+          <table>
+            <tr>
+              <th>극장</th>
+              <th>제목</th>
+              <th>지역</th>
+              <th>등록일</th>
+            </tr>
+            <tr>
+              <td>강남</td>
+              <td class="txt">[강남] 상영관 리뉴얼 공사 안내</td>
+              <td>서울</td>
+              <td>2024.09.27</td>
+            </tr>
+            <tr>
+              <td>서면대한</td>
+              <td class="txt">[서면대한] 신규오픈 안내</td>
+              <td>부산/대구/경상</td>
+              <td>2024.09.25</td>
+            </tr>
+            <tr>
+              <td>동대문</td>
+              <td class="txt">
+                [동대문] 4,5,6,7관 리클라이너 설치 공사 진행 안내(9/26 ~
+                10/10까지)
+              </td>
+              <td>서울</td>
+              <td>2024.09.24</td>
+            </tr>
+            <tr>
+              <td>킨텍스</td>
+              <td class="txt">[킨텍스] 컴포트 1관 영업 종료 안내</td>
+              <td>경기</td>
+              <td>2024.09.23</td>
+            </tr>
+            <tr>
+              <td>부산극장</td>
+              <td class="txt">
+                [부산극장] 2024년 29회 부산국제영화제 & 커뮤니티 BIFF 행사 진행
+                안내(10/2 ~ 10/6)
+              </td>
+              <td>부산/대구/경상</td>
+              <td>2024.09.23</td>
+            </tr>
+          </table>
+        </div>
+        <!--theater-notice-->
+      </div>
+      <!--container-->
+    </section>
+
+    <!--footer-->
+    <footer>
+      <div class="bg-color4">
+        <div class="container">
+          <div class="f-box">
+            <div class="content">
+              <ul>
+                <li>회사소개</li>
+                <li>인재채용</li>
+                <li>사회공헌</li>
+                <li>제휴/광고/부대사업문의</li>
+                <li>이용약관</li>
+                <li>위치기반서비스 이용약관</li>
+                <li><b>개인정보처리방침</b></li>
+                <li>윤리경영</li>
+              </ul>
+              <p><i class="fa-solid fa-magnifying-glass"></i> 극장찾기</p>
+            </div>
+            <div class="f-menu">
+              <div class="logo-img"></div>
+              <div class="txt">
+                <p>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 메가박스 스퀘어) ARS 1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr
+                  대표자명 홍정인 · 개인정보보호책임자 강병철 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 2023-서울성동-0177
+                  2024 LOGO &copy; copyright all right reserved.
+                </p>
+              </div>
+              <div class="sns">
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-square-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div> <!--container-->
+      </div>
+    </footer>
+  </body>
+</html>

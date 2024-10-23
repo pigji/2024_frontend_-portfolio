@@ -1,0 +1,325 @@
+/*폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&display=swap'); /*font-family: "Odor Mean Chey"*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); /*"Oswald"*/
+
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+/*공통속성 : container*/
+.container{
+  max-width: 1200px;
+  width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+/*--------------------------------------------------*/
+/*header*/
+header{
+  width: 100%;
+  font-family: "Odor Mean Chey";
+}
+header > .bg-color{
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #503396;
+}
+/*메뉴 부분*/
+.list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.3);
+}
+.list > h1{
+  padding-left: 20px;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+
+/*로고*/
+.list > .logo{
+  /*border: 1px solid red;  영역 확인용*/
+  width: 200px;
+  height: 70px;
+  background-image: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo_new2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.list > ul{
+  display: flex;
+}
+.list > ul > li{
+padding: 0 40px;
+margin-bottom: 15px;
+font-size: 15px;
+}
+/*마우스이벤트 효과*/
+.list li:hover, .list img:hover{
+  color: pink;
+}
+/*--------------------------------------------------*/
+/*main : 각 지역 극장 표시*/
+main{
+  margin-top: 50px;
+}
+main h1{
+  color: #503396;
+}
+main .tab{
+  width: 100%;
+  height: 100%;
+  border: 2px solid gray;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+/*버튼을 감싸고 있는 요소*/
+main .tab > .tab_menu{
+  height: 50px;
+	display:flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 1px solid #ccc;
+
+}
+/*버튼요소*/
+main .tab > .tab_menu > button{
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  padding: 14px 16px;
+  /*구분선 추가*/
+}
+.tab_menu button.on{
+  color: #503396;
+  font-weight:bold;
+}
+
+.tab_list{
+  text-align: left;
+  width: 100%;
+  height: auto;
+}
+
+/*세부지역 창 정렬*/
+.tab_list > div{
+  display: flex;
+}
+.tab_list > div > ul{
+  /*border: 1px solid red;  영역 확인용 */
+  width:25%;
+  padding:20px 30px;
+  border-right: 1px solid #ccc;
+}
+.tab_list > div > ul:nth-child(4){
+  border: 0;
+}
+.tab_list ul > li{
+  padding: 10px 0px;
+  cursor: pointer;
+}
+/*마우스이벤트*/
+.tab_list ul > li:hover{
+  text-decoration: underline;
+}
+
+.tab_list > div{
+  display:none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tab_list > div.on{
+  display:flex;
+}
+
+/**/
+.tab .form{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ecf0f4;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.tab .form > p > i{
+  color: rgb(112, 170, 170);
+}
+/*버튼요소*/
+.tab .form > button{
+  margin-left: 20px;
+  width: 100px;
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid #503396;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------*/
+/*section : 극장 이벤트*/
+section .event{
+  /* border: 1px solid red; */
+  margin-top: 50px;
+  text-align: center;
+}
+/*텍스트*/
+section .event > .e_txt{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+section .event > .e_txt > h1{
+  color: #503396;
+  font-size: 28px;
+}
+section .event > .e_txt > a:hover{
+  text-decoration: underline;
+}
+section .event > .theater-event{
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .event > .theater-event > img{
+  border-radius: 10px;
+}
+/*--------------------------------------------------*/
+/*section : 극장 공지사항*/
+section .theater-notice{
+  width: 100%;
+  height: auto;
+  /* border: 1px solid orange; */
+  margin-top: 50px;
+}
+section .theater-notice > .tn-txt{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .theater-notice > .tn-txt > h1{
+  color: #503396;
+  font-size: 28px;
+}
+section .theater-notice > .tn-txt > p:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+/*테이블 태그*/
+table{
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;  /*테이블 안쪽 기본여백 제거*/
+  margin-top: 15px;
+  cursor: pointer;
+}
+tr{
+  padding: 3px 10px;
+  color: #222;
+  border-top: 1px solid #777;
+}
+th{
+  height: 45px;
+  padding: 3px 10px;
+  text-align: center;
+  background-color: #f2f4f5;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 16px;
+  font-weight: normal;
+}
+td{
+  height: 45px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.txt{
+  text-align: left;
+  padding-left: 30px;
+}
+/*--------------------------------------------------*/
+/*footer*/
+footer > .bg-color4{
+  background-color: #f8f8fa;
+}
+footer .f-box{
+  width: 100%;
+  height: 200px;
+}
+footer .content{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+footer .content > ul{
+  margin-top: 30px;
+  display: flex;
+}
+footer .content > ul > li{
+  color: #666;
+  line-height: 30px;
+  padding: 0 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+/*마우스이벤트*/
+footer .content > ul > li:hover{
+  text-decoration: underline;
+}
+footer .content > p{
+  border: 1px solid #333;
+  border-radius: 30px;
+  width: 105px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+/**/
+footer .f-box > .f-menu{
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+/*로고 이미지*/
+footer .f-box > .f-menu > .logo-img{
+  width: 150px;
+  height: 50px;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-opacity_new2.png) no-repeat center;
+}
+footer .f-box > .f-menu > .txt{
+  font-size: 13px;
+  margin-left: 50px;
+  width: 65%;
+  color: #333;
+}
+/*sns 아이콘*/
+footer .f-box > .f-menu > .sns{
+  font-size: 24px;
+  margin-left: 45px;
+  color: gray;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
