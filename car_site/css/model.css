@@ -1,0 +1,194 @@
+/*폰트*/
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+body{
+  font-family: 'Pretendard-Regular';
+  font-size: 14px;
+  color: #111;
+  box-sizing: border-box;
+}
+
+/*공통속성 코드 : container*/
+.container{
+  min-width: 900px;
+  width: 900px;
+  margin: 0 auto; /*가운데정렬*/
+  box-sizing: border-box;
+}
+
+/* header:상단메뉴 */
+header{
+  width: 100%;
+  min-width: 900px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(8, 30, 77, 0.3);  /*연한 파란색으로 반투명하게 그림자 설정*/
+}
+header > .container{
+  padding: 24px 10px;
+  display: flex;
+  justify-content: space-between; /*각 요소 양끝에 배치(주축)*/
+  align-items: center;  /*교차축 가운데정렬*/
+}
+.logo{
+  font-size: 36px;
+  height: 20px;
+  transform: translateY(-15px);
+  letter-spacing: 2px;  /*자간 넓히기(가독성을 위해)*/
+}
+.logo span{
+  color: #213EDE;
+  font-weight: bold;
+  line-height: 1.5;
+}
+nav{
+  display: flex;  /*일열로 나란히 정렬*/
+}
+nav > ul{
+  display: flex;
+}
+
+.top_gnb > li{
+  margin: 0 35px;
+  transform: translateY(2px); /* line-height: 20px; 와 같은 의미 */
+}
+.top_gnb .tel{
+  color: #213EDE;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+section{
+  margin-bottom: 50px;
+  min-width:900px;
+}
+/*---------------------------------------------------------------*/
+/*자동차목록 --> 공통속성 .container을 사용하지 않고 따로 .content로 만듦.*/
+section{
+  width: 100%;
+  min-width: 900px;
+  margin: 0 auto;
+}
+section .content{
+  width: 1300px;
+  margin: 50px auto 20px;
+}
+/*---------------------------------------------------------------*/
+section .content h2{  /*제목태그 : 모델라인업*/
+  margin: 10px 10px 20px;
+  font-size: 32px;
+}
+section .content .car-search{ /*차량검색 박스*/
+  width: 100%;
+  box-shadow: 2px 2px 5p  ;
+  height: 230px;
+}
+section .content .car-search p{
+  font-size: 16px;
+  margin: 10px;
+}
+section .content .car-search input{
+  display: block;
+  width: 250px;
+  height: 30px;
+  padding-left: 5px;
+  margin: 0 5px;
+  display: inline-block;
+}
+section .content .car-search select{
+  width: 150px;
+  height: 34px;
+  margin: 0 5px;
+}
+
+/*자동차 시리즈별 목록*/
+section .car-list ul{
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;  /*주축 정렬*/
+  align-items: center;  /*교차축 정렬*/
+  background-color: aliceblue;
+}
+section .car-list ul li a{
+  display: block;
+  padding: 20px;
+  font-weight: bold;  /*글씨 두껍게*/
+  font-size: 18px;
+  margin-right: 40px;
+}
+/*마우스이벤트 효과*/
+section .car-list ul > li:hover > a{
+  color: navy;
+}
+/*---------------------------------------------------------------*/
+/*car-box : 자동차 영역*/
+section .car-box{width: 100%;}
+section .car-box .car-gnb{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 5px;
+}
+section .car-box .car-gnb .box{
+  width: 360px;
+  height: auto;
+  border: 1px solid #f3f3f3;
+  margin-bottom: 40px;
+}
+section .car-box .car-gnb .box img{
+  width: 350px;
+  height: auto;
+  text-align: center;
+  transform: scale(1);
+  transition: transform .5s;
+}
+/*마우스이벤트 애니메이션 효과*/
+section .car-box .car-gnb .box img:hover{
+  transform: scale(1.2);
+  transition: transform .5s;
+}
+/*텍스트 정렬*/
+section .car-box .car-gnb .box h1,
+section .car-box .car-gnb .box p{
+  text-align: center;
+}
+
+
+/*---------------------------------------------------------------*/
+/*footer*/
+footer{
+  width: 100%;
+  min-width: 900px;
+  height: 130px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(8, 30, 77, 0.3);  /*연한 파란색으로 반투명하게 그림자 설정*/
+}
+footer .fbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+footer h1{
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+}
+footer .fbox .footer-txt h2{
+  font-size: 15px;
+  font-weight: normal;
+}
+footer .fbox .footer-icon i{
+  font-size: 25px;
+  margin: 5px;
+}

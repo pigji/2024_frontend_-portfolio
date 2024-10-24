@@ -1,0 +1,290 @@
+/*폰트*/
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+body{
+  font-family: 'Pretendard-Regular';
+  font-size: 14px;
+  color: #111;
+  box-sizing: border-box;
+  /*background-color: #f0f2fa;*/
+}
+
+/*공통속성 코드 : container*/
+.container{
+  min-width: 900px;
+  width: 850px;
+  margin: 0 auto; /*가운데정렬*/
+  box-sizing: border-box;
+}
+/*---------------------------------------------------------------*/
+/* header:상단메뉴 */
+header{
+  width: 100%;
+  min-width: 900px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(8, 30, 77, 0.3);  /*연한 파란색으로 반투명하게 그림자 설정*/
+}
+header > .container{
+  padding: 24px 10px;
+  display: flex;
+  justify-content: space-between; /*각 요소 양끝에 배치(주축)*/
+  align-items: center;  /*교차축 가운데정렬*/
+}
+.logo{
+  font-size: 36px;
+  height: 20px;
+  transform: translateY(-15px);
+  letter-spacing: 2px;  /*자간 넓히기(가독성을 위해)*/
+}
+.logo span{
+  color: #213EDE;
+  font-weight: bold;
+  line-height: 1.5;
+}
+nav{
+  display: flex;  /*일열로 나란히 정렬*/
+}
+nav > ul{
+  display: flex;
+}
+
+.top_gnb > li{
+  margin: 0 35px;
+  transform: translateY(2px); /* line-height: 20px; 와 같은 의미 */
+}
+.top_gnb .tel{
+  color: #213EDE;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+section{
+  margin-bottom: 50px;
+  min-width:900px;
+}
+/*---------------------------------------------------------------*/
+/*section : Q&A 안내 부분*/
+section .bg-img{  /*배경이미지*/
+  background : url(../image/고객센터.avif) center/cover;
+  width: 100%;
+  height: 830px;
+  position: relative;
+}
+section .bg-txt{
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+section .bg-txt h1{
+  padding-top: 85px;
+  font-size: 32px;
+  letter-spacing: 8px;
+  color: #333;
+}
+section > .bg-color{
+  background-color: #f0f2fa;
+}
+.notice_warp{ /*전체 부분*/
+  padding: 30px 0;
+  width: 100%;  /*1200px*/
+}
+.notice_warp > .title{
+  border-bottom: 1px solid #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.notice_warp > .title > h1{
+  font-size: 30px;
+}
+/*버튼요소*/
+.notice_warp > .title > button{
+  background-color: transparent;  /*투명색*/
+  padding: 7px;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+/*Top5 Q&A 요소*/
+.notice_warp > .menu{
+  padding: 10px;
+  font-size: 20px;
+}
+/*구분선 추가*/
+.notice_warp > .menu ul > li{
+  border-bottom: 1px dotted #666;
+  margin: 20px 0;
+  background-color: rgba(163, 161, 161, 0);
+  line-height: 50px;
+}
+.notice_warp > .menu ul > li:first-child{
+  margin: 0;
+}
+/*마우스이벤트 효과*/
+.notice_warp > .menu ul > li:hover{
+  color: #3d62a7;
+  font-weight: bold;
+}
+/*---------------------------------------------*/
+/*Q&A부분*/
+.accordion{
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  transition: all .4s;
+  background-color: #f0f2fa;
+}
+.active, .accordion:hover{
+  background-color: #d3dbf8;
+}
+
+/*가상요소*/
+.accordion::after{
+  content: "\02795";  /*(+)모양 특수문자*/
+  font-size: 15px;
+  color: #777;
+  float: right;
+}
+.active::after{
+  content: "\2796"; /*(-)모양 특수문자*/
+}
+.panel{
+  padding: 0 18px;
+  background-color: #fff;
+  max-height: 0;  /*높이를 0으로 만듦*/
+  overflow: hidden; /*패널 안쪽 컨텐츠를 가려놓음*/
+  transition: max-height 0.2s ease-out;
+}
+.panel > p{
+  font-size: 15px;
+  padding: 10px 0;
+  color: #333;
+  line-height: 30px;
+}
+/*---------------------------------------------------------------*/
+/*section : 고객센터 안내 부분*/
+.guide{
+  margin: 0 auto;
+  text-align: center;
+}
+.guide h1{
+  margin-top: 70px;
+}
+.guide p{
+  color: #666;
+}
+.guide .guide-box{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.guide .guide-box > .box{
+  width: 280px;
+  height: 180px;
+  margin: 0 10px;
+  padding: 15px;
+  text-align: left;
+  background-color: #a8abc2;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/*마우스이벤트 효과*/
+.guide .guide-box > .box:hover{
+  color: #fff;
+  background-color: #6b708f;
+}
+.guide .guide-box > .box h2{
+  margin: 14px 0;
+  font-size: 18px;
+}
+/*아이콘*/
+.guide .guide-box > .box > i{
+  font-size: 30px;
+}
+/*---------------------------------------------------------------*/
+/*section : 고객 응대 절차*/
+.provision{ /*전체 영역*/
+  margin: 0 auto;
+  box-shadow: 0 2px 5px rgba(8, 30, 77, 0.3);
+}
+.provision h1{
+  text-align: center;
+  line-height: 2;
+  color: #333;
+  background-color: #f0f2fa;
+  height: 40px;
+  margin: 20px 0;
+
+}
+.provision .procedure{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 10px;
+  padding: 20px 0;
+}
+.provision .procedure .p-box{ /*각 요소 박스*/
+  border: 1px solid #eee;
+  width: 200px;
+  height: 250px;
+  text-align: center;
+}
+/*아이콘*/
+.provision .procedure .p-box i{
+  margin: 10px 0;
+  font-size: 40px;
+}
+.provision .procedure .p-box p{
+  color: #666;
+  padding: 10px 0;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+/*---------------------------------------------------------------*/
+/*footer*/
+footer{
+  width: 100%;
+  min-width: 900px;
+  height: 130px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(8, 30, 77, 0.3);  /*연한 파란색으로 반투명하게 그림자 설정*/
+}
+footer .fbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+footer h1{
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+}
+footer .fbox .footer-txt h2{
+  font-size: 15px;
+  font-weight: normal;
+}
+footer .fbox .footer-icon i{
+  font-size: 25px;
+  margin: 5px;
+}

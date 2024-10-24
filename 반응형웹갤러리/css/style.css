@@ -1,0 +1,231 @@
+/*구글폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none;}
+body{background-color: #efefef;}
+/*-------------------------------------------------------*/
+/*header*/
+header{
+  width: 400px;
+  height: 100%;
+  position: fixed;  /*고정*/
+  top: 0; left: 0;  /*왼쪽 위쪽으로 위치설정*/
+  background: linear-gradient(45deg, aqua, royalblue);
+  transition: all .5s;
+}
+/*로고*/
+header> h1{
+  font: bold 50px/1 "Orbitron";
+  color: #fff;
+  letter-spacing: 1px;
+  position: absolute; /*공중에 띄움*/
+  left: 50px;
+  top: 50%;
+  transform: translateY(-150%);
+}
+/*가상요소 : 밑줄(수평선)*/
+header h1::after{
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2px;
+  background: #fff;
+  margin-top: 20px;
+}
+/*가상요소 : 문구*/
+header h1::before{
+  content: "UI/UX DEVELOPMENT";
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: normal;
+  position: absolute;
+  left: 0;
+  top: 140px; /*위치정렬*/
+  letter-spacing: 2px;
+}
+/*sns 버튼*/
+header ul{
+  position: absolute;
+  left: 40px;
+  bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;  /*줄바꿈 허용*/
+  gap: 10px;
+}
+header ul li a{
+  font-size: 20px;
+  color: #fff;
+}
+header ul li a span{
+  display: inline-block;
+  font-weight: bold;
+  opacity: 0.7; /*반투명하게 설정*/
+  transform: scale(0.7) translateX(-10px);  /*70%로 축소하고 왼쪽으로 10px만큼 이동*/
+}
+/*-------------------------------------------------------*/
+/*main 부분*/
+main{
+  margin-left: 400px; /*header 옆에 배치*/
+  box-sizing: border-box;
+  padding: 20px;
+}
+main section{
+  width: 100%;
+}
+main section::after{  /*section안 요소를 float로 정렬하기 때문에 클리어픽스 핵 추가*/
+  content: "";
+  display: block;
+  clear: both;
+}
+/*각 이미지+문구 요소*/
+main section article{
+  width: 20%;
+  float: left;  /*나란히 정렬*/
+  box-sizing: border-box;
+  padding: 12px;
+}
+main section article div{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 14px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1); /*그림자 추가*/
+}
+/*텍스트 요소*/
+main section article div h2{
+  margin-top: 15px;
+  font: bold 11px/1 "Orbitron";
+  letter-spacing: 1px;  /*자간설정*/
+  color: #444;
+  margin-bottom: 5px;
+}
+main section article div p{
+  font: 10px/1.2 Arial;
+  color: #777;
+  margin-bottom: 15px;
+}
+/*이미지 요소*/
+main section article div img{
+  width: 100%;
+}
+/*-------------------------------------------------------*/
+/*분류버튼*/
+main ul::after{ /*클리어픽스핵*/
+  content: "";
+  display: block;
+  clear: both;
+  display: block;
+}
+main ul li{
+  float: right;
+  margin-right: 20px;
+  width: 100px;
+  height: 26px;
+}
+main ul li a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  font: bold 10px/26px "Orbitron";
+  color: #aaa;
+  background-color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  box-sizing: 0 0 10px rgba(0,0,0,0.05);
+}
+main ul li.on a{  /*on클래스가 추가 되었을때 적용할 속성*/
+  background: linear-gradient(45deg, #68faf3, #58abf8);
+  box-shadow: 0 5px 20px rgba(0,255,255,0.5);
+  color: #fff;
+}
+/*-------------------------------------------------------*/
+/*미디어쿼리*/
+/*브라우저 넓이가 1600px 미만일때*/
+@media screen and (max-width:1599px){
+  header{
+    width: 350px;
+  }
+  main{
+    margin-left: 350px;
+  }
+  main section article{
+    width: 25%;
+  }
+}
+
+/*브라우저 넓이가 1200px 미만일때 - 왼쪽에 있던 haader메뉴가 위로 올라감*/
+@media screen and (max-width:1199px) {
+    header{
+      width: 100%;
+      height: 80px;
+      position: relative;
+    }
+    header h1{
+      font-size: 24px;
+      transform: translateY(-50%);
+    }
+    header h1::before,
+    header h1::after{ /*가상요소로 만든 밑줄과 텍스트를 제거*/
+      display: none;
+    }
+    /*아이콘 요소*/
+    header ul{
+      left: auto;
+      right: 50px;
+      bottom: 25px;
+      flex-wrap: nowrap;  /*줄바꿈 금지*/
+      gap: 20px;
+    }
+    /*아이콘 표시를 알리는 텍스트 제거*/
+    header ul li a span{
+      display: none;
+    }
+    main{
+      width: 100%;
+      margin-left: 0; /*여백제거 : 전체영역 모두 사용*/
+    }
+}
+
+/*브라우저 넓이가 900px 미만일때*/
+@media screen and (max-width:899px){
+  main section article{
+    width: 33.3333%; /*컨텐츠를 3줄 정렬로 변경*/
+  }
+}
+
+/*브라우저 넓이가 680px 미만일때*/
+@media screen and (max-width:679px){
+  main section article{
+    width: 50%; /*컨텐츠를 2줄 정렬로 변경*/
+  }
+}
+
+/*브라우저 넓이가 540px 미만일때( 모바일 사이즈 )*/
+@media screen and (max-width:539px){
+  header ul{  /*아이콘 제거*/
+    display: none;
+  }
+  main section article{
+    width: 100%; /*컨텐츠를 1줄 정렬로 변경*/
+  }
+  /*분류버튼*/
+  main ul{
+    margin-right: 0;
+    box-sizing: border-box;
+    padding: 0 13px;
+  }
+  main ul li{
+    margin-right: 2%;
+    width: 32%;
+  }
+  main ul li:first-child{
+    margin-right: 0;
+  }
+}

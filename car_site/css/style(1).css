@@ -1,0 +1,349 @@
+/*폰트*/
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+body{
+  font-family: 'Pretendard-Regular';
+  font-size: 14px;
+  color: #111;
+  box-sizing: border-box;
+}
+
+/*공통속성 코드 : container*/
+.container{
+  min-width: 900px;
+  width: 850px;
+  margin: 0 auto; /*가운데정렬*/
+  box-sizing: border-box;
+}
+
+/* header:상단메뉴 */
+header{
+  width: 100%;
+  min-width: 900px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(8, 30, 77, 0.3);  /*연한 파란색으로 반투명하게 그림자 설정*/
+}
+header > .container{
+  padding: 24px 10px;
+  display: flex;
+  justify-content: space-between; /*각 요소 양끝에 배치(주축)*/
+  align-items: center;  /*교차축 가운데정렬*/
+}
+.logo{
+  font-size: 36px;
+  height: 20px;
+  transform: translateY(-15px);
+  letter-spacing: 2px;  /*자간 넓히기(가독성을 위해)*/
+}
+.logo span{
+  color: #213EDE;
+  font-weight: bold;
+  line-height: 1.5;
+}
+nav{
+  display: flex;  /*일열로 나란히 정렬*/
+}
+nav > ul{
+  display: flex;
+}
+
+.top_gnb > li{
+  margin: 0 35px;
+  transform: translateY(2px); /* line-height: 20px; 와 같은 의미 */
+}
+.top_gnb .tel{
+  color: #213EDE;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+section{
+  min-width:900px;
+}
+/*---------------------------------------------------------------*/
+/*section : banner 부분*/
+section > .banner{
+  width: 100%;
+  min-width: 900px;
+  height: 700px;
+  background: url(../image/자동차배경이미지1.jpg) center/cover;
+  position: relative; /*유령의 집화*/
+}
+
+section .box{
+  position: absolute;
+  width: 180px;
+  height: 270px;
+  text-align: center;
+  bottom: -20%;
+  color: white;
+  opacity: 0.9;
+  box-sizing: border-box;
+  padding: 15px;
+}
+section .banner .box h1{
+  margin: 10px;
+}
+section .banner .box i{
+  margin: 10px;
+  font-size: 45px;
+}
+section .banner .box p{
+  margin: 10px;
+  letter-spacing: 3px;
+}
+section .banner .box a{
+  display: block;
+  margin: 30px 10px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+}
+/*마우스이벤트 효과*/
+section .banner .box a:hover{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*각 요소 위치정렬*/
+section .box:first-child{
+  left: calc(50% - 400px);
+  background: url(../image/bg_image1.jpg) center/cover;
+  /*background-color: #21B5DE;*/
+}
+section .box:nth-child(2){
+  left: calc(50% - 220px);
+  background: url(../image/bg_image5.jpg) center/cover;
+  /*background-color: #2179DE;*/
+}
+section .box:nth-child(3){
+  right: calc(50% - 220px);
+  background: url(../image/bg_image3.jpg) center/cover;
+  /*background-color: #2e189c;*/
+}
+section .box:nth-child(4){
+  right: calc(50% - 400px);
+  background: url(../image/bg_image6.jpg) center/cover;
+  /*background-color: #213EDE;*/
+}
+
+/*banner-subMenu*/
+section .banner-subMenu{
+  width: 800px;
+  height: 140px;
+  margin: 150px auto 10px;
+  background-color: #2179DE;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+section .banner-subMenu > .banner_txt{
+  width:50%;
+  box-sizing: border-box;
+}
+section .banner-subMenu > .banner_txt  h1{
+  color: white;
+  font-size: 20px;
+}
+/*버튼요소*/
+section > .banner-subMenu > .banner_txt > a{
+  width: 115px;
+  height: 20px;
+  display: block;
+  background-color: white;
+  color: #2179DE;
+  border-radius: 30px;
+  padding: 5px;
+  margin-top: 20px;
+  text-align: center;
+}
+/*구분선 추가*/
+section .banner-subMenu > div:nth-of-type(2){
+  border-left: 1px solid #999;
+  padding-left: 20px;
+}
+
+/*이벤트 영역*/
+#eventBox{
+  width: 100%;
+  height: 70px;
+  background-color: #2179DE;
+  box-shadow: 0 1px 2px rgba(8, 30, 77, 0.3);  /*연한 파란색으로 반투명하게 그림자 설정*/
+  margin: 0 auto;
+}
+#eventBox .event{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+#eventBox .event img{
+  width: 160px;
+}
+#eventBox .event a{
+  display: block;
+  margin: 10px 0;
+}
+/*마우스이벤트 효과*/
+#eventBox .event a:hover{
+  color: gold;
+  font-weight: bold;
+}
+#eventBox > .container > .event p{
+  font-size: 20px;
+
+}
+#eventBox > .container > .event b{
+  color: gold;
+}
+/*---------------------------------------------------------------*/
+/*section : hotDeal부분*/
+#hotDeal{
+  width: 100%;
+  height: 430px;
+  background-color: #333;
+  margin: 0 auto;
+}
+.hotDeal-all{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+/*영역 제목태그*/
+#hotDeal > .container > h1{
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 40px;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+/*이미지요소 안 텍스트*/
+#hotDeal .hotDeal-img{
+  border: 2px solid white;
+  width: 185px;
+  height: 285px;
+}
+#hotDeal .hotDeal-img h1{
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 93%;
+}
+#hotDeal .hotDeal-img p{
+  color: #ccc;
+  text-align: center;
+}
+#hotDeal .hotDeal-img:nth-of-type(1){
+  background: url(../image/자동차3\(배경제거.png) center/contain no-repeat;
+}
+#hotDeal .hotDeal-img:nth-of-type(2){
+  background: url(../image/자동차2\(배경제거.png) center/contain no-repeat;
+}
+#hotDeal .hotDeal-img:nth-of-type(3){
+  background: url(../image/자동차7\(배경제거.png) center/contain no-repeat;
+}
+#hotDeal .hotDeal-img:nth-of-type(4){
+  background: url(../image/자동차6\(배경제거.png) center/contain no-repeat;
+}
+/*좌,우 표시 아이콘*/
+#hotDeal .hotDeal-all i{
+  font-size: 40px;
+}
+/*---------------------------------------------------------------*/
+/*section : badge*/
+#badge{
+  min-width: 900px;
+  width: 100%;
+  height: 340px;
+  background-color: #f8f8f8;
+}
+#badge .badge{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*badge-box 공통속성*/
+#badge .badge .badge-box{
+  width: 300px;
+  height: 225px;
+  margin: 55px 10px;
+  padding: 20px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+/*각 요소 배경색 설정*/
+#badge .badge .badge-box:nth-of-type(1){
+  background-color: #428bdf;
+}
+#badge .badge .badge-box:nth-of-type(2){
+  background-color: #445be0;
+}
+#badge .badge .badge-box:nth-of-type(3){
+  background-color: #4933b9;
+}
+/*텍스트 설정*/
+#badge .badge .badge-box h1{
+  margin: 20px 0;
+}
+
+/*버튼요소*/
+#badge .badge .badge-box button{
+  border: 0;
+  background-color: transparent;
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(231, 228, 228);
+  float: right;
+  padding: 10px;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+/*마우스이벤트 효과*/
+#badge .badge .badge-box button:hover{
+  font-size: 15px;
+}
+/*---------------------------------------------------------------*/
+/*footer*/
+footer{
+  width: 100%;
+  min-width: 900px;
+  height: 130px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(8, 30, 77, 0.3);  /*연한 파란색으로 반투명하게 그림자 설정*/
+}
+footer .fbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+footer h1{
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+}
+footer .fbox .footer-txt h2{
+  font-size: 15px;
+  font-weight: normal;
+}
+footer .fbox .footer-icon i{
+  font-size: 25px;
+  margin: 5px;
+}

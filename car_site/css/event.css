@@ -1,0 +1,162 @@
+/*폰트*/
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+body{
+  font-family: 'Pretendard-Regular';
+  font-size: 14px;
+  color: #111;
+  box-sizing: border-box;
+}
+
+/*공통속성 코드 : container*/
+.container{
+  min-width: 900px;
+  width: 900px;
+  margin: 0 auto; /*가운데정렬*/
+  box-sizing: border-box;
+}
+
+/* header:상단메뉴 */
+header{
+  width: 100%;
+  min-width: 900px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(8, 30, 77, 0.3);  /*연한 파란색으로 반투명하게 그림자 설정*/
+}
+header > .container{
+  padding: 24px 10px;
+  display: flex;
+  justify-content: space-between; /*각 요소 양끝에 배치(주축)*/
+  align-items: center;  /*교차축 가운데정렬*/
+}
+.logo{
+  font-size: 36px;
+  height: 20px;
+  transform: translateY(-15px);
+  letter-spacing: 2px;  /*자간 넓히기(가독성을 위해)*/
+}
+.logo span{
+  color: #213EDE;
+  font-weight: bold;
+  line-height: 1.5;
+}
+nav{
+  display: flex;  /*일열로 나란히 정렬*/
+}
+nav > ul{
+  display: flex;
+}
+
+.top_gnb > li{
+  margin: 0 35px;
+  transform: translateY(2px); /* line-height: 20px; 와 같은 의미 */
+}
+.top_gnb .tel{
+  color: #213EDE;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+section{
+  min-width:900px;
+}
+/*---------------------------------------------------------------*/
+/*section : 이벤트 부분*/
+section .content{
+  width: 1300px;
+  margin: 0 auto;
+}
+.eventAll{
+
+  margin-top: 50px;
+}
+.eventAll > h1{
+  text-align: center;
+  font-size: 36px;
+}
+.eventAll > p{
+  text-align: center;
+  margin: 15px 0;
+  color: #666;
+}
+.eventTop{
+  border-top: 1px solid #999;
+}
+.eventTop > h2{
+  float: right;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #333;
+  padding-right: 5px;
+  padding-top: 10px;
+}
+.eventAll .evnet-box{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+.eventAll .evnet-box .box{
+  width: 600px;
+  height: auto;
+}
+.eventAll .evnet-box .box h1,
+.eventAll .evnet-box .box p{
+  text-align: left;
+  padding: 8px;
+  color: #333;
+}
+.eventAll .evnet-box .box h1{
+  padding-top: 15px;
+}
+.eventAll .evnet-box .box p{
+  color: #333;
+}
+/*이미지 요소*/
+.eventAll .evnet-box .box img{
+  width: 600px;
+  height: 300px;
+}
+
+
+/*---------------------------------------------------------------*/
+/*footer*/
+footer{
+  width: 100%;
+  min-width: 900px;
+  height: 130px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(8, 30, 77, 0.3);  /*연한 파란색으로 반투명하게 그림자 설정*/
+}
+footer .fbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+footer h1{
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+}
+footer .fbox .footer-txt h2{
+  font-size: 15px;
+  font-weight: normal;
+}
+footer .fbox .footer-icon i{
+  font-size: 25px;
+  margin: 5px;
+}
