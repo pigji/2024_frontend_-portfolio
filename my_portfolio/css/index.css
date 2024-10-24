@@ -1,0 +1,66 @@
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none;}
+body{max-width: 1910px;}
+
+/*공통 요소*/
+.container{
+  margin: 0 auto;
+  padding: 50px;
+}
+/*-------------------------------------------*/
+header{
+  width: 100%;
+  height: 800px;
+  background: linear-gradient(45deg, #beccf5, #d6a4a4);
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  width: 600px;
+  height: 500px;
+  color: #fff;
+  font-size: 26px;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+.title > h1{
+  padding-bottom: 20px;
+}
+.title > p{
+  width: 350px;
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+}
+.title > .link{
+  margin-top: 10px;
+}
+/*아이콘 링크*/
+.title > .link i{
+  font-size: 25px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+/*프로필 이미지*/
+.profile-img{
+  width: 380px;
+  height: 380px;
+}
+.profile-img > img{
+  width: 100%;
+  height: 100%;
+}
+/*-------------------------------------------*/
+section{
+  width: 100%;
+  height: 800px;
+  background: linear-gradient(45deg, #d6a4a4,#beccf5);
+}
+
+/*https://kimjy97.github.io/Portfolio/#0 참고 사이트*/
