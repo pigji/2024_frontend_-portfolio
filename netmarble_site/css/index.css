@@ -11,7 +11,11 @@
 *{margin: 0; padding: 0;}
 ul, li{list-style: none;}
 a{text-decoration: none; color: inherit;}
-body{box-sizing: border-box; font-family: 'netmarbleB';}
+body{
+  box-sizing: border-box; 
+  min-width: 1200px;
+  font-size: 16px;
+}
 
 
 /*-------------------------------------------------------------*/
@@ -37,6 +41,7 @@ header{
   font-size: 34px;
   color: rgb(88, 23, 23);
   margin-bottom: 50px;
+  font-family: 'netmarbleB'; 
 }
 .login{
   border-top: 1px solid #eee;
@@ -74,7 +79,67 @@ header{
 }
 /*-------------------------------------------------------------*/
 section{
+  max-width: 1700px;
+  height: auto;
   border: 1px solid black;
   position: relative;
-  padding: 0 0 0 250px;
+  padding: 0 0 0 240px;
+}
+
+
+/*-------------------------------------------------------------*/
+.footer{
+  background-color: #171717;
+  color: #fff;
+  margin-top: 50px;
+  margin: 0 auto;
+  padding: 54px;
+}
+.footer > .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer > .top > h2{
+  font-family: 'netmarbleB'; 
+}
+/*언어선택 selsect창*/
+.footer > .top > select{
+  margin-right: 70px;
+  color: #333;
+  background-color: black;
+  border: none;
+  width: 160px;
+  height: 30px;
+}
+.footer .footer-txt{
+  margin-top: 30px;
+}
+.footer .footer-txt > p{
+  font-size: 12px;
+  color: rgba(255, 255, 255, .5);
+  line-height: 1.82;
+}
+.footer .footer-txt > b{
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, .5);
+  margin-top: 20px;
+}
+.footer > ul{
+  margin-top: 50px;
+  display: flex;
+}
+.footer > ul > li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, .5);
+  border-right: 1px solid rgba(255, 255, 255, .5);
+  padding: 0 10px;
+}
+.footer > ul > li:first-child{
+  padding-left: 0;
 }
