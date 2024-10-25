@@ -5,6 +5,11 @@ a{text-decoration: none;}
 body{max-width: 1910px;}
 
 /*공통 요소*/
+header, section, footer{  /*영역을 브라우저 화면에 꽉차게*/
+  width: 100%;
+  height: 100vh;
+}
+
 .container{
   margin: 0 auto;
   padding: 50px;
@@ -12,7 +17,7 @@ body{max-width: 1910px;}
 /*-------------------------------------------*/
 header{
   width: 100%;
-  height: 800px;
+  height:100vh;
   background: linear-gradient(45deg, #beccf5, #d6a4a4);
 }
 
@@ -57,10 +62,10 @@ header{
   height: 100%;
 }
 /*-------------------------------------------*/
-section{
+header, section, footer{
   width: 100%;
-  height: 800px;
-  background: linear-gradient(45deg, #d6a4a4,#beccf5);
+  height: 100vh;
+  /* background: linear-gradient(45deg, #d6a4a4,#beccf5); */
 }
 
 /*https://kimjy97.github.io/Portfolio/#0 참고 사이트*/
