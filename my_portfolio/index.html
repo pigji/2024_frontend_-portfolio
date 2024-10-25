@@ -8,21 +8,32 @@
   <!--css-->
   <link rel="stylesheet" href="css/index.css">
   <!--폰트어썸 내 script 코드-->
-<script src="https://kit.fontawesome.com/3223480a48.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/3223480a48.js" crossorigin="anonymous"></script>
+
+  <!--fullPage 플러그인 CDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.30/fullpage.min.js" integrity="sha512-XjHDYXqFXd3cWle8uxMnQFVcpjzm+mWZfJApBAyREtai0v/jJy9Na+PJlmrnaum7qb4B3BnwKAZd47piZRvoZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.30/vendors/easings.min.js" integrity="sha512-SrKslwu6IjHEo/8mAOtkoUOT3MzHCEOFWktrC8BNtjPuBBYLYjg1y/Marat34uYfOfxDMLEwy8DLArWEVc2i+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!--js-->
+  <script src="js/index.js" defer></script>
 </head>
 <body>
-  <header id="header">
-    <div class="container">
-      <div class="content">
-        <ul>
-          <li><a href="#">INTRO</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#stack">STACKS</a></li>
-          <li><a href="#work">WORKS</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-        </ul>
+  <!--네이게이션 메뉴 영역-->
+  <ul id="menu">
+    <li data-menuanchor="intro"><a href="#1">INTRO</a></li>
+    <li data-menuanchor="about"><a href="#2">ABOUT</a></li>
+    <li data-menuanchor="stacks"><a href="#3">STACKS</a></li>
+    <li data-menuanchor="works"><a href="#4">WORKS</a></li>
+    <li data-menuanchor="contact"><a href="#5">CONTACT</a></li>
+  </ul>
+
+  <!--컨텐츠 전체 영역-->
+  <div id="fullpage">
+    <!--1페이지-->
+    <section class="section">
+      <article>
         <div class="title">
-          <h1>
+           <h1>
             안녕하세요.<br>
             프론트엔드 개발자<br>
             성지혜 입니다.
@@ -36,32 +47,36 @@
               <i class="fas fa-pen-square"></i>
             </a>
           </div>
-        </div>
+        </div> <!--title-->
         <div class="profile-img">
           <img src="image/프로필사진1.png" alt="">
         </div>
-      </div>
-    </div> <!--container-->
-  </header>
-
-  <section id="about">
-    기타 소개
-  </section>
-
-  <section id="stack">
-    <div class="container">
-      <div>
-        기술 스택
-      </div>
-    </div>  <!--container-->
-  </section>
-
-  <section id="work">
-    작업물 소개
-  </section>
-
-  <footer id="contact">
-    하단 영역 소개
-  </footer>
+      </article>
+    </section> <!--1페이지 end-->
+    <section class="section">
+      <article>
+        <div class="title">
+           <h1>
+            zz안녕하세요.<br>
+            프론트엔드 개발자<br>
+            성지혜 입니다.
+          </h1>
+          <p>방문해 주셔서 감사합니다.</p>
+          <div class="link">
+            <a href="https://github.com/pigji/2024_frontend_-portfolio">  <!--github 주소-->
+              <i class="fa-brands fa-github"></i>
+            </a> 
+            <a href="https://www.notion.so/green-5cd2e3cb675b4eb698250f3a57a69678"> <!--notion 주소--> 
+              <i class="fas fa-pen-square"></i>
+            </a>
+          </div>
+        </div> <!--title-->
+        <div class="profile-img">
+          <img src="image/프로필사진1.png" alt="">
+        </div>
+      </article>
+    </section> <!--1페이지 end-->
+   
+  </div> <!--fullpage-->
 </body>
 </html>
