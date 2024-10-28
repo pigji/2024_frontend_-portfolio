@@ -1,13 +1,20 @@
 /*구글폰트*/
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap');
+/*눈누폰트*/
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 /*초기화*/
 *{margin: 0; padding: 0;}
-ul, li{list-style: none;}
+ol, ul, li{list-style: none;}
 a{text-decoration: none; color: inherit;}
 img {border: 0;}
-body{max-width: 1910px; font-family: "Oxanium"}
+body{min-width: 1400px; max-width: 1910px; font-family: "Oxanium"}
 /*-----------------------------------------*/
 /*그라데이션 색조합*/
 /*
@@ -54,21 +61,25 @@ body{max-width: 1910px; font-family: "Oxanium"}
 }
 .title{
   width: 100%;
+  border: 1px solid red;
 }
 .title > h1{
   color: #fff;
   font-size: 65px;
 }
-.title > p,
-.title i{
+.sub_title{
+  border: 1px solid black;
+}
+.sub_title > p,
+.sub_title i{
   font-size: 20px;
   color: #fff;
   margin: 10px 0;
 }
-.title > p{
+.sub_title > p{
   padding-top: 80px;
 }
-.title i{
+.sub_title i{
   margin-right: 10px;
 }
 /*프로필 이미지*/
@@ -80,14 +91,12 @@ body{max-width: 1910px; font-family: "Oxanium"}
   width: 500px;
   height: 500px;
 }
-
-
 /*-----------------------------------------*/
 /*컨텐츠 레이아웃 설정*/
 section{
   width: 100%;
   height: 100vh;
-  background: linear-gradient(45deg, #2b8576,#4e4376);
+  background: linear-gradient(45deg, #d6a4a4,#beccf5);
   overflow: hidden;
 }
 article{
@@ -152,12 +161,13 @@ article{
 }
 /*마우스 이벤트 효과*/
 .st-element > ul > li:hover{
-  width: 320px;
+  width: 400px;
   opacity: 1;
 }
 /*마우스이벤트 효과*/
 .st-element > ul > li:hover .txt{
   display: block;
+  font-size: 14px;
 }
 .st-element > ul > li > .txt{
   display: none;
@@ -167,9 +177,87 @@ article{
 .st-element > ul > li > img{
   width: 80px;
   height: 80px;
-  padding-left: 20px;
+  padding: 0 20px;
   /* border: 1px solid red; */
 }
 /*-----------------------------------------*/
 /*4페이지 : Works*/
+
+/*슬라이드 배너*/
+#banner{
+  height: 100%;
+  padding: 10px;
+}
+#banner > li{
+  border: 3px solid yellow;
+}
+
+#wrap{
+  width: 700px;
+  height: auto;
+  margin:100px auto 0 auto;
+}
+#nav li{
+  float:left;
+}
+#nav li a{
+  display: block;
+  width: 75px;
+  height: 45px;
+  border: 2px solid #bbb;
+  margin: 0 6px 10px 0;
+  border-radius:5px;
+}
+
+/*메인 이미지*/
+#thumbanil > img{
+  width: 700px;
+  height: 450px;
+}
+/*서브 이미지*/
+#nav li a img{
+  width: 75px;
+  height: 45px;
+}
+
+#thumbanil{
+  clear:both;
+}
+
+#nav li a.active{
+  border: 2px solid #fff;
+}
+
+/*프로젝트 설명 영역*/
+.P-explanation{
+  width: 700px;
+  background-color: #fff;
+  margin: 50px auto;
+}
+.P-explanation > .text1{
+  margin-bottom: 20px;
+}
+.P-explanation > .text1 > b{
+  font-size: 24px;
+}
+.P-explanation > .text1 > p{
+  font-size: 14px;
+}
+.P-explanation > .text2{
+
+}
+.site-link{
+  width: 100%;
+  display: flex;
+}
+.site-link > a{
+  display: block;
+  width: 150px;
+  height: 35px;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 2.4;
+  background-color: purple;
+}
 /*-----------------------------------------*/
