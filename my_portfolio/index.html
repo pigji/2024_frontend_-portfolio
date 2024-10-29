@@ -23,7 +23,7 @@
     <li data-menuanchor="intro"><a href="#1">INTRO</a></li>
     <li data-menuanchor="about"><a href="#2">ABOUT</a></li>
     <li data-menuanchor="stacks"><a href="#3">STACKS</a></li>
-    <li data-menuanchor="works"><a href="#4">WORKS</a></li>
+    <li data-menuanchor="projects"><a href="#4">PROJECTS</a></li>
   </ul>
 
   <!--컨텐츠 전체 영역-->
@@ -31,33 +31,34 @@
     <section class="section"> <!--1페이지 : intro-->
       <article>
         <div class="introduction">
-          <div class="profile-img">
-            <img src="image/프로필사진1.png" alt="">
-          </div>
+          <h1>FRONT-END PORT FOLIO</h1>
           <div class="title">
-             <h1>
-              <!-- 안녕하세요.<br>
-              프론트엔드 개발자<br>
-              성지혜 입니다. -->
-            </h1>
-            <p>방문해 주셔서 감사합니다.</p>
-            <div class="link">
-              <a href="https://github.com/pigji/2024_frontend_-portfolio">  <!--github 주소-->
-                <i class="fa-brands fa-github"></i>
-              </a> 
-              <a href="https://www.notion.so/green-5cd2e3cb675b4eb698250f3a57a69678"> <!--notion 주소--> 
-                <i class="fas fa-pen-square"></i>
-              </a>
-            </div>
+            <p></p>
           </div> <!--title-->
-          
         </div>
       </article>
     </section> <!--1페이지 end-->
 
     <section class="section"> <!--2페이지 : about-->
       <article>
-       ABOUT 영역
+       <div class="about-all">
+        <div class="dream-txt"> <!--개발자를 희망하게 된 이유, 마음가짐 등 작성-->
+          <p>'프론트엔드 개발자' 라는 꿈을 가지게 된 이유는 ~~</p>
+        </div>
+        <div class="about">
+          <img src="image/프로필사진3.jpg" alt="">
+          <div class="ab-txt">
+            <p><i class="fas fa-user"></i>성지혜</p>
+            <p><i class="fas fa-birthday-cake"></i>2000.01.22</p>
+            <p><i class="fas fa-home"></i>경기도 시흥시 거주</p>
+            <p><i class="fas fa-school"></i>동서울대학교(정보통신과)</p>
+            <p><i class="fa-solid fa-phone"></i>010-9760-2217</p>
+            <p><i class="fas fa-envelope"></i>wjlqlrll012@gmail.com</p>
+            <p><i class="fa-brands fa-github"></i><a href="https://github.com/pigji/2024_frontend_-portfolio">GiHub</a></p>
+            <p><i class="fas fa-pen-square"></i><a href="https://www.notion.so/green-5cd2e3cb675b4eb698250f3a57a69678">Notion</a>Notion</p>
+          </div>
+        </div> <!--about-->
+       </div>
       </article>
     </section> <!--2페이지 end-->
 
@@ -178,19 +179,22 @@
       </article>
     </section> <!--3페이지 end-->
 
-    <section class="section"> <!--4페이지 : works-->
+    <section class="section"> <!--4페이지 : Projects-->
       <article>
         <div>
           <div id="p-banner"> <!--프로젝트 배너 : 화살표를 누르면 전환됨-->
+            <p>
+              <a class="prev">&#10094;</a> <!--이전버튼-->
+              <a class="next">&#10095;</a>  <!--다음버튼-->
+            </p>
             <div id="frame">
               <ul id="banner">
                 <li> <!--슬라이드 요소-->
                   <div id="wrap"> <!--프로젝트 이미지가 보이는 영역(썸네일 이미지 변경)-->
                     <div id="thumbanil">
-                      <img src="image/animation-img/Representative-img.PNG" alt="">
+                      <img src="image/animation-img/img1.PNG" alt="">
                     </div>
                     <ul id="nav">
-                      <li><a href="image/animation-img/Representative-img.PNG" class="active"><img src="image/animation-img/Representative-img.PNG"/></a></li>.
                       <li><a href="image/animation-img/img1.PNG"><img src="image/animation-img/img1.PNG"/></a></li>
                       <li><a href="image/animation-img/img2.PNG"><img src="image/animation-img/img2.PNG"/></a></li>
                       <li><a href="image/animation-img/img3.PNG"><img src="image/animation-img/img3.PNG"/></a></li>
@@ -203,7 +207,7 @@
                       <b>마을 애니메이션 제작</b>
                       <p>개인 프로젝트</p>
                     </div>
-                    <div class="text2">`
+                    <div class="text2">
                       <p>프로젝트 기능구현 설명</p>
                       <div>
                         <!--사용한 기능명 HTML, CSS 반응형 유뮤 등-->
@@ -215,7 +219,241 @@
                     </div>
                   </div>
                 </li>
-              </ul> <!--banner-->`
+                <li> <!--슬라이드 요소-->
+                  <div id="wrap"> <!--프로젝트 이미지가 보이는 영역(썸네일 이미지 변경)-->
+                    <div id="thumbanil">
+                      <img src="image/animation-img/img1.PNG" alt="">
+                    </div>
+                    <ul id="nav">
+                      <li><a href="image/animation-img/img1.PNG"><img src="image/animation-img/img1.PNG"/></a></li>
+                    </ul>
+                  </div>
+                  <div class="P-explanation"> <!--프로젝트 설명-->
+                    <div class="text1">
+                      <b>웹페이지 구현</b>
+                      <p>개인 프로젝트</p>
+                    </div>
+                    <div class="text2">
+                      <p>프로젝트 기능구현 설명</p>
+                      <div>
+                        <!--사용한 기능명 HTML, CSS 반응형 유뮤 등-->
+                      </div>
+                    </div>
+                    <div class="site-link">
+                      <a href="#"><i class="fa-solid fa-sitemap"></i> 사이트 바로가기</a>
+                      <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                  </div>
+                </li>
+                <li> <!--슬라이드 요소-->
+                  <div id="wrap"> <!--프로젝트 이미지가 보이는 영역(썸네일 이미지 변경)-->
+                    <div id="thumbanil">
+                      <img src="image/animation-img/img1.PNG" alt="">
+                    </div>
+                    <ul id="nav">
+                      <li><a href="image/animation-img/img1.PNG"><img src="image/animation-img/img1.PNG"/></a></li>
+                    </ul>
+                  </div>
+                  <div class="P-explanation"> <!--프로젝트 설명-->
+                    <div class="text1">
+                      <b>파노라마</b>
+                      <p>개인 프로젝트</p>
+                    </div>
+                    <div class="text2">
+                      <p>프로젝트 기능구현 설명</p>
+                      <div>
+                        <!--사용한 기능명 HTML, CSS 반응형 유뮤 등-->
+                      </div>
+                    </div>
+                    <div class="site-link">
+                      <a href="#"><i class="fa-solid fa-sitemap"></i> 사이트 바로가기</a>
+                      <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                  </div>
+                </li>
+                <li> <!--슬라이드 요소-->
+                  <div id="wrap"> <!--프로젝트 이미지가 보이는 영역(썸네일 이미지 변경)-->
+                    <div id="thumbanil">
+                      <img src="image/animation-img/img1.PNG" alt="">
+                    </div>
+                    <ul id="nav">
+                      <li><a href="image/animation-img/img1.PNG"><img src="image/animation-img/img1.PNG"/></a></li>
+                    </ul>
+                  </div>
+                  <div class="P-explanation"> <!--프로젝트 설명-->
+                    <div class="text1">
+                      <b>반응형 웹갤러리</b>
+                      <p>개인 프로젝트</p>
+                    </div>
+                    <div class="text2">
+                      <p>프로젝트 기능구현 설명</p>
+                      <div>
+                        <!--사용한 기능명 HTML, CSS 반응형 유뮤 등-->
+                      </div>
+                    </div>
+                    <div class="site-link">
+                      <a href="#"><i class="fa-solid fa-sitemap"></i> 사이트 바로가기</a>
+                      <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                  </div>
+                </li>
+                <li> <!--슬라이드 요소-->
+                  <div id="wrap"> <!--프로젝트 이미지가 보이는 영역(썸네일 이미지 변경)-->
+                    <div id="thumbanil">
+                      <img src="image/animation-img/img1.PNG" alt="">
+                    </div>
+                    <ul id="nav">
+                      <li><a href="image/animation-img/img1.PNG"><img src="image/animation-img/img1.PNG"/></a></li>
+                    </ul>
+                  </div>
+                  <div class="P-explanation"> <!--프로젝트 설명-->
+                    <div class="text1">
+                      <b>[메가박스]리뉴얼 사이트 제작</b>
+                      <p>개인 프로젝트</p>
+                    </div>
+                    <div class="text2">
+                      <p>프로젝트 기능구현 설명</p>
+                      <div>
+                        <!--사용한 기능명 HTML, CSS 반응형 유뮤 등-->
+                      </div>
+                    </div>
+                    <div class="site-link">
+                      <a href="#"><i class="fa-solid fa-sitemap"></i> 사이트 바로가기</a>
+                      <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                  </div>
+                </li>
+                <li> <!--슬라이드 요소-->
+                  <div id="wrap"> <!--프로젝트 이미지가 보이는 영역(썸네일 이미지 변경)-->
+                    <div id="thumbanil">
+                      <img src="image/animation-img/img1.PNG" alt="">
+                    </div>
+                    <ul id="nav">
+                      <li><a href="image/animation-img/img1.PNG"><img src="image/animation-img/img1.PNG"/></a></li>
+                    </ul>
+                  </div>
+                  <div class="P-explanation"> <!--프로젝트 설명-->
+                    <div class="text1">
+                      <b>반응형 웹페이지 제작</b>
+                      <p>개인 프로젝트</p>
+                    </div>
+                    <div class="text2">
+                      <p>프로젝트 기능구현 설명</p>
+                      <div>
+                        <!--사용한 기능명 HTML, CSS 반응형 유뮤 등-->
+                      </div>
+                    </div>
+                    <div class="site-link">
+                      <a href="#"><i class="fa-solid fa-sitemap"></i> 사이트 바로가기</a>
+                      <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                  </div>
+                </li>
+                <li> <!--슬라이드 요소-->
+                  <div id="wrap"> <!--프로젝트 이미지가 보이는 영역(썸네일 이미지 변경)-->
+                    <div id="thumbanil">
+                      <img src="image/animation-img/img1.PNG" alt="">
+                    </div>
+                    <ul id="nav">
+                      <li><a href="image/animation-img/img1.PNG"><img src="image/animation-img/img1.PNG"/></a></li>
+                    </ul>
+                  </div>
+                  <div class="P-explanation"> <!--프로젝트 설명-->
+                    <div class="text1">
+                      <b>3D 스크롤</b>
+                      <p>개인 프로젝트</p>
+                    </div>
+                    <div class="text2">
+                      <p>프로젝트 기능구현 설명</p>
+                      <div>
+                        <!--사용한 기능명 HTML, CSS 반응형 유뮤 등-->
+                      </div>
+                    </div>
+                    <div class="site-link">
+                      <a href="#"><i class="fa-solid fa-sitemap"></i> 사이트 바로가기</a>
+                      <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                  </div>
+                </li>
+                <li> <!--슬라이드 요소-->
+                  <div id="wrap"> <!--프로젝트 이미지가 보이는 영역(썸네일 이미지 변경)-->
+                    <div id="thumbanil">
+                      <img src="image/animation-img/img1.PNG" alt="">
+                    </div>
+                    <ul id="nav">
+                      <li><a href="image/animation-img/img1.PNG"><img src="image/animation-img/img1.PNG"/></a></li>
+                    </ul>
+                  </div>
+                  <div class="P-explanation"> <!--프로젝트 설명-->
+                    <div class="text1">
+                      <b>동영상 웹페이지</b>
+                      <p>개인 프로젝트</p>
+                    </div>
+                    <div class="text2">
+                      <p>프로젝트 기능구현 설명</p>
+                      <div>
+                        <!--사용한 기능명 HTML, CSS 반응형 유뮤 등-->
+                      </div>
+                    </div>
+                    <div class="site-link">
+                      <a href="#"><i class="fa-solid fa-sitemap"></i> 사이트 바로가기</a>
+                      <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                  </div>
+                </li>
+                <li> <!--슬라이드 요소-->
+                  <div id="wrap"> <!--프로젝트 이미지가 보이는 영역(썸네일 이미지 변경)-->
+                    <div id="thumbanil">
+                      <img src="image/animation-img/img1.PNG" alt="">
+                    </div>
+                    <ul id="nav">
+                      <li><a href="image/animation-img/img1.PNG"><img src="image/animation-img/img1.PNG"/></a></li>
+                    </ul>
+                  </div>
+                  <div class="P-explanation"> <!--프로젝트 설명-->
+                    <div class="text1">
+                      <b>Swiper API를 사용한 프로젝트</b>
+                      <p>개인 프로젝트</p>
+                    </div>
+                    <div class="text2">
+                      <p>프로젝트 기능구현 설명</p>
+                      <div>
+                        <!--사용한 기능명 HTML, CSS 반응형 유뮤 등-->
+                      </div>
+                    </div>
+                    <div class="site-link">
+                      <a href="#"><i class="fa-solid fa-sitemap"></i> 사이트 바로가기</a>
+                      <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                  </div>
+                </li>
+                <li> <!--슬라이드 요소-->
+                  <div id="wrap"> <!--프로젝트 이미지가 보이는 영역(썸네일 이미지 변경)-->
+                    <div id="thumbanil">
+                      <img src="image/animation-img/img1.PNG" alt="">
+                    </div>
+                    <ul id="nav">
+                      <li><a href="image/animation-img/img1.PNG"><img src="image/animation-img/img1.PNG"/></a></li>
+                    </ul>
+                  </div>
+                  <div class="P-explanation"> <!--프로젝트 설명-->
+                    <div class="text1">
+                      <b>[넷마블]리뉴얼 사이트 제작</b>
+                      <p>개인 프로젝트</p>
+                    </div>
+                    <div class="text2">
+                      <p>프로젝트 기능구현 설명</p>
+                      <div>
+                        <!--사용한 기능명 HTML, CSS 반응형 유뮤 등-->
+                      </div>
+                    </div>
+                    <div class="site-link">
+                      <a href="#"><i class="fa-solid fa-sitemap"></i> 사이트 바로가기</a>
+                      <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                  </div>
+                </li>
+              </ul> <!--banner-->
             </div>
           </div>
         </div>
