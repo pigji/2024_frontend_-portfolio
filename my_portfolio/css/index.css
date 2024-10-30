@@ -14,7 +14,8 @@
 ol, ul, li{list-style: none;}
 a{text-decoration: none; color: inherit;}
 img {border: 0;}
-body{min-width: 1400px; max-width: 1910px; font-family: "Oxanium"}
+body{min-width: 1400px; max-width: 1910px; font-family: "Oxanium";}
+
 /*-----------------------------------------*/
 /*그라데이션 색조합*/
 /*
@@ -334,6 +335,10 @@ article{
   background-color: rgb(165, 162, 165);
 }
 /*-----------------------------------------*/
+#project-page{
+  overflow-y: auto;
+}
+
 .project{
   margin: 40px auto 0;
   text-align: center;
@@ -357,7 +362,7 @@ article{
   height: 400px;
   background-color: #fff;
   border-radius: 10px;
-  margin: 10px 25px;
+  margin: 25px;
   text-align: left;
   padding: 40px;
   box-sizing: border-box;
@@ -373,13 +378,22 @@ article{
 }
 .p-box > .pb-title > b{
   background-color: pink;
-  width: 200px;
+  width: 180px;
   height: 35px;
   display: block;
   border-radius: 5px;
+  padding-top: 5px;
+  box-sizing: border-box;
   text-align: center;
   margin-bottom: 5px;
+  font-size: 18px;
 }
+/*각 요소 넓이 조절*/
+.p-box:nth-of-type(5) > .pb-title > b{
+  width: 300px;
+}
+
+
 .p-box > .pb-title > p{
   margin-bottom: 10px;
 }
@@ -424,10 +438,11 @@ article{
   top: 0; left: 0; bottom: 0; right: 0; /*뷰포트 사이즈로 늘려줌*/
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 9999;
+  overflow-y:auto;
 }
 .readme-box > .content{
   width: 850px;
-  height: 1200px;
+  height: 1000px;
   background-color: white;
   position: absolute;
   left: 50%;
@@ -450,11 +465,12 @@ article{
   padding-top: 13px;
   font-size: 18px;
 }
-.close > a{
+.close > i{
   font-size: 20px;
   position: absolute;
   right: 10px;
   top: 12px;
+  cursor:pointer;
 }
 /*-----------------------------------------*/
 /*팝업창 전체 내용요소*/

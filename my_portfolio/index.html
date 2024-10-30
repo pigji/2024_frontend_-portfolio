@@ -18,6 +18,92 @@
   <script src="js/index.js" defer></script>
 </head>
 <body>
+  <div class="modal">
+    <div class="readme1 readme-box">
+      <div class="content">
+        <!--클로즈 버튼을 클릭하면 pClose함수가 실행-->
+        <div class="close" onclick="pClose('.readme1')">
+          <b>README.md</b>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="form">
+          <div class="pr-img"> <!--프로젝트 이미지-->
+            <img src="" alt="">
+          </div>
+          <div class="pr-name">
+            <h4>프로젝트 명</h4>
+            <p>프로젝트 기간</p>
+          </div>
+          <div class="pr-link">
+            <b>♟️ Deployment URL</b>
+            <a href="#">링크넣기</a>
+          </div>
+          <div class="pr-reason">
+            <b>🧾 주제를 선정하게 된 이유</b>
+            <p>주제를 선정하게 된 이유를 적으시오.</p>
+          </div>
+          <div class="pr-technolohy">
+            <b>🔊 Summary</b>
+            <p>프로젝트 기술명</p>
+            <ul>
+              <li>• 기술개발 목적, 활용 등 3가지 이상 적기</li>
+              <li>• 기술개발 목적, 활용 등 3가지 이상 적기</li>
+              <li>• 기술개발 목적, 활용 등 3가지 이상 적기</li>
+            </ul>
+          </div>
+          <div class="pr-stack">
+            <b>🔨 Technology Stack</b>
+            <p>프로젝트에 사용한 API 또는 기술을 적으시오.</p>
+          </div>
+          <div class="pr-setup">
+            <b>🔔 Reviews & complement</b>
+          </div>
+        </div>
+      </div>
+    </div> <!--readme-box : 팝업창 end-->
+    <div class="readme2 readme-box">
+      <div class="content">
+        <!--클로즈 버튼을 클릭하면 pClose함수가 실행-->
+        <div class="close" onclick="pClose('.readme2')">
+          <b>README.md</b>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="form">
+          <div class="pr-img"> <!--프로젝트 이미지-->
+            <img src="" alt="">
+          </div>
+          <div class="pr-name">
+            <h4>프로젝트 명</h4>
+            <p>프로젝트 기간</p>
+          </div>
+          <div class="pr-link">
+            <b>♟️ Deployment URL</b>
+            <a href="#">링크넣기</a>
+          </div>
+          <div class="pr-reason">
+            <b>🧾 주제를 선정하게 된 이유</b>
+            <p>주제를 선정하게 된 이유를 적으시오.</p>
+          </div>
+          <div class="pr-technolohy">
+            <b>🔊 Summary</b>
+            <p>프로젝트 기술명</p>
+            <ul>
+              <li>• 기술개발 목적, 활용 등 3가지 이상 적기</li>
+              <li>• 기술개발 목적, 활용 등 3가지 이상 적기</li>
+              <li>• 기술개발 목적, 활용 등 3가지 이상 적기</li>
+            </ul>
+          </div>
+          <div class="pr-stack">
+            <b>🔨 Technology Stack</b>
+            <p>프로젝트에 사용한 API 또는 기술을 적으시오.</p>
+          </div>
+          <div class="pr-setup">
+            <b>🔔 Reviews & complement</b>
+          </div>
+        </div>
+      </div>
+    </div> <!--readme-box : 팝업창 end-->
+  </div>
   <!--네이게이션 메뉴 영역-->
   <ul id="menu">
     <li data-menuanchor="intro"><a href="#1">INTRO</a></li>
@@ -459,7 +545,7 @@
         </div>
       </article>
     </section> <!--4페이지 end-->
-    <section class="section"> <!--4페이지 : Projects-->
+    <section class="section" id="project-page"> <!--4페이지 : Projects-->
       <article>
         <div class="project">
           <div class="P-title">
@@ -468,7 +554,7 @@
           <div class="p-boxAll">
             <div class="p-box">
               <div class="pb-title">
-                <b>프로젝트명</b>
+                <b>웹페이지 구현</b>
                 <p>프로젝트 기간</p>
               </div>
               <div class="pb-data">
@@ -478,60 +564,39 @@
                 <p>• 사용한 API주소 등등</p>
               </div>
               <div class="pb-link">
-                <a href="#">➡️ 프로젝트 링크</a>
+                <a href="https://pigji.github.io/css-example/%EB%A7%88%EC%9D%84%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98%EC%A0%9C%EC%9E%91.html">➡️ 프로젝트 보러가기</a>
               </div>
               <div class="pb-stack">
                 <p>사용한 기술스택 : HTML, CSS 등</p>
               </div>
-
               <!--버튼을 클릭하면 readme함수가 호출-->
-              <button type="button" onclick="readme()">📝 README</button>
-              <div class="readme-box">
-                <div class="content">
-                  <!--클로즈 버튼을 클릭하면 pClose함수가 실행-->
-                  <div class="close" onclick="pClose(event)">
-                    <b>README.md</b>
-                    <a href="#"><i class="fas fa-times"></i></a>
-                  </div>
-                  <div class="form">
-                    <div class="pr-img"> <!--프로젝트 이미지-->
-                      <img src="" alt="">
-                    </div>
-                    <div class="pr-name">
-                      <h4>프로젝트 명</h4>
-                      <p>프로젝트 기간</p>
-                    </div>
-                    <div class="pr-link">
-                      <b>♟️ Deployment URL</b>
-                      <a href="#">링크넣기</a>
-                    </div>
-                    <div class="pr-reason">
-                      <b>🧾 주제를 선정하게 된 이유</b>
-                      <p>주제를 선정하게 된 이유를 적으시오.</p>
-                    </div>
-                    <div class="pr-technolohy">
-                      <b>🔊 Summary</b>
-                      <p>프로젝트 기술명</p>
-                      <ul>
-                        <li>• 기술개발 목적, 활용 등 3가지 이상 적기</li>
-                        <li>• 기술개발 목적, 활용 등 3가지 이상 적기</li>
-                        <li>• 기술개발 목적, 활용 등 3가지 이상 적기</li>
-                      </ul>
-                    </div>
-                    <div class="pr-stack">
-                      <b>🔨 Technology Stack</b>
-                      <p>프로젝트에 사용한 API 또는 기술을 적으시오.</p>
-                    </div>
-                    <div class="pr-setup">
-                      <b>🔔 Reviews & complement</b>
-                    </div>
-                  </div>
-                </div>
-              </div> <!--readme-box : 팝업창 end-->
+              <button type="button" onclick="readme('.readme1')">📝 README</button>
             </div> <!--p-box : 프로젝트 요소-->
+
             <div class="p-box">
               <div class="pb-title">
-                <b>프로젝트명</b>
+                <b>마을 애니메이션</b>
+                <p>프로젝트 기간</p>
+              </div>
+              <div class="pb-data">
+                <p>• 프로젝트 설명</p>
+                <p>• 어떤 기술을 사용했는지</p>
+                <p>• 사용한 API주소 등등</p>
+                <p>• 사용한 API주소 등등</p>
+              </div>
+              <div class="pb-link">
+                <a href="https://pigji.github.io/css-example/%EB%A7%88%EC%9D%84%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98%EC%A0%9C%EC%9E%91.html">➡️ 프로젝트 보러가기</a>
+              </div>
+              <div class="pb-stack">
+                <p>사용한 기술스택 : HTML, CSS 등</p>
+              </div>
+              <!--버튼을 클릭하면 readme함수가 호출-->
+              <button type="button" onclick="readme('.readme1')">📝 README</button>
+            </div> <!--p-box : 프로젝트 요소-->
+
+            <div class="p-box">
+              <div class="pb-title">
+                <b>파노라마</b>
                 <p>프로젝트 기간</p>
               </div>
               <div class="pb-data">
@@ -546,52 +611,94 @@
               <div class="pb-stack">
                 <p>사용한 기술스택 : HTML, CSS 등</p>
               </div>
-
               <!--버튼을 클릭하면 readme함수가 호출-->
-              <button type="button" onclick="readme()">📝 README</button>
-              <div class="readme-box">
-                <div class="content">
-                  <!--클로즈 버튼을 클릭하면 pClose함수가 실행-->
-                  <div class="close" onclick="pClose(event)">
-                    <b>README.md</b>
-                    <a href="#"><i class="fas fa-times"></i></a>
-                  </div>
-                  <div class="form">
-                    <div class="pr-img"> <!--프로젝트 이미지-->
-                      <img src="" alt="">
-                    </div>
-                    <div class="pr-name">
-                      <h4>프로젝트 명</h4>
-                      <p>프로젝트 기간</p>
-                    </div>
-                    <div class="pr-link">
-                      <b>♟️ Deployment URL</b>
-                      <a href="#">링크넣기</a>
-                    </div>
-                    <div class="pr-reason">
-                      <b>🧾 주제를 선정하게 된 이유</b>
-                      <p>주제를 선정하게 된 이유를 적으시오.</p>
-                    </div>
-                    <div class="pr-technolohy">
-                      <b>🔊 Summary</b>
-                      <p>프로젝트 기술명</p>
-                      <ul>
-                        <li>• 기술개발 목적, 활용 등 3가지 이상 적기</li>
-                        <li>• 기술개발 목적, 활용 등 3가지 이상 적기</li>
-                        <li>• 기술개발 목적, 활용 등 3가지 이상 적기</li>
-                      </ul>
-                    </div>
-                    <div class="pr-stack">
-                      <b>🔨 Technology Stack</b>
-                      <p>프로젝트에 사용한 API 또는 기술을 적으시오.</p>
-                    </div>
-                    <div class="pr-setup">
-                      <b>🔔 Reviews & complement</b>
-                    </div>
-                  </div>
-                </div>
-              </div> <!--readme-box : 팝업창 end-->
+              <button type="button" onclick="readme('.readme2')">📝 README</button>
             </div> <!--p-box : 프로젝트 요소-->
+
+            <div class="p-box">
+              <div class="pb-title">
+                <b>반응형 웹갤러리</b>
+                <p>프로젝트 기간</p>
+              </div>
+              <div class="pb-data">
+                <p>• 프로젝트 설명</p>
+                <p>• 어떤 기술을 사용했는지</p>
+                <p>• 사용한 API주소 등등</p>
+                <p>• 사용한 API주소 등등</p>
+              </div>
+              <div class="pb-link">
+                <a href="#">➡️ 프로젝트 링크</a>
+              </div>
+              <div class="pb-stack">
+                <p>사용한 기술스택 : HTML, CSS 등</p>
+              </div>
+              <!--버튼을 클릭하면 readme함수가 호출-->
+              <button type="button" onclick="readme('.readme2')">📝 README</button>
+            </div> <!--p-box : 프로젝트 요소-->
+
+            <div class="p-box">
+              <div class="pb-title">
+                <b>[메가박스] 리뉴얼 사이트 제작</b>
+                <p>프로젝트 기간</p>
+              </div>
+              <div class="pb-data">
+                <p>• 프로젝트 설명</p>
+                <p>• 어떤 기술을 사용했는지</p>
+                <p>• 사용한 API주소 등등</p>
+                <p>• 사용한 API주소 등등</p>
+              </div>
+              <div class="pb-link">
+                <a href="#">➡️ 프로젝트 링크</a>
+              </div>
+              <div class="pb-stack">
+                <p>사용한 기술스택 : HTML, CSS 등</p>
+              </div>
+              <!--버튼을 클릭하면 readme함수가 호출-->
+              <button type="button" onclick="readme('.readme2')">📝 README</button>
+            </div> <!--p-box : 프로젝트 요소-->
+
+            <div class="p-box">
+              <div class="pb-title">
+                <b>반응형 웹페이지 제작1</b>
+                <p>프로젝트 기간</p>
+              </div>
+              <div class="pb-data">
+                <p>• 프로젝트 설명</p>
+                <p>• 어떤 기술을 사용했는지</p>
+                <p>• 사용한 API주소 등등</p>
+                <p>• 사용한 API주소 등등</p>
+              </div>
+              <div class="pb-link">
+                <a href="#">➡️ 프로젝트 링크</a>
+              </div>
+              <div class="pb-stack">
+                <p>사용한 기술스택 : HTML, CSS 등</p>
+              </div>
+              <!--버튼을 클릭하면 readme함수가 호출-->
+              <button type="button" onclick="readme('.readme2')">📝 README</button>
+            </div> <!--p-box : 프로젝트 요소-->
+
+            <div class="p-box">
+              <div class="pb-title">
+                <b>반응형 웹페이지 제작2</b>
+                <p>프로젝트 기간</p>
+              </div>
+              <div class="pb-data">
+                <p>• 프로젝트 설명</p>
+                <p>• 어떤 기술을 사용했는지</p>
+                <p>• 사용한 API주소 등등</p>
+                <p>• 사용한 API주소 등등</p>
+              </div>
+              <div class="pb-link">
+                <a href="#">➡️ 프로젝트 링크</a>
+              </div>
+              <div class="pb-stack">
+                <p>사용한 기술스택 : HTML, CSS 등</p>
+              </div>
+              <!--버튼을 클릭하면 readme함수가 호출-->
+              <button type="button" onclick="readme('.readme2')">📝 README</button>
+            </div> <!--p-box : 프로젝트 요소-->
+
           </div> <!--p-boxAll-->
         </div> <!--project-->
       </article>

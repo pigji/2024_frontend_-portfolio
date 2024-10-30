@@ -102,25 +102,29 @@ document.querySelector('.prev').addEventListener('click', (e) => {
 /*--------------------------------------------------------*/
 /*README 팝업창 코드 작성*/
 // 팝업창 폼 선택
-const readme_box = document.querySelector(".readme-box")
-
+const readme_box = document.querySelectorAll(".readme-box");
 //함수 생성
-function readme(){
+function readme(selector){
   //팝업창 display값을 black으로 변경하여 화면에 표시
-  readme_box.style.display = "block";
+  document.querySelector(selector).style.display = "block";
+  
 }
 
 //pClose 함수 생성 -> 닫기버튼을 누르면 화면에서 사라짐(가려줌)
-function pClose(evnet){
-  event.preventDefault();
-  readme_box.style.display = "none";
+function pClose(selector){
+  // console.log(e)
+  // e.preventDefault();
+  document.querySelector(selector).style.display = "none";
 }
 
-//닫히는 구현
+// //닫히는 구현
 window.addEventListener("click", (e) => {
-  //console.log(e.target) //클릭한 요소를 읽어올 수 있음
+//console.log(e.target) //클릭한 요소를 읽어올 수 있음
 
-  if(e.target == readme_box){
-    readme_box.style.display = "none";
-  }
+  readme_box.forEach(box => {
+    if(e.target === box){
+      box.style.display = "none"; 
+      myFullpage1 = myFullpage();
+    }
+  })
 })
