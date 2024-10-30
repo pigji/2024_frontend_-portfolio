@@ -334,3 +334,195 @@ article{
   background-color: rgb(165, 162, 165);
 }
 /*-----------------------------------------*/
+.project{
+  margin: 40px auto 0;
+  text-align: center;
+  padding: 80px 0px 20px 10px;
+}
+.project > .P-title{
+  margin-bottom: 60px;
+}
+.project > .P-title > h2{
+  font-size: 45px;
+}
+
+.project > .p-boxAll{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.project > .p-boxAll > .p-box{
+  width: 550px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 10px 25px;
+  text-align: left;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 0 .5rem 0 rgba(68, 68, 68, .4);
+}
+.project > .p-boxAll > .p-box:hover{
+  transform: scale(1.1);
+  transition: .45s;
+}
+
+.p-box > .pb-title{
+  border-bottom: 1px solid #ccc;
+}
+.p-box > .pb-title > b{
+  background-color: pink;
+  width: 200px;
+  height: 35px;
+  display: block;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.p-box > .pb-title > p{
+  margin-bottom: 10px;
+}
+
+/*프로젝트 설명*/
+.p-box > .pb-data{
+  margin: 5px 0;
+  padding: 10px;
+}
+.p-box > .pb-data > p{
+  line-height: 1.7;
+}
+/*프로젝트 링크*/
+.p-box > .pb-link{
+  margin: 10px 0;
+}
+.p-box > .pb-link > a{
+  color: blue;
+}
+/*프로젝트 기술*/
+.p-box > .pb-stack{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+/*버튼요소*/
+.p-box > button{
+  border: 0;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/*-----------------------------------------*/
+/*README 팝업창*/
+.readme-box{
+  display: none;
+  position: fixed;  /*고정*/
+  top: 0; left: 0; bottom: 0; right: 0; /*뷰포트 사이즈로 늘려줌*/
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+.readme-box > .content{
+  width: 850px;
+  height: 1200px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+/*팝업창 상단 제목 + x버튼 */
+.close{
+  height: 45px;
+  border-bottom: 1px solid #999;
+  position: relative;
+  background-color: #666;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; 
+}
+.close > b{
+  display: block;
+  padding-left: 10px;
+  padding-top: 13px;
+  font-size: 18px;
+}
+.close > a{
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+/*-----------------------------------------*/
+/*팝업창 전체 내용요소*/
+.form{
+  padding: 10px;
+  height: auto;
+}
+.form b{
+  font-size: 18px;
+}
+.form p{
+  font-size: 14px;
+}
+.form li{
+  font-size: 14px;
+}
+
+
+/*프로젝트 이미지*/
+.form > .pr-img{
+  border: 1px solid black;
+  width: 600px;
+  height: 350px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.form > .pr-img > img{
+  width: 600px;
+  height: 350px;
+}
+/*팝업창 - 프로젝트 제목*/
+.form > .pr-name{
+  border: 1px solid red;
+  margin: 20px 0;
+}
+.form > .pr-name > h4{
+  font-size: 30px;
+}
+.form > .pr-name > p{
+  font-size: 14px;
+  color: #555;
+}
+/*팝업창 - 프로젝트 링크*/
+.form > .pr-link{
+  border: 1px solid red;
+  margin-bottom: 20px;
+}
+.form > .pr-link:hover{
+  text-decoration: underline;
+}
+/*팝업창 - 프로젝트 주제선정이유*/
+.form > .pr-reason{
+  border: 1px solid blue;
+  margin-bottom: 20px;
+}
+/*팝업창 - 프로젝트 개발 목적*/
+.form > .pr-technolohy{
+  border: 1px solid red;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+/*팝업창 - 프로젝트 기술*/
+.form > .pr-stack{
+  border: 1px solid blue;
+  margin-bottom: 20px;
+}
+/*팝업창 - 프로젝트 느낀점&보완점*/
+.form > .pr-setup{
+  border: 1px solid red;
+  margin: 10px 0;
+}
