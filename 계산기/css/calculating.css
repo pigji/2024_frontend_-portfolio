@@ -13,11 +13,11 @@ button{
 
 /*
   색상코드
-  #522448
-  #79325a
-  #b54677
-  #fe6798
-  #ff9ebc
+  #522448 -> 보라에 가까운 자주색
+  #79325a -> 진한 자주색
+  #b54677 -> 연한 자주색
+  #fe6798 -> 형광 분홍색
+  #ff9ebc -> 연한 분홍색
 
 */
 
@@ -30,7 +30,7 @@ button{
 
 /*계산기 전체 영역*/
 .calculating-machine{
-  background-color: #b54677;
+  background-color: #79325a;
   width: 350px;
   height: 500px;
   border-radius: 10px;
@@ -102,6 +102,10 @@ button{
   cursor: pointer;
   outline: none;
   background-color: #79325a;
+}
+/*연산기호 버튼 색상변경*/
+.button_row > button:last-child{
+  background-color: #666;
 }
 /*0버튼 크기 설정*/
 .button_row:nth-of-type(4) > button:nth-of-type(1){

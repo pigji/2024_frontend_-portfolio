@@ -107,7 +107,8 @@ const readme_box = document.querySelectorAll(".readme-box");
 function readme(selector){
   //팝업창 display값을 black으로 변경하여 화면에 표시
   document.querySelector(selector).style.display = "block";
-  
+  //스크롤 기능 비활성화
+  myFullpage.setAllowScrolling(false);
 }
 
 //pClose 함수 생성 -> 닫기버튼을 누르면 화면에서 사라짐(가려줌)
@@ -115,6 +116,8 @@ function pClose(selector){
   // console.log(e)
   // e.preventDefault();
   document.querySelector(selector).style.display = "none";
+  //스크롤 기능 활성화
+  myFullpage.setAllowScrolling(true);
 }
 
 // //닫히는 구현
@@ -124,7 +127,8 @@ window.addEventListener("click", (e) => {
   readme_box.forEach(box => {
     if(e.target === box){
       box.style.display = "none"; 
-      myFullpage1 = myFullpage();
+      //스크롤 기능 활성화
+      myFullpage.setAllowScrolling(true);
     }
   })
 })

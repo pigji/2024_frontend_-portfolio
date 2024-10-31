@@ -1,0 +1,49 @@
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+
+/*전체 영역*/
+#arena{
+  width: 480px;
+  height: 360px;
+  margin: auto;
+  background: url(../image/rays.svg) center/cover;
+  position: relative;
+}
+
+/*상단 시작 영역*/
+#control{
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  top: 0; left: 0;
+  line-height: 30px;
+  text-align: center;
+  background-color: #cbc39d;
+  cursor: pointer;
+}
+
+/*ul목록*/
+#home, #guest{
+  position: relative;
+  float: left;
+}
+#guest{
+  float: right;
+}
+/*li 요소*/
+#home > li,
+#guest > li{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 105px;
+  visibility: hidden; /*요소 눈에 안보이도록 설정*/
+}
+#guest > li{
+  right: 0;
+}
+
+/*가위바위보 이미지*/
+.rock{background: url(../image/rock.png) no-repeat;}
+.paper{background: url(../image/paper.png) no-repeat;}
+.scissors{background: url(../image/scissors.png) no-repeat;}
