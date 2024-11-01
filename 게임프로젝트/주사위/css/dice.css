@@ -1,0 +1,27 @@
+*{margin: 0; padding: 0;}
+
+/*전체 영역*/
+#arena{
+  width:480px;
+  height:360px;
+  margin:auto;
+  background:url(../images/rays.svg) no-repeat center/cover;
+}
+#home{
+  margin:105px 10px;
+  float:left;
+}
+#guest{
+  margin:105px 10px;
+  float:right;
+}
+
+/*상단 시작 영역*/
+#control{
+  width:480px;
+  margin:20px auto 0;
+  line-height:30px;
+  text-align: center;
+  background-color:#cbc39d;
+  cursor:pointer;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>볼바운스 게임</title>
+
+  <script src="js/ball.js" defer></script>
+
+  <style>
+    #space{
+      margin: auto;
+      display: block;
+      background-image: url(images/space.jpg);
+    }
+  </style>
+</head>
+<body>
+  <label>장애물의 개수: </label>
+  <select id="barrierNum">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  
+  <canvas id="space" width="400" height="400"></canvas>
+
+</body>
+</html>
