@@ -1,33 +1,45 @@
-/*초기화*/
-*{margin: 0; padding: 0; box-sizing: border-box;}
-ul, li{list-style: none;}
-a{text-decoration: none;}
+*{
+  margin:0; padding:0; 
+  box-sizing: border-box;
+}
+ul,li{
+  list-style:none;
+}
+a{
+  text-decoration: none;
+}
 
 figure{
-  width: 100%;
-  height: 100vh;
-  min-height: 600px;
-  overflow: hidden; /*밖으로 나가는 요소 가려줌*/
-  position: relative;
-  background: linear-gradient(25deg, violet, pink);
+  width:100%;
+  height:100vh;
+  min-height:600px;
+  overflow: hidden;
+  position:relative;
+  background:linear-gradient(24deg, violet, pink);
 }
-/*제목태그*/
 figure h1{
-  position: absolute;
-  top: 7%;
+  position:absolute;
+  top:7%;
   left: 4%;
-  color: #fff;
+  color:#fff;
   font-family: Arial;
+  line-height:0.7;
 }
 figure h1 strong{
-  font-size: 36px;
-  line-height: 1.4;
+  font-size:36px;
   letter-spacing: 1px;
 }
 figure h1 span{
-  font-size: 12px;
-  opacity: 0.8;
+  font-size:12px;
+  opacity:0.8;
   letter-spacing: 1px;
+}
+figure .menu{
+  position:absolute;
+  top:8%;
+  right:4%;
+  font-size:24px;
+  color:#fff;
 }
 figure > p{
   position:absolute;
