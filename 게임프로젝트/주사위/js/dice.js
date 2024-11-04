@@ -15,8 +15,8 @@ document.querySelector("#control").addEventListener('click', function(){
   }
 })
 
-const home = document.querySelector("#home").src = 'images/dice.gif';
-const guest = document.querySelector("#guest").src = 'images/dice.gif';
+const home = document.querySelector("#home");
+const guest = document.querySelector("#guest");
 
 
 //게임 시작 함수
