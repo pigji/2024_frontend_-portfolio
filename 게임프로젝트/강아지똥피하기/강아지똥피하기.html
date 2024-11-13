@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>강아지똥피하기</title>
+  <style>
+    #space {
+      margin: 0 auto;
+      display: block;
+      background-image: url("images/space.png");
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="space" width="550" height="500"></canvas>
+  <script>
+    //전역 변수 초기화
+    let canvas = null;//캔버스 요소를 참조하는 변수
+    let ctx = null;//캔버스의 2d그리기 컨텍스트를 나타내는 변수
+    let canvasW = 0, canvasH = 0;//캔버스의 넓이와 높이를 저장할 변수
+    let intervalId = null; //게임 루프를 제어하는 데 사용
+    let direction = null; //이동 방향을 나타내는 변수
+    let score = 0; //점수를 저장할 변수
+    let gameOption = true;//gameStart가 반복호출되지 않도록 막아줄 변수
+
+    //캔버스 초기화
+    addEventListener('load', () => {
+      canvas = document.getElementById("space");
+      ctx = canvas.getContext('2d');
+      canvasW = canvas.width;
+      canvasH = canvas.height;
+      help();//help함수는 게임의 도움말을 캔버스에 표시하는 함수
+
+      //키보드를 누르면 keyControl함수가 호출됨
+      document.addEventListener("keydown", keyControl);
+    })
+
+    //게임의 도움말을 캔버스에 표시
+    function help() {
+      ctx.font = "20px Arial";
+      ctx.fillStyle = "green";
+      ctx.textAlign = "center";
+      ctx.fillText("강아지 똥 피하기 게임 도움말", 270, 130);
+      ctx.fillText("게임 시작: space bar", 270, 180);
+      ctx.fillText("강아지 움직임:왼쪽(<-), 오른쪽(->)", 270, 230);
+    }
+
+    //키보드 입력에 따라 게임의 동작을 제어하는 함수(32 = 스페이스바, 37 = 왼쪽 화살표, 39 = 오른쪽 화살표)
+    function keyControl(event) {
+      let selection = {
+        32: 'startGame',
+        37: 'left',
+        39: 'right'
+      }
+      //스페이스바를 누르면 playGame함수를 실행
+      if (selection[event.keyCode] == 'startGame') {
+        if (gameOption) {//gameOption변수가 true일 경우에만 playGame을 호출
+          gameOption = false;
+          playGame();
+        }
+      } else { //화살표 버튼을 클릭한 경우 direction변수에 selection객체 값을 넣어줍니다.
+        direction = selection[event.keyCode]
+      }
+      console.log(direction)
+    }
+
+    //강아지 객체 생성
+    const Dog = {
+      x: 100, //강아지의 x좌표값
+      y: 400, //강아지의 y좌표값
+      dogW: 80, //강아지 이미지의 넓이
+      dogH: 80, //강아지 이미지의 높이
+      moveSpace: 20, //방향키 한번 눌렀을때 강아지가 이동하는 거리
+      dogImage: 'images/dogRight.png',//이미지 소스파일 경로
+
+      draw: function () {//강아지를 그려줄 메서드
+        this.dog = new Image(); //이미지 객체를 생성하고 dog속성에 할당
+        this.dog.src = this.dogImage;//이미지 소스파일 경로
+        //강아지 이미지를 그려 줍니다.
+        ctx.drawImage(this.dog, this.x, this.y, this.dogW, this.dogH);
+      },
+      move: function () {//강아지를 왼쪽 또는 오른쪽으로 이동 시키는 메서드
+        if (direction == 'right') {//오른쪽 버튼을 누르면
+          this.x += this.moveSpace; //강아지객체의 x축위치값을 moveSpace값만큼 증가(오른쪽으로 이동)
+          if (this.x > canvasW - this.dogW) {
+            this.x = canvasW - this.dogW;//강아지가 캔버스 밖으로 넘어가지 않게 증가값을 제한시킴
+          }
+          //강아지 이미지를 오른쪽 방향 이미지로 변경
+          this.dogImage = 'images/dogRight.png';
+        }
+        if (direction == 'left') {//왼쪽 버튼을 누르면
+          this.x -= this.moveSpace; //강아지 객체의 x축 위치값을 moveSpace값만큼 감소(왼쪽으로 이동)
+          if (this.x < 0) {
+            this.x = 0;//강아지가 캔버스 밖으로 넘어가지 않게 감소값을 제한시킴
+          }
+          //강아지 이미지를 오른쪽 방향 이미지로 변경
+          this.dogImage = 'images/dogLeft.png';
+        }
+        direction = ""; //방향 초기화(방향키 한번 누를때 마다 한번만 이동)
+      }
+    }
+
+    //동 이미지객체를 생성할 생성자 함수
+    const Dong = function () {
+      this.yspeed = 1; //동의 y방향 속도
+      this.dongW = 40;//동의 넓이
+      this.dongH = 40;//동의 높이
+      //동의 x축 위치값 (0 ~ canvasW-this.dongW 사이의 랜덤한 위치)설정
+      this.x = Math.floor(Math.random() * (canvasW - this.dongW));
+      //동의 y축 위치값 (0 ~ canvasH/3 사이의 랜덤한 위치)설정
+      this.y = Math.floor(Math.random() * canvasH / 3);
+
+      this.draw = function () {//동을 그려주는 메서드
+        const dong = new Image();//이미지 객체 생성
+        dong.src = 'images/dong.png';//이미지 소스파일 경로
+        //동 이미지를 캔버스에 그려줍니다.
+        ctx.drawImage(dong, this.x, this.y, this.dongW, this.dongH)
+      }
+      //동을 y방향으로 이동시켜주는 메서드
+      this.move = function () {
+        this.y += this.yspeed;
+      }
+      //동과 강아지 객체와의 충돌 여부를 검사하는 메서드
+      this.checkCollision = function (dog) {//메서드를 호출할때 강아지 객체를 전달받아옴
+        //동의 중심위치를 구해줌
+        let centerX = this.x + this.dongW / 2;
+        let centerY = this.y + this.dongH / 2;
+        let collideRange = 10; //충돌 범위 설정
+
+        //동 이미지의 가운데를 기준으로 강아지의 중심에 collideRange범위 안에 들어오면 gameOver함수 실행
+        if (
+          centerX >= dog.x - collideRange &&
+          centerX <= dog.x + dog.dogW + collideRange &&
+          centerY >= dog.y - collideRange &&
+          centerY <= dog.y + dog.dogH + collideRange
+        ) {
+          gameOver()//충돌이 일어나면 gameOver함수를 호출함
+        }
+        //바닥과의 충돌이 발생되었을때
+        if (centerY > 450) {
+          //동의 위치가 450보다 크면 바닥과 충돌한 것으로 간주
+          //동의 위치를 다시 랜덤하게 초기화
+          this.x = Math.floor(Math.random() * (canvasW - this.dongW));
+          this.y = Math.floor(Math.random() * canvasH / 3);
+          //점수를 증가
+          score++;
+        }
+      }
+    }
+
+    //게임을 시작하고 게임 루프를 설정하는 함수
+    function playGame() {
+      const dongNum = 5;//생성할 동 객체의 수를 정의
+      const dong = new Array(); //동 객체들을 저장할 배열 생성
+
+      //5개의 동 객체를 배열에 할당
+      for (let i = 0; i < dongNum; i++) {
+        dong[i] = new Dong();
+      }
+
+      //0.02초마다 호출되는 함수
+      intervalId = setInterval(function () {
+        //캔버스를 지우고 강아지를 그려줍니다.
+        ctx.clearRect(0, 0, canvasW, canvasH)
+
+        //dong배열에 있는 동을 순회하여 캔버스에 그려줍니다.
+        for (let i = 0; i < dongNum; i++) {
+          dong[i].move(); //move메서드를 호출하여 동을 아래로 이동시킴
+          dong[i].draw();
+          dong[i].checkCollision(Dog);//동 객체의 checkCollision메서드로 Dog객체를 전달하여 충돌이 발생했는지 확인
+        }
+
+        Dog.move();//강아지를 이동시킴
+        Dog.draw();
+
+        //점수를 화면에 표시
+        drawScore();
+      }, 20)
+    }
+
+    //gameOver함수가 호출되면 clearInterval로 반복함수를 종료하고 gameover 글자 표시
+    async function gameOver() {//async로 gameOver함수를 비동기 함수로 변경
+      //clearInterval함수를 처리
+      await clearInterval(intervalId);//awiat로 clearInterval함수가 처리된 후 아래 코드를 실행시킴
+      ctx.font = '50px Arial';
+      ctx.fontStyle = 'blue';
+      ctx.textAlign = 'center';
+      ctx.fillText('Game Over', canvasW / 2, canvasH / 2);
+      gameOption = true;//game변수를 true로 변경해서 다시 gamestart가 되도록 설정
+    }
+
+    //score를 표시하는 함수
+    function drawScore() {
+      ctx.font = "20px Arial";
+      ctx.fillStyle = "green";
+      ctx.textAlign = "left";
+      ctx.fillText("Score: " + score, 10, 30);
+    }
+  </script>
+</body>
+
+</html>

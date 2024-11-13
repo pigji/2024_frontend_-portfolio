@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 사이트 예시</title>
+
+  <!--폰트어썸 내 script 코드-->
+	<script src="https://kit.fonsdtawesome.com/3223480a48.js" crossorigin="anonymous"></script>
+
+  <style>
+    /*root 속성(css 변수선언)*/
+    :root{
+      --bg-b-color:#263343;
+      --bg-w-color:#efefef;
+      --text-w-color:#f0f4f5;
+      --text-b-color:#333;
+      --accent-color:#d49d66;
+
+      --padding:12px;
+
+      --font-title:36px;
+      --font-large:24px;
+      --font-medium:18px;
+      --font-small:14px;
+      --font-micro:10px;
+    }
+
+    /*초기화*/
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+    body{
+      font-family: Arial; 
+      /*root에 설정한 속성 값을 활용하여 color를 변경*/
+      color: var(--text-w-color);
+      line-height: 1.6; /*행간 늘림*/
+    }
+    header{
+      width: 100%;
+      background-color: var(--bg-b-color);
+      padding: var(--padding);
+      position: fixed;  /*고정메뉴로 설정*/
+      z-index: 1;
+    }
+    header > .wrap{
+      max-width: 1200px;
+      margin: 0 auto; /*가운데정렬*/
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    /*logo 제목태그*/
+    .logo{
+      font-size: var(--font-medium);
+    }
+    /*logo 아이콘*/
+    .logo i{
+      font-size: var(--font-large);
+      color: var(--accent-color);
+    }
+    /*목록태그*/
+    .gnb{
+      display: flex;
+    }
+    .gnb li{
+      margin: 0 calc(var(--padding) * 2); /* --padding에 설정해둔 값에 *2값으로 여백을 크게줌*/
+      font-size: var(--font-medium);
+    }
+    .icon{
+      display: flex;
+    }
+    .icon li{
+      margin: 0 calc(var(--padding) / 2); /* --padding에 설정해둔 값에 /2값으로 여백을 작게줌*/
+      font-size: var(--font-medium);
+    }
+    .togglebtn{
+      font-size: var(--font-medium);
+      position: absolute;
+      right: 32px;
+      color: var(--accent-color);
+      cursor: pointer;
+      display: none;  /*화면에 보이지 않게 가려둠*/
+    }
+
+    #banner{
+      width: 100%;
+      height: 500px;
+      background: url(image/bg.png) center -50px/cover;
+      position: relative;
+    }
+    #banner > .wrap{
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%,-50%);  /*가운데정렬*/
+      text-align: center;
+      color: var(--text-b-color);
+    }
+    #banner h1{
+      font-size: var(--font-title);
+    }
+    #banner p{
+      font-size: var(--font-medium);
+      font-weight: bold;
+    }
+    #contents{
+      width: 100%;
+      background-color: var(--bg-w-color);
+    }
+    #contents > .wrap{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+    #contents h1{
+      font-size: var(--font-title);
+      text-align: center;
+      margin-bottom: calc(var(--padding) * 2);
+      color: var(--text-b-color);
+    }
+    /*이미지요소*/
+    #contents .imgGroup{
+      display: flex;
+      width: 100%;
+    }
+    .imgGroup > li{
+      padding: calc(var(--padding) / 2);
+    }
+    .imgGroup img{
+      width: 100%;
+    }
+    
+    /*미디어쿼리 : 980px미만 적용*/
+    @media screen and (max-width:980px){
+      #banner{
+        background-position: center top;
+      }
+    }
+
+    /*미디어쿼리 : 768px미만 적용*/
+    @media screen and (max-width:768px){
+      header > .wrap{
+        flex-direction: column; /*세로 정렬로 변경*/
+        align-items: flex-start;  /*logo 왼쪽으로 정렬*/
+      }
+      .gnb{ /*목록요소*/
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        display: none;  /*보이지않게 설정함*/
+      }
+      .gnb > li{
+        padding: var(--padding) 0;  /*위,아래 여백을 줌, 좌우는 0*/
+      }
+      /*마우스이벤트 효과 : 클릭했을때 배경색 변경*/
+      .gnb > li:hover{
+        background-color: var(--accent-color);
+      }
+      .icon{
+        width: 100%;
+        justify-content: center;  /*가운데정렬*/
+        display: none;
+      }
+      .togglebtn{
+        display: block;
+      }
+
+      /*gnb와 icon에 active가 추가되면 화면에 표시*/
+      .gnb.active,
+      .icon.active{
+        display: flex;
+      }
+
+      #contents .imgGroup{
+        flex-wrap: wrap;  /*줄바꿈 허용*/
+      }
+      .imgGroup > li{
+        width: 50%; /*이미지요소의 넓이를 50%로 설정하여 2줄로 정렬( 3줄로 정렬하려면 33.333% )*/
+      }
+    }
+
+    @media screen and (max-width:600px) {
+      .imgGroup > li{
+        width: 100%; /*이미지요소의 넓이를 100%로 설정하여 1줄로 정렬*/
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header id="header">
+    <a href="#" class="togglebtn"><i class="fas fa-bars"></i></a>
+    <div class="wrap">
+      <div class="logo">
+        <i class="fab fa-drupal"></i>
+        <a href="#">COMPANY</a>
+      </div>
+      <ul class="gnb">
+        <li><a href="#">about</a></li>
+        <li><a href="#">news</a></li>
+        <li><a href="#">portfolio</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#">board</a></li>
+      </ul>
+      <ul class="icon">
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+    </div>
+  </header>
+  <section id="banner">
+    <div class="wrap">
+      <h1>TITLE</h1>
+      <p>some text...</p>
+    </div>
+  </section>
+  <section id="contents">
+    <div class="wrap">
+      <h1>TITLE</h1>
+      <ul class="imgGroup">
+        <li><img src="image/eye_1.jpg" alt="eye"></li>
+        <li><img src="image/eye_2.jpg" alt="eye"></li>
+        <li><img src="image/eye_3.jpg" alt="eye"></li>
+        <li><img src="image/eye_4.jpg" alt="eye"></li>
+      </ul>
+    </div>
+  </section>
+  
+  <script>
+    //선택자
+    const togglebtn = document.querySelector(".togglebtn");
+    const gnb = document.querySelector(".gnb");
+    const icon = document.querySelector(".icon")
+
+    //togglebtn에 click이벤트 추가
+    togglebtn.addEventListener("click", () => {
+      //gnb와 icon에 active클래스를 제거하고 없으면 추가
+      gnb.classList.toggle("active");
+      icon.classList.toggle("active");
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>catering : 반응형 예시</title>
+
+  <!--폰트어썸 내 script 코드-->
+	<script src="https://kit.fontawesome.com/3223480a48.js" crossorigin="anonymous"></script>
+
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    a{text-decoration: none; color: inherit;}
+    ul, li{list-style: none;}
+    body{
+      font-family: Arial, "맑은 고딕";
+    }
+    h1,h2,h3,h4,h5,h6{
+      letter-spacing: 2px;
+      line-height: 1.4;
+    }
+    hr{
+      border: 1px solid #eee;
+    }
+    /*------------------------------------------------*/
+    /*Navber : 상단고정*/
+    .top{
+      position: fixed;  /*객체를 띄워서 고정*/
+      width: 100%;
+      z-index: 1; /*다른 요소에 가져지지 않도록 설정*/
+    }
+
+    /*togglebtn : 브라우저 넓이가 600px 이하로 작아졌을때 나타나는 메뉴 버튼*/
+    .togglebtn{
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      font-size: 18px;
+      display: none;  /*평소에는 가려줌*/
+    }
+
+    /*상단 메뉴*/
+    .navbar{
+      width: 100%;
+      padding: 8px 16px;
+      color: #111;
+      letter-spacing: 4px;  /*자간 설정*/
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);  /*연한 회색으로 입체감있게 그림자 추가*/
+      overflow: hidden; /*밖으로 넘어가는 부분 가려줌*/
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar .home{
+      padding: 8px 16px;
+    }
+    .navbar .right{
+      display: flex;
+    }
+    .navbar .right a{
+      padding: 8px 16px;
+    }
+    /*------------------------------------------------*/
+    /*header : 배너처럼 보여지는 부분*/
+    header{
+      max-width: 1600px;
+      margin: 0 auto;
+      position: relative;
+    }
+    header img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    header .title{
+      position: absolute;
+      left: 0; bottom: 0;
+    }
+    header .title h1{
+      font-size: 36px;
+      padding: 10px 30px;
+      opacity: 0.6; /*투명도 설정*/
+    }
+    /*------------------------------------------------*/
+    /*content부분*/
+    .content{
+      max-width: 1100px;
+      margin: auto;
+    }
+    .content h1{
+      text-align: center;
+      margin: 10px 0 35px;
+      font-size: 36px;
+    }
+    /*------------------------------------------------*/
+    /*about부분*/
+    #about{
+      padding: 64px 0;overflow: hidden;
+      display: flex;
+    }
+    #about > div{ /*id가 about인 자식의 div태그 전체 선택*/
+      width: 50%;
+      padding: 12px 24px;
+    }
+    /*이미지*/
+    #about > .img > img{
+      width: 100%;
+      height: auto;
+      opacity: 0.8;
+      border-radius: 4px;
+    }
+    #about > .txt > h5{
+      text-align: center;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    #about > .txt > p{
+      font-size: 18px;
+      margin: 18px 0;
+      line-height: 1.5; /*행간조절*/
+    }
+    /*텍스트 강조*/
+    #about > .txt > p > span{
+      color: #111;
+      background-color: #f1f1f1;
+      display: inline-block;
+      padding: 0 8px;
+    }
+    #about > .txt > p.gray{
+      color: #757575;
+    }
+    /*------------------------------------------------*/
+    /*Our Menu부분*/
+    #menu{
+      padding: 64px 0;
+      display: flex;
+    }
+    #menu > div{
+      width: 50%;
+      padding: 12px 24px;
+    }
+    #menu > .txt > h4{
+      margin: 10px 0;
+      font-size: 20px;
+    }
+    #menu > .txt > p{
+      color: #757575;
+    }
+    /*이미지*/
+    #menu > .img > img{
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    /*------------------------------------------------*/
+    /*contact*/
+    #contact{
+      padding: 64px 16px;
+    }
+    #contact > h1{
+      text-align: left;
+    }
+    #contact p{
+      line-height: 1.5;
+      margin-top: 20px;
+      color: #757575;
+    }
+    #contact p.color{
+      font-size: 18px;
+      color: #607b8b;
+    }
+    #contact input{
+      display: block;
+      width: 100%;
+      padding: 24px 8px 18px;
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid #ccc;
+    }
+    #contact button{
+      border: 0;
+      background-color: #f1f1f1;
+      color: #111;
+      margin: 16px 0;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    /*마우스이벤트 효과*/
+    #contact button:hover{
+      background-color: #ccc;
+    }
+    /*------------------------------------------------*/
+    /*footer*/
+    footer{
+      background-color: #f1f1f1;
+      padding: 32px 0;
+      text-align: center;
+      color: #757575;
+    }
+    footer a{
+      background-color: #ffffc4;
+      text-decoration: underline;
+    }
+    /*------------------------------------------------*/
+    /*미디어쿼리*/
+    /*브라우저의 넓이가 980px 미만일때 적용*/
+    @media screen and (max-width:980px){  
+      #about > .txt > p.gray{display: none;}
+    }
+    /*브라우저의 넓이가 780px 미만일때 적용*/
+    @media screen and (max-width:780px){
+      #about, #menu{
+        flex-wrap: wrap;  /*줄바꿈 허용*/
+      }
+      #about > div, #menu > div{
+        width: 100%;
+      }
+      #about > .txt > p.gray{display: block;}
+    }
+    /*브라우저의 넓이가 600px 미만일때 적용*/
+    @media screen and (max-width:600px){
+      .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .navbar .right{ /*상단 메뉴*/
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+      }
+      .navbar .right.active{
+        display: flex;
+      }
+      .navbar .right:hover{ /*클릭했을때 이벤트*/
+        background-color: rgb(199, 230, 240);
+      }
+
+      .togglebtn{ /*버튼요소*/
+        display: block;
+      }
+      #about > .img{
+        display: none;
+      }
+      footer{
+        font-size: 12px;
+      }
+    }
+    
+</style>
+</head>
+<body>
+  <!-- Navbar 상단고정 -->
+  <div class="top">
+    <a href="#" class="togglebtn"><i class="fas fa-bars"></i></a>
+    <div class="navbar">
+      <a class="home" href="#home">Gourmet au Catering</a>
+      <!-- 오른쪽 Navbar 링크 -->
+      <div class="right">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+      </div><!--right END-->
+    </div><!--navbar END-->
+  </div><!--top END-->
+
+  <!-- Header -->
+  <header id="home">
+    <img src="image/main.jpg" alt="Hamburger Catering" width="1600" height="800">
+    <div class="title">
+      <h1>Le Catering</h1>
+    </div>
+  </header>
+
+  <!-- Page content -->
+  <div class="content">
+
+    <!-- About Section -->
+    <div id="about">
+      <div class="img">
+      <img src="image/plating.jpg" alt="Table Setting" width="600" height="750">
+      </div>
+      <div class="txt">
+        <h1>About Catering</h1><br>
+        <h5>Tradition since 1889</h5>
+        <p>
+          Gourmet au Catering은 단순히 <span>'먹는 것'</span> 그 이상의 새로운 식문화를 제안합니다.
+          <br>먹는 행위의 목적인 미각의 만족, 생존을 위한 영양공급, 건강에 대한 열망뿐만아니라 
+          섭취자의 라이프스타일에 미치는 영향까지 고려하여 식품을 설계합니다.<br>
+          Gourmet au Catering은 오감의 만족, 영양적인 균형, 과학적인 건강성, 간편성과 휴대성, 
+          합리성과 경제성의 가치를 실현하기 위해 소비자의 식습관 및 섭취 패턴과 같은 
+          라이프스타일을 심도있게 연구합니다.
+        </p>
+        <p class="gray"> 
+          Gourmet au Catering은 미술관과 갤러리를 중심으로 행사성격과 장소에 따른 맞춤식 전시 오프닝 
+          리셉션과 공연 리셉션을 전문으로 하며 그외 출판기념회, 론칭파티 병원 개원파티 등 맛과 멋이 
+          어울어진 다양한 메뉴와 데코레이션 그리고 최상의 서비스로 다양한 파티를 준비해드립니다.
+        </p>
+      </div>
+    </div> <!--about END-->
+    
+    <hr>
+    
+    <!-- Menu Section -->
+    <div id="menu">
+      <div class="txt">
+        <h1>Our Menu</h1><br>
+        <h4>리코타치즈올리브 샐러드</h4>
+        <p>리코타치즈, 토마토, 올리브, 야채가 어우러진 담백한 샐러드 &#92;5,800</p><br>
+      
+        <h4>허브 치킨 가든 샐러드</h4>
+        <p>로즈마리를 마리네이드한 담백한 로스트 치킨과 신선한 야채, 토마토가 어우러진 샐러드 &#92;5,500</p><br>
+      
+        <h4>벨기에 와플</h4>
+        <p>와플 고유의 쫄깃하면서 바삭한 식감을 즐길 수 있는 벨기에 와플 &#92;3,000 </p><br>
+      
+        <h4>크로크무슈</h4>
+        <p>치즈의 풍미가 돋보이는 프랑스식 샌드위치 &#92;6,000</p><br>
+      
+        <h4>햄 치즈 포카치아</h4>
+        <p>크렌베리가 쏙 들어간 포카치아 번에 치즈와 햄으로 영양을 더한 핫브레드 &#92;6,000</p>    
+      </div>
+      <div class="img">
+        <img src="image/ourmenu.jpg" alt="Menu">
+      </div>
+    </div>
+    
+    <hr>
+    
+    <!-- Contact Section -->
+    <div id="contact">
+      <h1>Contact</h1><br>
+      <p>
+        Gourmet au Catering은 최근 트랜드인 실용주의 정신을 담아
+        가벼운 가격에 맛있는 음식을 제공하는 케이터링 서비스 입니다.</p>
+      <p class="color">
+        <b>Catering Service : 경기도 안산시 단원구 고잔동 541-1(중앙대로 921) 동서코아빌딩 3F</b>
+      </p>
+      <p>Phone : 000-000-0000<br> e-mail : catering@catering.com</p>
+      
+      <form action="" target="_blank">
+        <p><input type="text" placeholder="Name" required name="Name"></p>
+          <!--required : 값이 입력되지 않았거나 check/select되지 않았을 경우 브라우져에 있는 알림 화면이 나타납니다.-->
+        <p><input type="number" placeholder="How many people" required name="People"></p>
+        <p><input type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+        <p><input type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+        <p><button type="submit">SEND MESSAGE</button></p>
+      </form>
+    </div> <!--contact-->
+  </div> <!--contant END-->
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      &copy; COPYRIGHT BY 
+      <a href="" title="" target="_blank" class="">jmk255@naver.com</a>
+      ALL RIGHTS RESERVED
+    </p>
+  </footer>
+
+  <script>
+    //선택자
+    const togglebtn = document.querySelector(".togglebtn");
+    const right = document.querySelector(".right");
+
+    //togglebtn에 click이벤트 추가
+    togglebtn.addEventListener("click", () => {
+      //gnb와 icon에 active클래스를 제거하고 없으면 추가
+      right.classList.toggle("active");
+    })
+  </script>
+</body>
+</html>
